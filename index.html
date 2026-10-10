@@ -78,7 +78,7 @@
 
   :root {
     --bg-deep: #07090a; --bg-panel: #0e1414; --bg-bezel: #161e1e; --bg-inset: #0a1010;
-    --line: #1f2a2a; --line-soft: #15201f; --txt: #c8d5cc; --txt-dim: #6f8077; --txt-faint: #3d4a45;
+    --line: #1f2a2a; --line-soft: #15201f; --txt: #c8d5cc; --txt-dim: #8a9b92; --txt-faint: #3d4a45;
     --phosphor: #7eff95; --phosphor-glow: #7eff9544;
     --amber: #ffb84d; --amber-glow: #ffb84d44;
     --red: #ff5e6c; --red-glow: #ff5e6c66;
@@ -960,7 +960,7 @@
 
   /* E3: Lighten --txt-faint to pass WCAG (was #3d4a45 = 2.15:1, now passes 3:1) */
   /* Override in :root via .v14-fix */
-  :root { --txt-faint: #5a6c64; }
+  :root { --txt-faint: #7f9288; }
 
   /* A6: Proper horizontal EQ slider styling — replaces broken vertical inline styles */
   .eq-bands {
@@ -5529,6 +5529,7 @@
 <footer>
   Frequency Laboratory v4.1 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
+  <br><small>Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio", „Schumann", binaurale și presetările „Pain Relief"/„Peak Performance" nu au validare științifică ca terapie. Volum redus, mai ales cu căști. Not a medical device or treatment.</small>
 </footer>
 </div>
 <script>
@@ -25178,7 +25179,7 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
 @media (max-width:560px){#tf-donate .tf-lbl{display:none}}
 @media print{#tf-donate{display:none}}
 </style>
-<input type="checkbox" id="tf-donate-cb" class="tf-cb" aria-hidden="true">
+<input type="checkbox" id="tf-donate-cb" class="tf-cb" aria-hidden="true" tabindex="-1">
 <div class="tf-panel">
 <span class="tf-lbl">Sprijină:</span>
 <a class="tf-b tf-pat" href="https://www.patreon.com/c/alexio_tf" target="_blank" rel="noopener" aria-label="Sprijină pe Patreon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.4" cy="9.4" r="6.6" fill="currentColor"/><rect x="2.4" y="2.4" width="3.7" height="19.2" fill="currentColor"/></svg>Patreon</a>
@@ -25187,5 +25188,57 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
 </div>
 <label for="tf-donate-cb" class="tf-open" title="Sprijină" aria-label="Sprijină">♥</label>
 </div>
+<script id="tf-a11y-labels">
+(function(){
+  /* Audit 2026-10-10: nume accesibile pentru controale fără etichetă (WCAG 4.1.2 / 1.3.1). Doar atribute ARIA; nu modifică comportamentul. */
+  var SEL='input:not([type=hidden]):not([type=checkbox]):not([type=radio]),select,textarea';
+  function has(el){
+    if(el.getAttribute('aria-label')||el.getAttribute('aria-labelledby')||el.getAttribute('title'))return true;
+    if(el.labels&&el.labels.length)return true;
+    return false;
+  }
+  function pick(n){
+    if(n&&n.children&&n.children.length>1&&n.children[0].tagName!=='svg'&&!n.matches('label')&&(n.children[0].textContent||'').trim())return n.children[0];
+    return n;
+  }
+  function txt(n){return n?(pick(n).textContent||'').replace(/\s+/g,' ').trim():''}
+  function derive(el){
+    var p=el.previousElementSibling,i=0;
+    while(p&&i<3){ if(!p.matches('input,select,textarea,button,canvas,svg')&&txt(p)&&txt(p).length<=40)return {n:pick(p)}; p=p.previousElementSibling;i++; }
+    var a=el.parentElement,d=0;
+    while(a&&d<4){
+      var l=a.querySelector(':scope > .ctrl-label > span:first-child')||a.querySelector(':scope > .ctrl-label, :scope > label, :scope > .lbl, :scope > .label');
+      if(l&&!l.contains(el)&&txt(l)&&txt(l).length<=48)return {n:pick(l)};
+      a=a.parentElement;d++;
+    }
+    return null;
+  }
+  var cnt=0;
+  function run(root){
+    (root||document).querySelectorAll(SEL).forEach(function(el){
+      if(has(el))return;
+      var r=derive(el),g=el.closest('.ctrl,.small-row,.row');
+      var multi=g&&g.querySelectorAll(SEL).length>1;
+      var suffix='';
+      if(multi){ suffix=el.tagName==='SELECT'?' (opțiune)':(el.type==='number'?' (valoare)':''); if(el.tagName==='SELECT'&&el.id&&/unit/i.test(el.id))suffix=' (unitate)'; }
+      if(el.type==='file')r=null;
+      if(r&&!suffix){
+        if(!r.n.id)r.n.id='tf-lbl-'+(++cnt);
+        el.setAttribute('aria-labelledby',r.n.id);
+      } else if(r){
+        el.setAttribute('aria-label',txt(r.n)+suffix);
+      } else {
+        var s=el.getAttribute('placeholder')||el.id||el.className||el.type||'control';
+        var idx=Array.prototype.indexOf.call(el.parentElement?el.parentElement.parentElement?el.parentElement.parentElement.children:[]:[],el.parentElement)+1;
+        el.setAttribute('aria-label',String(s).replace(/([a-z])([A-Z0-9])/g,'$1 $2').replace(/[-_]+/g,' ').trim()+(idx>0?' '+idx:''));
+      }
+    });
+  }
+  var t=null;
+  function sched(){ if(t)return; t=setTimeout(function(){t=null;run();},250); }
+  function start(){ run(); try{ new MutationObserver(sched).observe(document.body,{childList:true,subtree:true}); }catch(e){} }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start); else start();
+})();
+</script>
 </body>
 </html>

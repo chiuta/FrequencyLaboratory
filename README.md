@@ -42,6 +42,10 @@ Funcțiile de mai jos apar ca secțiuni/controale în interfață:
 - **Rețea:** aplicația nu face cereri `fetch` și nu încarcă scripturi sau fonturi externe. Politica CSP din pagină limitează `connect-src` la `'self'`. Linkurile (Patreon, Buy Me a Coffee, alexio.tf, creativecommons.org) sunt hiperlegături deschise doar la click.
 - Microfonul este folosit local, doar după acordarea permisiunii; audio-ul nu este trimis nicăieri de aplicație.
 
+## Avertisment
+
+Conținut informativ/educațional. Aplicația nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical (inclusiv pentru tinnitus, durere sau probleme de auz). Frecvențele „Solfeggio", „Schumann", ritmurile binaurale/izocronice și presetările din interfață denumite „Pain Relief" sau „Peak Performance" nu au validare științifică ca terapie; pagina însăși avertizează în panoul de presetări. Folosește volum redus (sub 20% la început), mai ales cu căști; evită frecvențe înalte la volum mare. Audiograma nu înlocuiește un audiogram medical.
+
 ## Rulare locală / offline
 
 Descarcă `index.html` și deschide-l în browser; nu necesită internet. MIDI funcționează doar unde există Web MIDI (de ex. Chrome desktop), iar accesul la microfon necesită context sigur (HTTPS sau fișier local, în funcție de browser).
@@ -49,6 +53,10 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet. MIDI f
 ## Licență
 
 CC0 1.0 Universal (domeniu public) — vezi fișierul LICENSE
+
+## Audit
+
+2026-10-10: verificat (fără cereri de rețea în cod, CSP `connect-src 'self'`); adăugate nume accesibile pentru controale, contrast, avertisment în subsol.
 
 ## Autor
 
