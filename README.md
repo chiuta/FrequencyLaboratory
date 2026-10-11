@@ -1,5 +1,7 @@
 # Frequency Laboratory
 
+**Ultima actualizare:** 11 octombrie 2026
+
 Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian, analizoare și teste auditive.
 
 **Live:** https://chiuta.github.io/FrequencyLaboratory/
@@ -8,7 +10,7 @@ Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian
 
 ## Ce este
 
-Frequency Laboratory (v4.0 în titlul aplicației) este un laborator audio dintr-un singur fișier HTML, bazat pe Web Audio API. Combină generator de tonuri, sinteză, efecte, sesiuni programabile, instrumente de măsurare cu microfonul și o bază de date de frecvențe (Solfeggio, Schumann, binaurale, acordaje etc.). Aplicația precizează că nu este tratament medical și că categoriile de frecvențe sunt informative.
+Frequency Laboratory (v4.1.1 în titlul aplicației) este un laborator audio dintr-un singur fișier HTML, bazat pe Web Audio API. Combină generator de tonuri, sinteză, efecte, sesiuni programabile, instrumente de măsurare cu microfonul și o bază de date de frecvențe (Solfeggio, Schumann, binaurale, acordaje etc.). Aplicația precizează că nu este tratament medical și că categoriile de frecvențe sunt informative.
 
 ## Funcții
 
@@ -67,3 +69,11 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 ## English summary
 
 Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. Romanian/English UI. State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
+
+## Istoric / Changelog
+
+### 11 octombrie 2026
+- Versiune unificată v4.1.1 (titlu, antet, manifest, subsol; înainte titlul spunea v4.0, iar subsolul v4.1).
+- Ghidul de bun venit (prima rulare) are acum butoane RO/EN și „Sari peste” (plus tasta Esc), este un dialog accesibil și este tradus complet în engleză; modulele/profilurile sunt traduse la afișare. Pe ecrane joase nu mai taie partea de sus.
+- Fonturile de afișaj încorporate nu conțin Ă/Ș/Ț: elementele afectate trec pe fontul de text (clasa `dia-fb`), deci titlul nu mai amestecă glife (ex. „FRECVENȚE”, „CONTINUĂ”).
+- Axe: 0 încălcări (conținutul în `<main>`, 18 câmpuri cu `aria-label`, titluri h2 în „Usage notes”, `aside` pentru donații, containerul de notificări ca regiune). Corectat „uppended” → „suspended” în indicatorul CTX.

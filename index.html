@@ -27,8 +27,8 @@
 </style>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' 'unsafe-inline' blob:; connect-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="Frequency Laboratory v4.0 — Complete Audio Generator" data-ro="Frequency Laboratory v4.0 — Complete Audio Generator">Frequency Laboratory v4.0 — Complete Audio Generator</title>
-<meta name="description" content="Generator de frecvențe v4.0: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.">
+<title data-i18n="Frequency Laboratory v4.1.1 — Complete Audio Generator" data-ro="Frequency Laboratory v4.1.1 — Complete Audio Generator">Frequency Laboratory v4.1.1 — Complete Audio Generator</title>
+<meta name="description" content="Generator de frecvențe v4.1.1: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.">
 
 <!-- ===== PWA: instalabil direct din browser, fără App Store ===== -->
 <meta name="theme-color" content="#0a0f0a">
@@ -37,7 +37,7 @@
 <meta name="apple-mobile-web-app-title" content="FreqLab">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%230a0f0a'/%3E%3Ccircle cx='96' cy='96' r='60' fill='none' stroke='%237eff95' stroke-width='4'/%3E%3Ccircle cx='96' cy='96' r='20' fill='none' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='96' y1='36' x2='96' y2='56' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='96' y1='136' x2='96' y2='156' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='36' y1='96' x2='56' y2='96' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='136' y1='96' x2='156' y2='96' stroke='%237eff95' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Frequency+Laboratory+v4.0%22%2C%22short_name%22%3A%22FreqLab%22%2C%22description%22%3A%22Generator+complet+de+frecvente+audio%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230a0f0a%22%2C%22theme_color%22%3A%22%230a0f0a%22%2C%22orientation%22%3A%22any%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg+xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'+viewBox%3D'0+0+512+512'%253E%253Crect+width%3D'512'+height%3D'512'+rx%3D'80'+fill%3D'%25230a0f0a'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'160'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'12'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'60'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'8'%2F%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any+maskable%22%7D%5D%7D">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Frequency+Laboratory+v4.1.1%22%2C%22short_name%22%3A%22FreqLab%22%2C%22description%22%3A%22Generator+complet+de+frecvente+audio%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230a0f0a%22%2C%22theme_color%22%3A%22%230a0f0a%22%2C%22orientation%22%3A%22any%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg+xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'+viewBox%3D'0+0+512+512'%253E%253Crect+width%3D'512'+height%3D'512'+rx%3D'80'+fill%3D'%25230a0f0a'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'160'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'12'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'60'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'8'%2F%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any+maskable%22%7D%5D%7D">
 
 <style>
 @font-face {
@@ -362,7 +362,7 @@
   .preset-btn .pdesc { font-size: 10px; color: var(--txt-faint); margin-top: 4px; }
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media (max-width: 700px) { .info-grid { grid-template-columns: 1fr; } }
-  .info-grid h3 { font-family: 'Major Mono Display', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--amber); text-transform: lowercase; margin: 0 0 10px 0; }
+  .info-grid h3, .info-grid h2 { font-weight: 400;} .info-grid h3,.info-grid h2 { font-family: 'Major Mono Display', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--amber); text-transform: lowercase; margin: 0 0 10px 0; }
   .info-grid p { color: var(--txt-dim); font-size: 12px; line-height: 1.6; margin: 0 0 10px 0; }
   .info-grid strong { color: var(--txt); font-weight: 500; }
   .warning {
@@ -1905,10 +1905,11 @@
   .welcome-overlay {
     position: fixed; inset: 0; z-index: 400;
     background: #07090a;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: flex-start; justify-content: center;
     overflow-y: auto; padding: 12px;
     transition: opacity 0.5s;
   }
+  .welcome-overlay > .welcome-box { margin: auto; }
   .welcome-overlay.fade-out { opacity: 0; pointer-events: none; }
   .welcome-overlay.hidden { display: none; }
 
@@ -1921,6 +1922,13 @@
     overflow: hidden;
   }
 
+  .wl-topbar { display:flex; justify-content:space-between; align-items:center; gap:8px; padding:8px 12px; background:var(--bg-inset); border-bottom:1px solid var(--line); }
+  .wl-langs { display:inline-flex; gap:4px; }
+  .wl-lang, .wl-skip { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.12em; padding:6px 12px; min-height:32px; background:transparent; color:var(--txt-dim); border:1px solid var(--line); border-radius:6px; cursor:pointer; }
+  .wl-lang[aria-pressed=true] { color:var(--phosphor); border-color:var(--phosphor); }
+  .wl-lang:hover, .wl-skip:hover { color:var(--phosphor); border-color:var(--phosphor); }
+  .wl-lang:focus-visible, .wl-skip:focus-visible { outline:2px solid var(--phosphor); outline-offset:2px; }
+  .dia-fb { font-family: 'JetBrains Mono', ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace !important; font-weight: 700; letter-spacing: normal; text-transform: uppercase; }
   /* Step header */
   .wl-step-bar {
     display: flex; gap: 0;
@@ -2401,7 +2409,7 @@
       <svg viewBox="0 0 24 24"><path d="M2 12 Q 5 2, 8 12 T 14 12 T 20 12 H 22"/></svg>
     </div>
     <div class="brand-text">
-      <h1>FREQUENCY LABORATORY<span class="ver-tag">v4.0</span></h1>
+      <h1>FREQUENCY LABORATORY<span class="ver-tag">v4.1.1</span></h1>
       <div class="sub">audio generator · piano · chords · effects · audiogram · ambient</div>
     </div>
   </div>
@@ -2418,11 +2426,12 @@
     </div>
     <div class="led-stack">
       <span class="pill" id="srPill">SR · — Hz</span>
-      <span class="pill" id="ctxPill" title="AudioContext state. uppended = inactiv (gesture utilizator necesar pentru Web Audio). running = activ.">CTX · uppended</span>
+      <span class="pill" id="ctxPill" title="AudioContext state. suspended = inactiv (gesture utilizator necesar pentru Web Audio). running = activ.">CTX · suspended</span>
     </div>
   </div>
 </header>
 
+<main id="main">
 <div class="status-bar">
   <div class="stat"><span class="lbl">A:</span><span class="val" id="sFreqA">— Hz</span></div>
   <div class="stat"><span class="lbl">B:</span><span class="val" id="sFreqB">— Hz</span></div>
@@ -2794,15 +2803,15 @@
       <div class="ctrl-label"><span>new stage</span></div>
       <div class="small-row">
         <input type="text" id="stageName" placeholder="Nume" maxlength="32">
-        <input type="number" id="stageDur" min="5" max="3600" step="5" value="120" title="Durată secunde">
+        <input type="number" id="stageDur" min="5" max="3600" step="5" value="120" title="Durată secunde" aria-label="Durată secunde">
       </div>
       <div class="small-row" style="margin-top:6px;">
-        <input type="number" id="stageFreq" min="1" max="22000" step="0.01" value="174" title="Frecvență A (Hz)">
-        <input type="number" id="stageBeat" min="0" max="40" step="0.1" value="0" title="Δ binaural (0 = oprit)">
+        <input type="number" id="stageFreq" min="1" max="22000" step="0.01" value="174" title="Frecvență A (Hz)" aria-label="Frecvență A (Hz)">
+        <input type="number" id="stageBeat" min="0" max="40" step="0.1" value="0" title="Δ binaural (0 = oprit)" aria-label="Δ binaural (0 = oprit)">
       </div>
       <div class="small-row" style="margin-top:6px;">
-        <input type="number" id="stageCross" min="0" max="60" step="1" value="5" title="Crossfade (s)">
-        <input type="number" id="stageGain" min="0" max="100" step="1" value="80" title="Nivel A%">
+        <input type="number" id="stageCross" min="0" max="60" step="1" value="5" title="Crossfade (s)" aria-label="Crossfade (s)">
+        <input type="number" id="stageGain" min="0" max="100" step="1" value="80" title="Nivel A%" aria-label="Nivel A%">
       </div>
     </div>
     <div class="btn-row"><button class="btn small full primary" id="btnAddStage">◇ ADD STAGE</button></div>
@@ -2879,7 +2888,7 @@
     <div class="ctrl">
       <div class="ctrl-label"><span>calibrare offset</span><span class="ctrl-value blue" id="lblCalOffset">+94 dB</span></div>
       <div class="small-row">
-        <input type="number" id="calRefValue" min="40" max="120" step="0.1" value="94" title="dB SPL real">
+        <input type="number" id="calRefValue" min="40" max="120" step="0.1" value="94" title="dB SPL real" aria-label="dB SPL real">
         <button class="btn small blue" id="btnCalibrate" disabled>⚐ CALIBRATE</button>
       </div>
       <div class="warning" style="font-size:10px;">
@@ -2890,9 +2899,9 @@
     <div class="ctrl">
       <div class="ctrl-label"><span>room response measurement (room sweep)</span></div>
       <div class="small-row-3">
-        <input type="number" id="rmFrom" min="20" max="20000" step="1" value="40" title="De la (Hz)">
-        <input type="number" id="rmTo" min="20" max="20000" step="1" value="16000" title="Până la (Hz)">
-        <input type="number" id="rmDur" min="5" max="120" step="1" value="20" title="Durată secunde">
+        <input type="number" id="rmFrom" min="20" max="20000" step="1" value="40" title="De la (Hz)" aria-label="De la (Hz)">
+        <input type="number" id="rmTo" min="20" max="20000" step="1" value="16000" title="Până la (Hz)" aria-label="Până la (Hz)">
+        <input type="number" id="rmDur" min="5" max="120" step="1" value="20" title="Durată secunde" aria-label="Durată secunde">
       </div>
       <div class="btn-row" style="margin-top:6px;">
         <button class="btn small primary" id="btnRoomSweep" disabled>▶ MEASURE ROOM</button>
@@ -2925,27 +2934,27 @@
     <div class="panel-title">usage notes<span class="badge">INFO</span></div>
     <div class="info-grid">
       <div>
-        <h3>connecting to speakers / audio system</h3>
+        <h2>connecting to speakers / audio system</h2>
         <p>Phone and laptop speakers reproduce frequencies below <strong>~120 Hz</strong> and above <strong>~14 kHz</strong> poorly. For serious testing, connect the audio output to a receiver, powered monitors, active speakers, or quality headphones.</p>
         <p>For <strong>binaural beats</strong>, headphones are <em>required</em> — the effect only occurs when the left ear hears one frequency and the right ear a slightly different one.</p>
-        <h3 style="margin-top:18px;">what's new in v4.0</h3>
+        <h2 style="margin-top:18px;">what's new in v4.0</h2>
         <p><strong>ADSR</strong> — instead of a flat fade, the oscillator has attack, decay, sustain and release like a real synthesiser. <strong>Master filter</strong> with Q resonance (up to 30) — sweep through it with high Q for "acid" sounds. <strong>WAV recording</strong> — download anything you run as a 16-bit .wav file. <strong>Sleep timer</strong> — auto-stop after N minutes. <strong>Programmable sessions</strong> — define stages with crossfade. <strong>Isochronic tones</strong> — AM with square LFO, a no-headphones alternative to binaurals. <strong>SPL meter + room measurement</strong> — use your phone's microphone as a measurement tool.</p>
       </div>
       <div>
-        <h3>programmable sessions · how to use</h3>
+        <h2>programmable sessions · how to use</h2>
         <p>Define a stage (name, frequency, binaural beat, duration, crossfade, level) and press "Add". Stages run in order. Between stages, frequency and level migrate smoothly over the crossfade time — no abrupt jumps.</p>
         <p>Two ready-made templates: <strong>Meditation</strong> (Theta → Alpha → Theta, ~30 min) and <strong>Sleep</strong> (Alpha → Theta → Delta with a gradual 40-minute frequency descent).</p>
-        <h3 style="margin-top:18px;">room measurement (mic-based)</h3>
+        <h2 style="margin-top:18px;">room measurement (mic-based)</h2>
         <p>With the microphone active and speakers connected, press "Measure room". The app runs a logarithmic sweep and uses the mic to measure the level reaching the room at each frequency. <strong>Peaks</strong> = resonances (corner buildup). <strong>Deep nulls</strong> = cancellations from reflections (poor speaker/listener positioning).</p>
         <p class="warning" style="margin-top:8px;">The phone microphone is not professionally calibrated — it shows relative trends, not absolute values.</p>
       </div>
       <div>
-        <h3>user presets · backup</h3>
+        <h2>user presets · backup</h2>
         <p>Save the current configuration (all settings) with a name. <strong>Export JSON</strong> gives you a file with all your presets — useful for backup or transferring to another device. <strong>Import JSON</strong> merges them with existing presets (does not overwrite).</p>
-        <h3 style="margin-top:18px;">hearing safety</h3>
+        <h2 style="margin-top:18px;">hearing safety</h2>
         <p>Always start with <strong>master below 20%</strong> and raise gradually. High frequencies (above 4 kHz) at high volume are the most damaging to hearing. Very low frequencies can damage speakers not built for them.</p>
         <p class="warning" style="margin-top:8px;">Do not use this application as a <em>medical treatment</em>. For tinnitus, ear pain, or any hearing issue, consult a specialist.</p>
-        <h3 style="margin-top:18px;">keyboard shortcuts</h3>
+        <h2 style="margin-top:18px;">keyboard shortcuts</h2>
         <p><strong>Space</strong> — start/stop · <strong>P</strong> — panic · <strong>R</strong> — start/stop recording · <strong>↑/↓</strong> — frequency A ±1 Hz · <strong>Shift+↑/↓</strong> — ±10 Hz · <strong>1–4</strong> — waveform A</p>
       </div>
 
@@ -3161,7 +3170,7 @@
         <option value="2">1/2 (doime)</option>
         <option value="3">3/4 (trei pătrimi)</option>
       </select>
-      <input type="number" id="delaySyncBPM" min="40" max="300" step="1" value="120" style="width:70px;" title="BPM pentru sync">
+      <input type="number" id="delaySyncBPM" min="40" max="300" step="1" value="120" style="width:70px;" title="BPM pentru sync" aria-label="BPM pentru sync">
       <button class="btn small blue" id="btnDelaySyncApply" title="Aplică calculul BPM→ms">↗ SYNC</button>
     </div>
     <div class="small-row-3">
@@ -3451,7 +3460,7 @@
     <div class="ctrl">
       <div class="ctrl-label"><span>break-in mode (rodaj boxe)</span></div>
       <div class="small-row">
-        <input type="number" id="brkMinutes" min="5" max="4320" step="5" value="60" title="duration minute">
+        <input type="number" id="brkMinutes" min="5" max="4320" step="5" value="60" title="duration minute" aria-label="duration minute">
         <button class="btn small amber" id="btnBreakIn">▶ START BREAK-IN</button>
       </div>
       <button class="btn small full" id="btnBreakInStop" disabled style="margin-top:6px;">◼ STOP BREAK-IN</button>
@@ -3607,8 +3616,8 @@
     <div class="ctrl">
       <div class="ctrl-label"><span>mod (m, n)</span></div>
       <div class="small-row">
-        <input type="number" id="cymM" min="1" max="12" step="1" value="3" title="Modul m">
-        <input type="number" id="cymN" min="1" max="12" step="1" value="4" title="Modul n">
+        <input type="number" id="cymM" min="1" max="12" step="1" value="3" title="Modul m" aria-label="Modul m">
+        <input type="number" id="cymN" min="1" max="12" step="1" value="4" title="Modul n" aria-label="Modul n">
       </div>
     </div>
     <div class="ctrl">
@@ -4031,19 +4040,19 @@
     <div class="small-row-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:4px;">
       <div class="ctrl" style="margin:0;">
         <div class="ctrl-label" style="justify-content:center;font-size:10px;"><span>A</span></div>
-        <input type="range" id="fenvA" min="1" max="2000" step="1" value="50" title="Attack ms">
+        <input type="range" id="fenvA" min="1" max="2000" step="1" value="50" title="Attack ms" aria-label="Attack ms">
       </div>
       <div class="ctrl" style="margin:0;">
         <div class="ctrl-label" style="justify-content:center;font-size:10px;"><span>D</span></div>
-        <input type="range" id="fenvD" min="1" max="2000" step="1" value="200" title="Decay ms">
+        <input type="range" id="fenvD" min="1" max="2000" step="1" value="200" title="Decay ms" aria-label="Decay ms">
       </div>
       <div class="ctrl" style="margin:0;">
         <div class="ctrl-label" style="justify-content:center;font-size:10px;"><span>S</span></div>
-        <input type="range" id="fenvS" min="0" max="100" step="1" value="50" title="Sustain %">
+        <input type="range" id="fenvS" min="0" max="100" step="1" value="50" title="Sustain %" aria-label="Sustain %">
       </div>
       <div class="ctrl" style="margin:0;">
         <div class="ctrl-label" style="justify-content:center;font-size:10px;"><span>amt</span></div>
-        <input type="range" id="fenvAmount" min="0" max="100" step="1" value="0" title="Amount %">
+        <input type="range" id="fenvAmount" min="0" max="100" step="1" value="0" title="Amount %" aria-label="Amount %">
       </div>
     </div>
     <label class="toggle" style="margin-top:4px;"><input type="checkbox" id="fenvOn"><span class="toggle-track"></span><span class="toggle-label">enable</span></label>
@@ -5527,8 +5536,9 @@
   </div>
 </div>
 
+</main>
 <footer>
-  Frequency Laboratory v4.1 · Web Audio API · Single-file HTML ·
+  Frequency Laboratory v4.1.1 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
   <br><small data-tf-ro="Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio&quot;, „Schumann&quot;, binaurale și presetările „Pain Relief&quot;/„Peak Performance&quot; nu au validare științifică ca terapie și nu au efect medical dovedit. Volum redus, mai ales cu căști." data-tf-en="Informational/educational content; not a medical device or treatment and not a substitute for medical advice. The “Solfeggio”, “Schumann” and binaural frequencies and the “Pain Relief”/“Peak Performance” presets have no scientific validation as therapy and no proven medical effect. Keep the volume low, especially with headphones.">Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio", „Schumann", binaurale și presetările „Pain Relief"/„Peak Performance" nu au validare științifică ca terapie și nu au efect medical dovedit. Volum redus, mai ales cu căști.</small>
 </footer>
@@ -9370,6 +9380,9 @@ if (typeof setupPhaseAnalyser === 'function') {
       c = document.createElement('div');
       c.className = 'toast-container';
       c.id = 'toastContainer';
+      c.setAttribute('role', 'region');
+      c.setAttribute('aria-label', 'Notificări / Notifications');
+      c.setAttribute('aria-live', 'polite');
       document.body.appendChild(c);
     }
     return c;
@@ -10256,7 +10269,7 @@ if (typeof setupPhaseAnalyser === 'function') {
 
   // Final init message
   setTimeout(function() {
-    toast('v4.0 încărcat · ' + (typeof navigator !== 'undefined' && navigator.requestMIDIAccess ? 'MIDI disponibil' : 'MIDI indisponibil în acest browser'), { kind: 'blue', duration: 2500 });
+    toast('v4.1.1 încărcat · ' + (typeof navigator !== 'undefined' && navigator.requestMIDIAccess ? 'MIDI disponibil' : 'MIDI indisponibil în acest browser'), { kind: 'blue', duration: 2500 });
   }, 600);
 
 })(); // end v4.0 patch
@@ -11866,7 +11879,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
     row.className = 'metro-row';
     row.innerHTML = '<button class="btn small amber" id="btnMetroToggle">⏱ METRONOM OFF</button>' +
       '<div class="metro-led" id="metroLED"></div>' +
-      '<input type="number" id="metroBPM" min="30" max="300" step="1" value="120" style="width:60px;" title="BPM">' +
+      '<input type="number" id="metroBPM" min="30" max="300" step="1" value="120" style="width:60px;" title="BPM" aria-label="BPM">' +
       '<label class="toggle" style="margin-left:4px;"><input type="checkbox" id="metroAccent" checked><span class="toggle-track"></span><span class="toggle-label">accent</span></label>';
     btnPanic.closest('.ctrl').insertAdjacentElement('afterend', row);
     document.getElementById('btnMetroToggle').addEventListener('click', function() {
@@ -13956,7 +13969,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 
     'oscillator a · left': {
       emoji: '🎵',
-      title: (window.currentLang==='en'?'Main sound generator':'Generatorul de sunet principal'),
+      get title() { return (window.currentLang==='en'?'Main sound generator':'Generatorul de sunet principal'); },
       text: `<p>Acesta este <strong>sursa principală de sunet</strong>. Gândește-te la el ca la un fluier electronic.</p>
 <p>Slider-ul mare controlează <strong>înălțimea sunetului</strong> (frecvența): în left = sunete joase ca un urs, în dreapta = sunete înalte ca o mușcătură.</p>
 <p>Formele de undă sunt <em>flavors</em> ale aceluiași ton:<br>
@@ -13964,20 +13977,20 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 ▭ <strong>Pătrat</strong> = mai aspru, electronic<br>
 △ <strong>Triunghi</strong> = un mix între cele două<br>
 ⋀ <strong>Dinte de sawtooth</strong> = cel mai bogat, strident</p>`,
-      tip: (window.currentLang==='en'?'Start with Sine at 440 Hz — that\'s note A, the standard orchestral tuning reference.':'Pornește cu Sinusoidă la 440 Hz — asta este nota LA, cu care se acordează orchestrele.')
+      get tip() { return (window.currentLang==='en'?'Start with Sine at 440 Hz — that\'s note A, the standard orchestral tuning reference.':'Pornește cu Sinusoidă la 440 Hz — asta este nota LA, cu care se acordează orchestrele.'); }
     },
 
     'oscilator b · dreapta': {
       emoji: '🎶',
-      title: (window.currentLang==='en'?'Second sound generator':'Al doilea generator de sunet'),
+      get title() { return (window.currentLang==='en'?'Second sound generator':'Al doilea generator de sunet'); },
       text: `<p>Un al doilea fluier electronic, <strong>independent</strong> față de primul.</p>
 <p>Poți folosi ambele simultan. Dacă setezi frecvențe ușor diferite (ex: 440 Hz și 444 Hz), vei auzi un <strong>efect de bătaie</strong> — un pulsut lent. Exact cum se acordează instrumentele muzicale!</p>`,
-      tip: (window.currentLang==='en'?'Start both oscillators with close frequencies (e.g. 432 and 440 Hz) and listen to the beat between them.':'Pornește ambii oscilatoare cu frecvențe apropiate (ex: 432 și 440 Hz) și ascultă bătaia dintre ele.')
+      get tip() { return (window.currentLang==='en'?'Start both oscillators with close frequencies (e.g. 432 and 440 Hz) and listen to the beat between them.':'Pornește ambii oscilatoare cu frecvențe apropiate (ex: 432 și 440 Hz) și ascultă bătaia dintre ele.'); }
     },
 
     'display · oscilloscope · spectrum · spectrogram': {
       emoji: '📺',
-      title: (window.currentLang==='en'?'Sound visualisation screens':'Ecranele de vizualizare a sunetului'),
+      get title() { return (window.currentLang==='en'?'Sound visualisation screens':'Ecranele de vizualizare a sunetului'); },
       text: `<p>Trei moduri de a <strong>vedea sunetul</strong>:</p>
 <p>🌊 <strong>Osciloscop</strong> (up): Arată forma undei în timp real, ca o linie care vibrează. Unda sinusoidă seamănă cu valuri de mare.</p>
 <p>📊 <strong>Spectru FFT</strong> (mijloc): Arată cât de tare este fiecare frequency în același timp. Ca un ecualizator vizual. <em>Click pe el pentru a selecta o frequency!</em></p>
@@ -14005,7 +14018,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>🔼 <strong>High-Pass</strong> = lasă să treacă sunetele înalte, taie pe cele joase. Sunetul devine subțire.</p>
 <p>⋂ <strong>Band-Pass</strong> = lasă să treacă doar o bandă îngustă. Sunet de telefon vechi sau radio.</p>
 <p><strong>Rezonanța (Q)</strong> = amplifică frecvențele chiar la limita filtrului. Sus de tot creează un țiuit.</p>`,
-      tip: (window.currentLang==='en'?'Low-Pass + High Resonance + Sweep (slowly moved) = the classic synth "wah-wah" sound.':'Low-Pass + Rezonanță mare + Sweep (deplasat lent) = sunetul clasic de sintetizator "wah-wah".')
+      get tip() { return (window.currentLang==='en'?'Low-Pass + High Resonance + Sweep (slowly moved) = the classic synth "wah-wah" sound.':'Low-Pass + Rezonanță mare + Sweep (deplasat lent) = sunetul clasic de sintetizator "wah-wah".'); }
     },
 
     'sweep · am · izocronic': {
@@ -14015,7 +14028,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>↔ <strong>Sweep</strong> = glisează frecvența automat dintr-un capăt în altul, ca sirena unui ambulanțe.</p>
 <p>🔄 <strong>AM (Amplitude Modulation)</strong> = face sunetul să pulseze în ritm. La 4 Hz auzi un tremolo muzical, la 40 Hz sună robotizat.</p>
 <p>🧠 <strong>Izocronic</strong> = pulsuri ritmice separate, mai pronunțate decât AM. Folosit în meditație.</p>`,
-      tip: (window.currentLang==='en'?'AM at 10 Hz on a 440 Hz tone = alert sound. AM at 1 Hz = slow vibrato like a violinist drawing a bow.':'AM la 10 Hz pe un ton de 440 Hz = sunet de alertă. AM la 1 Hz = vibrato lent ca violonistul care face "vibrato".')
+      get tip() { return (window.currentLang==='en'?'AM at 10 Hz on a 440 Hz tone = alert sound. AM at 1 Hz = slow vibrato like a violinist drawing a bow.':'AM la 10 Hz pe un ton de 440 Hz = sunet de alertă. AM la 1 Hz = vibrato lent ca violonistul care face "vibrato".'); }
     },
 
     'generator zgomot': {
@@ -14025,7 +14038,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>⬜ <strong>Alb</strong> = toate frecvențele la volum egal. Sună ca "sssss" sau ploaie pe folie.</p>
 <p>🩷 <strong>Roz</strong> = frecvențele joase mai tari. Mai cald, mai natural. Cel mai asemănător cu natura.</p>
 <p>🟫 <strong>Maro</strong> = și mai mult bas. Ca un râu, cascadă sau wind puternic.</p>`,
-      tip: (window.currentLang==='en'?'Pink noise at low volume helps many people sleep better — it masks surrounding sounds.':'Zgomotul roz la volum mic ajută mulți oameni să adoarmă mai bine — maschează zgomotele din jur.')
+      get tip() { return (window.currentLang==='en'?'Pink noise at low volume helps many people sleep better — it masks surrounding sounds.':'Zgomotul roz la volum mic ajută mulți oameni să adoarmă mai bine — maschează zgomotele din jur.'); }
     },
 
     'wav recording · sleep timer': {
@@ -14033,7 +14046,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       title: 'Recording and sleep timer',
       text: `<p>🎙 <strong>Recistrare</strong>: apasă REC și tot ce auzi (sunetele generate) va fi salvat ca fișier WAV pe care îl poți descărca.</p>
 <p>😴 <strong>Sleep Timer</strong>: dacă asculți înainte de somn, poți seta un timer. După X minute, <em>totul se oprește singur</em>. Nu trebuie să ții telefonul în mână.</p>`,
-      tip: (window.currentLang==='en'?'Sleep Timer + Pink noise + low volume = recipe for better sleep without worrying about stopping it.':'Sleep Timer + Zgomot roz + volum mic = rețetă pentru somn mai bun fără să te gândești la oprire.')
+      get tip() { return (window.currentLang==='en'?'Sleep Timer + Pink noise + low volume = recipe for better sleep without worrying about stopping it.':'Sleep Timer + Zgomot roz + volum mic = rețetă pentru somn mai bun fără să te gândești la oprire.'); }
     },
 
     'sesiuni programabile · crossfade': {
@@ -14042,7 +14055,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p>Poți crea o <strong>listă de frecvențe</strong> care se redau una după alta automat.</p>
 <p>De exemplu: 10 minute la 40 Hz → 10 minute la 100 Hz → 10 minute la 440 Hz.</p>
 <p><strong>Crossfade</strong> = tranziția dintre etape este lină (nu brusc), ca atunci când DJ-ul mixează două piese.</p>`,
-      tip: (window.currentLang==='en'?'Useful for sound therapy protocols or guided relaxation with different frequencies per stage.':'Util pentru protocoale de terapie sonoră sau relaxare ghidată cu diferite frecvențe pe etape.')
+      get tip() { return (window.currentLang==='en'?'Useful for sound therapy protocols or guided relaxation with different frequencies per stage.':'Util pentru protocoale de terapie sonoră sau relaxare ghidată cu diferite frecvențe pe etape.'); }
     },
 
     'user presets · save/load': {
@@ -14051,7 +14064,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p>Ai configurat sunetul perfect și nu vrei să îl pierzi? <strong>Salvează-l ca preset!</strong></p>
 <p>Data viitoare când deschizi aplicația, dai click pe preset și toate setările revin exact cum le-ai lăsat.</p>
 <p>Poți <strong>exporta</strong> preseturile ca fișier JSON și le poți <strong>importa</strong> pe alt dispozitiv.</p>`,
-      tip: (window.currentLang==='en'?'Give presets a descriptive name like "Evening Meditation" or "Left ear test" to find them easily.':'Dă presetului un nume descriptiv ca "Meditație seară" sau "Test auditiv left" pentru a le găsi ușor.')
+      get tip() { return (window.currentLang==='en'?'Give presets a descriptive name like "Evening Meditation" or "Left ear test" to find them easily.':'Dă presetului un nume descriptiv ca "Meditație seară" sau "Test auditiv left" pentru a le găsi ușor.'); }
     },
 
     'room measurement · spl meter': {
@@ -14060,7 +14073,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p>Acest instrument trimite un sunet test prin boxe, microfonul aude ecoul, și <strong>calculează cum sună camera ta</strong>.</p>
 <p>Graficul arată care frecvențe sunt amplificate de pereți/mobilă și care sunt absorbite.</p>
 <p><strong>SPL Meter</strong> (Sound Pressure Level) = măsoară volumul în decibeli, ca un sonometru.</p>`,
-      tip: (window.currentLang==='en'?'You need the microphone enabled and silence in the room for an accurate result.':'Ai nevoie de microfon activat și de liniște în cameră pentru un rezultat corect.')
+      get tip() { return (window.currentLang==='en'?'You need the microphone enabled and silence in the room for an accurate result.':'Ai nevoie de microfon activat și de liniște în cameră pentru un rezultat corect.'); }
     },
 
     'presets library': {
@@ -14069,7 +14082,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p>O colecție de <strong>frecvențe cu semnificație</strong> — de la sunete muzicale la fenomene naturale.</p>
 <p>Click pe un preset → frecvența se setează instant. Folosește bara de căutare pentru a găsi rapid.</p>
 <p>⚠️ Categoriile ca "Solfeggio" sau "Schumann" sunt <strong>tradiții, nu știință verificată</strong>. Aplicația afișează avertismente clare acolo unde nu există dovezi.</p>`,
-      tip: (window.currentLang==='en'?'Search "432" for alternative tuning, "Schumann" for Earth frequency, or "A4" for standard pitch.':'Caută "432" pentru acordajul alternativ, "Schumann" pentru frecvența Pământului, sau "A4" pentru nota standard.')
+      get tip() { return (window.currentLang==='en'?'Search "432" for alternative tuning, "Schumann" for Earth frequency, or "A4" for standard pitch.':'Caută "432" pentru acordajul alternativ, "Schumann" pentru frecvența Pământului, sau "A4" pentru nota standard.'); }
     },
 
     'polyphonic · chords · arpeggiator': {
@@ -14078,7 +14091,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p><strong>Acorduri</strong>: un singur oscilator devine mai multe note deodată — ca atunci când un pianist lovește mai multe clape simultan.</p>
 <p>Poți alege tipul acordului: Major (vesel), Minor (melancolic), Septimă, etc.</p>
 <p><strong>Arpeggiator</strong>: în loc să sune simultan, notele acordului sunt cântate <em>una câte una, rapid</em>, ca o harfă.</p>`,
-      tip: (window.currentLang==='en'?'Major Chord + Arpeggiator at 120 BPM + Reverb = classic electronic music.':'Acord Major + Arpeggiator la 120 BPM + Reverb = muzică electronică clasică.')
+      get tip() { return (window.currentLang==='en'?'Major Chord + Arpeggiator at 120 BPM + Reverb = classic electronic music.':'Acord Major + Arpeggiator la 120 BPM + Reverb = muzică electronică clasică.'); }
     },
 
     'sub-oscillator · supersaw': {
@@ -14086,7 +14099,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       title: 'Sub-bass and thick synth sound',
       text: `<p><strong>Sub-oscilatorul</strong> add automat o notă cu <em>o octavă mai jos</em> decât nota principală. Add greutate și bas fără să schimbi frecvența principală.</p>
 <p><strong>Supersaw</strong> (Voci Unison) = mai multe copii ale aceluiași sunet, ușor dezacordate între ele. Creează sunetul gros, bogat al sintetizoarelor de dans din anii '90.</p>`,
-      tip: (window.currentLang==='en'?'Sub-osc + 4 unison voices with small spread = the classic EDM/trance sound on any note.':'Sub-osc + 4 voci unison cu spread mic = sunetul specific EDM/trance pe orice notă.')
+      get tip() { return (window.currentLang==='en'?'Sub-osc + 4 unison voices with small spread = the classic EDM/trance sound on any note.':'Sub-osc + 4 voci unison cu spread mic = sunetul specific EDM/trance pe orice notă.'); }
     },
 
     'fm · ring · autopan · glide': {
@@ -14096,7 +14109,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>💍 <strong>Ring Modulation</strong> = înmulțirea celor doi oscilatoare. Sunet de extratereștri sau robot.</p>
 <p>↔ <strong>Auto-Pan</strong> = sunetul se mișcă automat între left și dreapta. Efect de spațialitate.</p>
 <p>⤵ <strong>Glide</strong> = în loc să sară instant la o notă nouă, alunecă lin. Sunet de theremin.</p>`,
-      tip: (window.currentLang==='en'?'Glide + Piano on-screen = feels exactly like a theremin or a slide guitar.':'Glide + Piano on-screen = simți exact ca un theremin sau o chitară cu slide.')
+      get tip() { return (window.currentLang==='en'?'Glide + Piano on-screen = feels exactly like a theremin or a slide guitar.':'Glide + Piano on-screen = simți exact ca un theremin sau o chitară cu slide.'); }
     },
 
     'effects chain · drive · comp · delay · reverb · eq': {
@@ -14108,7 +14121,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>📏 <strong>EQ</strong> = ajustezi basul, mijlocul și înaltele separat.</p>
 <p>⏳ <strong>Delay</strong> = echo. Sunetul se repetă după X milisecunde.</p>
 <p>🏛 <strong>Reverb</strong> = simulează spațiu: cameră mică, sală mare, cavou.</p>`,
-      tip: (window.currentLang==='en'?'Light drive + Large reverb = warm vintage recording studio sound.':'Drive mic + Reverb mare = sunet cald de studio de înregistrări vintage.')
+      get tip() { return (window.currentLang==='en'?'Light drive + Large reverb = warm vintage recording studio sound.':'Drive mic + Reverb mare = sunet cald de studio de înregistrări vintage.'); }
     },
 
     'piano keyboard · notes · midi · tap-tempo': {
@@ -14117,26 +14130,26 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p>🎹 <strong>Pian on-screen</strong>: click (sau touch pe mobil) pe taste pentru a schimba frecvența la nota respectivă.</p>
 <p>🎛 <strong>MIDI IN</strong>: conectează un pian/tastatură MIDI la calculator și <em>cântă direct</em> în aplicație. Până la 4 note simultan!</p>
 <p>⏱ <strong>Tap Tempo</strong>: bate ritmic pe buton și BPM-ul se calculează automat pentru arpeggiator sau tremolo.</p>`,
-      tip: (window.currentLang==='en'?'Connect any MIDI keyboard (even a cheap 25-key one) and the app becomes a full synthesiser.':'Conectează orice tastatură MIDI (chiar și cea mai ieftină de 25 de taste) și aplicația devine un sintetizator complet.')
+      get tip() { return (window.currentLang==='en'?'Connect any MIDI keyboard (even a cheap 25-key one) and the app becomes a full synthesiser.':'Conectează orice tastatură MIDI (chiar și cea mai ieftină de 25 de taste) și aplicația devine un sintetizator complet.'); }
     },
 
     'phase scope · lissajous': {
       emoji: '⊙',
-      title: (window.currentLang==='en'?'Phase detector (technical but visually beautiful)':'Detector de faze (tehnic, dar vizual frumos)'),
+      get title() { return (window.currentLang==='en'?'Phase detector (technical but visually beautiful)':'Detector de faze (tehnic, dar vizual frumos)'); },
       text: `<p>Arată relația dintre canalul stâng și cel drept ca o <strong>formă geometrică</strong>.</p>
 <p>/ Linie diagonală dreaptă = sunet mono sau în fază corectă ✓</p>
 <p>O sau cerc = stereo larg, sună bine pe căști</p>
 <p>\ Linie diagonală inversă = <strong>faze inversate</strong>! Un cablu de boxă conectat invers — sunetele se anulează reciproc pe sistem mono.</p>`,
-      tip: (window.currentLang==='en'?'If you have a stereo system and music sounds odd when you move to the centre of the room, check the Phase Scope.':'Dacă ai un sistem stereo și muzica sună ciudat când te muți în mijlocul camerei, verifică Phase Scope.')
+      get tip() { return (window.currentLang==='en'?'If you have a stereo system and music sounds odd when you move to the centre of the room, check the Phase Scope.':'Dacă ai un sistem stereo și muzica sună ciudat când te muți în mijlocul camerei, verifică Phase Scope.'); }
     },
 
     'analizor real-time · 1/3 octave': {
       emoji: '📊',
-      title: (window.currentLang==='en'?'Professional spectrum analyser':'Analizor spectral profesional'),
+      get title() { return (window.currentLang==='en'?'Professional spectrum analyser':'Analizor spectral profesional'); },
       text: `<p>Arată <strong>nivelul fiecărei benzi de frequency</strong> în timp real, împărțite în 1/3 de octavă (standardul industriei audio).</p>
 <p>Util pentru: acordarea sistemelor de sunet, găsirea frecvențelor care "urlă" într-o sală, sau pur și simplu să vezi ce conține un sunet.</p>
 <p>Benzile din left = sunete joase (bas), din dreapta = sunete înalte (treble).</p>`,
-      tip: (window.currentLang==='en'?'Play music and watch the RTA — you\'ll literally see why a track sounds "soft" or "aggressive".':'Pune muzică și uită-te la RTA — vei vedea literalmente de ce o piesă sună "moale" sau "agresivă".')
+      get tip() { return (window.currentLang==='en'?'Play music and watch the RTA — you\'ll literally see why a track sounds "soft" or "aggressive".':'Pune muzică și uită-te la RTA — vei vedea literalmente de ce o piesă sună "moale" sau "agresivă".'); }
     },
 
     'test hardware · polaritate · break-in': {
@@ -14145,7 +14158,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p>🔌 <strong>Test Polaritate</strong>: trimite un puls și detectează dacă boxele tale sunt conectate corect. O boxă inversată îți fură basul.</p>
 <p>🆔 <strong>Channel ID</strong>: alternează sunetul între left și dreapta — verifici rapid că nu ai inversat cablurile L/R.</p>
 <p>🔄 <strong>Break-in boxe</strong>: redă diverse frecvențe ore întregi pentru a "dezmorți" difuzoarele noi. Controverse dacă ajută, dar unii audiofili jură pe el.</p>`,
-      tip: (window.currentLang==='en'?'Channel ID is the first test to do on any new audio system: left should play on left.':'Channel ID este primul test de făcut pe orice sistem audio nou: left trebuie să sune pe left.')
+      get tip() { return (window.currentLang==='en'?'Channel ID is the first test to do on any new audio system: left should play on left.':'Channel ID este primul test de făcut pe orice sistem audio nou: left trebuie să sune pe left.'); }
     },
 
     'audiogram · interactive hearing test': {
@@ -14155,7 +14168,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>Vei auzi tonuri la frecvențe diferite, de la joase la înalte. Dacă auzi tonul, apeși Space sau "AUD". Dacă nu, apeși Skip.</p>
 <p>La final, graficul arată la ce frecvențe ai nevoie de volum mai mare pentru a auzi. Vârfurile în jos = frecvențe unde auzul tău e mai slab.</p>
 <p>⚠️ <strong>Nu este diagnostic medical</strong>. Pentru probleme reale de auz, consultați un specialist ORL.</p>`,
-      tip: (window.currentLang==='en'?'Use good headphones, volume at 30%, quiet room. The test takes ~5 minutes.':'Folosește căști bune, volum la 30%, cameră silențioasă. Testul durează ~5 minute.')
+      get tip() { return (window.currentLang==='en'?'Use good headphones, volume at 30%, quiet room. The test takes ~5 minutes.':'Folosește căști bune, volum la 30%, cameră silențioasă. Testul durează ~5 minute.'); }
     },
 
     'sunete naturale procedurale': {
@@ -14164,7 +14177,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       text: `<p>Aceste sunete — ploaie, ocean, wind, foc, forest — sunt <strong>generate în timp real de calcule matematice</strong>, nu înregistrări.</p>
 <p>Avantaj: nu se repetă niciodată, sună natural, și ocupă zero spațiu ca fișier audio.</p>
 <p>Fiecare slider controlează intensitatea — de la ploaie ușoară la furtună.</p>`,
-      tip: (window.currentLang==='en'?'Combine Rain + Fire at low volumes = mountain cabin sound. Perfect for focus or sleep.':'Combină Ploaie + Foc la volume mici = sunet de colibă la munte. Perfect pentru concentrare sau somn.')
+      get tip() { return (window.currentLang==='en'?'Combine Rain + Fire at low volumes = mountain cabin sound. Perfect for focus or sleep.':'Combină Ploaie + Foc la volume mici = sunet de colibă la munte. Perfect pentru concentrare sau somn.'); }
     },
 
     'tinnitus matching · mosquito · ultrasunete': {
@@ -14172,7 +14185,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
       title: 'Tools for special frequencies',
       text: `<p>👂 <strong>Tinnitus Matcher</strong>: dacă ai un țiuit în ureche (tinnitus), poți identifica exact frecvența lui și activa un filtru care <em>îl maschează</em> cu alte sunete.</p>
 <p>🦟 <strong>Tonuri mosquito</strong> (17-20 kHz): frecvențe auzite doar de tineri sub ~25 de ani. Auzul uman le pierde cu vârsta.</p>`,
-      tip: (window.currentLang==='en'?'Tinnitus: slowly increase frequency until the app tone overlaps with the one in your ear.':'Tinnitus: creșteți încet frecvența până când tonul din aplicație "se suprapune" cu cel din ureche.')
+      get tip() { return (window.currentLang==='en'?'Tinnitus: slowly increase frequency until the app tone overlaps with the one in your ear.':'Tinnitus: creșteți încet frecvența până când tonul din aplicație "se suprapune" cu cel din ureche.'); }
     },
 
     'frequency database · search': {
@@ -14182,7 +14195,7 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>Caută orice: "LA", "528", "Schumann", "Pusar", "DTMF", "Solfeggio"...</p>
 <p>Click pe o intrare → frecvența se setează instant pe oscilator.</p>
 <p>Căutarea este <em>fuzzy</em> — găsește și dacă scrii greșit ("solfegio" în loc de "solfeggio").</p>`,
-      tip: (window.currentLang==='en'?'Categories with ⚠️ or "No scientific evidence" = cultural traditions, not verified science.':'Categoriile cu ⚠️ sau "Fără dovezi științifice" = tradiții culturale, nu știință verificată.')
+      get tip() { return (window.currentLang==='en'?'Categories with ⚠️ or "No scientific evidence" = cultural traditions, not verified science.':'Categoriile cu ⚠️ sau "Fără dovezi științifice" = tradiții culturale, nu știință verificată.'); }
     },
 
     'cymatics · simulator chladni': {
@@ -14192,39 +14205,39 @@ registerProcessor('recorder-worklet', RecorderProcessor);
 <p>Aplicația calculează matematic cum arată aceste modele pentru frecvența curentă.</p>
 <p>Schimbă frecvența → modelul se schimbă instantaneu.</p>
 <p>⚠️ Modelul real depinde și de <em>forma și materialul plăcii</em>, nu doar de frequency.</p>`,
-      tip: (window.currentLang==='en'?'Search YouTube for "Chladni patterns" to see the real experiment with sand.':'Caută pe YouTube "Chladni patterns" pentru a vedea experimentul real cu nisip.')
+      get tip() { return (window.currentLang==='en'?'Search YouTube for "Chladni patterns" to see the real experiment with sand.':'Caută pe YouTube "Chladni patterns" pentru a vedea experimentul real cu nisip.'); }
     },
 
     'step sequencer · 8 steps': {
       emoji: '🎼',
-      title: (window.currentLang==='en'?'Automatic melody mini-player':'Un mini-player automat de melodii'),
+      get title() { return (window.currentLang==='en'?'Automatic melody mini-player':'Un mini-player automat de melodii'); },
       text: `<p>Imaginează-ți 8 butoane, fiecare cu o notă. Aplicația le cântă <strong>în buclă, ritmică</strong>, la BPM-ul setat.</p>
 <p>Rândul de up = ce notă (în semitonuri față de nota de bază)<br>
 Rândul de jos = dacă nota se cântă sau nu (activat/dezactivat)</p>
 <p>Preseturile Major/Minor/Pentatonic umplu automat notele cu scări muzicale clasice.</p>`,
-      tip: (window.currentLang==='en'?'Set BPM to 120, choose "Major", press RUN. You have an automatic melody in 3 clicks.':'Setează BPM la 120, alege "Major", apasă RULEAZĂ. Ai melodie automată în 3 click-uri.')
+      get tip() { return (window.currentLang==='en'?'Set BPM to 120, choose "Major", press RUN. You have an automatic melody in 3 clicks.':'Setează BPM la 120, alege "Major", apasă RULEAZĂ. Ai melodie automată în 3 click-uri.'); }
     },
 
     'tuner · pitch din microfon': {
       emoji: '🎯',
-      title: (window.currentLang==='en'?'Instrument tuner via microphone':'Acordor de instrumente prin microfon'),
+      get title() { return (window.currentLang==='en'?'Instrument tuner via microphone':'Acordor de instrumente prin microfon'); },
       text: `<p>Cum arată aplicația de tuning de pe telefonul chitaristului — dar construit în aplicație.</p>
 <p>Sing a note la instrument, microfonul o aude, și aplicația arată:</p>
 <p>• <strong>Ce notă</strong> este (de ex: Mi, La, Do)<br>
 • <strong>Cât de departe</strong> ești de nota perfectă (în cents, 100 cents = 1 semiton)<br>
 • Acul merge la left = ești sub notă (too flat), la dreapta = ești peste (too sharp)</p>`,
-      tip: (window.currentLang==='en'?'Needle at centre + green colour = perfectly tuned. Works for guitar, cello, or voice!':'Acul la centru + culoare verde = acordat perfect. Folosit pentru chitară, violoncel, sau voce!')
+      get tip() { return (window.currentLang==='en'?'Needle at centre + green colour = perfectly tuned. Works for guitar, cello, or voice!':'Acul la centru + culoare verde = acordat perfect. Folosit pentru chitară, violoncel, sau voce!'); }
     },
 
     'game · identify the frequency': {
       emoji: '🎮',
-      title: (window.currentLang==='en'?'Ear training game':'Joc de antrenament auditiv'),
+      get title() { return (window.currentLang==='en'?'Ear training game':'Joc de antrenament auditiv'); },
       text: `<p>Aplicația cântă o frequency și tu trebuie să <strong>ghicești ce notă este</strong> din 4 variante.</p>
 <p>Este un <em>antrenament</em> care te ajută să-ți dezvolți "auzul absolut" — capacitatea de a recunoaște notele după sunet.</p>
 <p>Dificultate:<br>
 😊 <strong>Ușor</strong>: notele sunt la o octavă distanță (ușor de distins)<br>
 😰 <strong>Expert</strong>: notele sunt la 1 semiton distanță (extrem de greu)</p>`,
-      tip: (window.currentLang==='en'?'Professional musicians spend years training their ear. 10 min/day at medium difficulty = rapid progress.':'Muzicienii profesioniști petrec ani antrenând auzul. 10 minute/zi pe dificultate medie = progres rapid.')
+      get tip() { return (window.currentLang==='en'?'Professional musicians spend years training their ear. 10 min/day at medium difficulty = rapid progress.':'Muzicienii profesioniști petrec ani antrenând auzul. 10 minute/zi pe dificultate medie = progres rapid.'); }
     },
 
     'karplus-strong · physical string model': {
@@ -14233,7 +14246,7 @@ Rândul de jos = dacă nota se cântă sau nu (activat/dezactivat)</p>
       text: `<p>Algoritmul Karplus-Strong din 1983 simulează matematic ce se întâmplă când ciupești o coardă.</p>
 <p>Ideea: un <em>zgomot scurt</em> este injectat într-o <strong>buclă de întârziere</strong> (loop de delay). Bucla se repetă, dar cu fiecare trecere, un filtru absoarbe puțin din înaltele — exact ca o coardă reală care pierde energie.</p>
 <p>Apasă squareul mare sau tasta Enter/Space pentru a "ciupi".</p>`,
-      tip: (window.currentLang==='en'?'High Decay (0.99) = nylon string vibrating long. Low Decay (0.85) = quickly damped string.':'Decay mare (0.99) = coardă de nailon care vibrează lung. Decay mic (0.85) = coardă amortizată rapid.')
+      get tip() { return (window.currentLang==='en'?'High Decay (0.99) = nylon string vibrating long. Low Decay (0.85) = quickly damped string.':'Decay mare (0.99) = coardă de nailon care vibrează lung. Decay mic (0.85) = coardă amortizată rapid.'); }
     },
 
     'granular synth': {
@@ -14242,7 +14255,7 @@ Rândul de jos = dacă nota se cântă sau nu (activat/dezactivat)</p>
       text: `<p>Sinteza granulară ia un <strong>fișier audio și îl taie în "granule"</strong> de câteva milisecunde, pe care le redă aleator, rapid, în suprapunere.</p>
 <p>Rezultatul poate fi total diferit față de originalul — de la textUri de sunet până la tonuri ciudate.</p>
 <p>📁 <strong>Trebuie să incarci un fișier WAV</strong> din secțiunea OSC A (Drop WAV). Fără WAV, granularul nu funcționează.</p>`,
-      tip: (window.currentLang==='en'?'Load a long vocal \'a\', set Position to 80%, Density to 40 = choir of voices texture.':'Încarc un "a" vocal lung, mărește Position la 80%, Density la 40 = textură de cor de glasuri.')
+      get tip() { return (window.currentLang==='en'?'Load a long vocal \'a\', set Position to 80%, Density to 40 = choir of voices texture.':'Încarc un "a" vocal lung, mărește Position la 80%, Density la 40 = textură de cor de glasuri.'); }
     },
 
     'looper · record + overdub': {
@@ -14262,7 +14275,7 @@ Rândul de jos = dacă nota se cântă sau nu (activat/dezactivat)</p>
       title: 'Special modulators (make sound move on its own)',
       text: `<p>🚶 <strong>Random Walk</strong>: frecvența face pași mici aleatorii în jurul valorii curente. Sunetul "plutește" fără a rămâne exact pe o notă. Ca un instrument ușor dezacordat care respiră.</p>
 <p>🎲 <strong>Sample & Hold LFO</strong>: la intervale regulate, un număr aleatoriu controlează filtrul. Rezultatul sună ca un sintetizator vechi cu "step" vizibil.</p>`,
-      tip: (window.currentLang==='en'?'Random Walk SLOW + pink noise = organic wind sound, never identical.':'Random Walk SLOW + zgomot roz = sunet de wind organic, niciodată identic.')
+      get tip() { return (window.currentLang==='en'?'Random Walk SLOW + pink noise = organic wind sound, never identical.':'Random Walk SLOW + zgomot roz = sunet de wind organic, niciodată identic.'); }
     },
 
     'filter envelope · ping-pong · ir': {
@@ -14271,28 +14284,28 @@ Rândul de jos = dacă nota se cântă sau nu (activat/dezactivat)</p>
       text: `<p>🎚 <strong>Filter Envelope</strong>: filtrul are propriul ADSR. La fiecare notă nouă, cutoff-ul urcă și coboară — sunet de sintetizator "wah" automatic.</p>
 <p>🏓 <strong>Ping-Pong Delay</strong>: echo-ul alternează left-dreapta-left-dreapta, ca o minge de tenis. Mult mai dinamic decât echo-ul centrat.</p>
 <p>🏛 <strong>IR (Impulse Response)</strong>: poți încărca un fișier WAV cu înregistrarea acustică a unui spațiu real (catedrală, studio) și reverb-ul <em>va suna ca acel spațiu</em>.</p>`,
-      tip: (window.currentLang==='en'?'Search online for "free IR reverb" for hundreds of free real spaces in WAV format.':'Caută online "free IR reverb" pentru sute de spații reale gratuite în format WAV.')
+      get tip() { return (window.currentLang==='en'?'Search online for "free IR reverb" for hundreds of free real spaces in WAV format.':'Caută online "free IR reverb" pentru sute de spații reale gratuite în format WAV.'); }
     },
 
     'multi-band compressor · 3 benzi': {
       emoji: '📦',
-      title: (window.currentLang==='en'?'Professional 3-band compressor':'Compressor profesional pe 3 benzi de frequency'),
+      get title() { return (window.currentLang==='en'?'Professional 3-band compressor':'Compressor profesional pe 3 benzi de frequency'); },
       text: `<p>Un compressor normal tratează tot sunetul la fel. Ăsta îl <strong>împarte în 3 zone</strong>:</p>
 <p>🔵 <strong>LOW</strong> (jos, bas): poți comprima agresiv basul fără a afecta vocea.</p>
 <p>🟢 <strong>MID</strong> (mediu): zona vocii și a instrumentelor principale.</p>
 <p>🟡 <strong>HIGH</strong> (înalt, strălucire): poți controla sibilanța ("s"-urile ascuțite) separat.</p>
 <p>Barele de jos arată <em>cât de mult comprimă</em> fiecare bandă în timp real.</p>`,
-      tip: (window.currentLang==='en'?'If bass is too dominant, increase ratio on the LOW band. Doesn\'t affect the rest.':'Dacă basul este prea dominant, mărește ratio-ul pe banda LOW. Nu afectează restul.')
+      get tip() { return (window.currentLang==='en'?'If bass is too dominant, increase ratio on the LOW band. Doesn\'t affect the rest.':'Dacă basul este prea dominant, mărește ratio-ul pe banda LOW. Nu afectează restul.'); }
     },
 
     'vocoder · 8 bands': {
       emoji: '🤖',
-      title: (window.currentLang==='en'?'The "robot voice" effect (Daft Punk, Kraftwerk)':'Efectul "voce de robot" (Daft Punk, Kraftwerk)'),
+      get title() { return (window.currentLang==='en'?'The "robot voice" effect (Daft Punk, Kraftwerk)':'Efectul "voce de robot" (Daft Punk, Kraftwerk)'); },
       text: `<p>Vocalul tău din microfon devine <strong>modulatorul</strong>: spune ritmul și nuanțele.<br>
 Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetizator.</p>
 <p>Rezultatul: oscilatorul "vorbește" cu vocea ta, dar cu tonul unui sintetizator. Sunetul iconic al muzicii electronice.</p>
 <p><strong>Trebuie</strong>: microfon activat + oscilator running simultan.</p>`,
-      tip: (window.currentLang==='en'?'Oscillator A at 110 Hz (note A2) + clear voice into mic = the classic Daft Punk effect from \"Harder, Better, Faster\".':'Oscillator A la 110 Hz (notă LA 2) + voce clară în microfon = efectul Daft Punk clasic din \"Harder, Better, Faster\".')
+      get tip() { return (window.currentLang==='en'?'Oscillator A at 110 Hz (note A2) + clear voice into mic = the classic Daft Punk effect from \"Harder, Better, Faster\".':'Oscillator A la 110 Hz (notă LA 2) + voce clară în microfon = efectul Daft Punk clasic din \"Harder, Better, Faster\".'); }
     },
 
     'cc learn · beat detect · calculator · export': {
@@ -14302,7 +14315,7 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
 <p>🥁 <strong>Beat Detect</strong>: bate ritmic sau pune muzică în microfon → aplicația detectează BPM-ul automat.</p>
 <p>📐 <strong>Calculator Frecvențe</strong>: introduci două frecvențe și calculează intervalul dintre ele (cents, semitonuri, octave, numele intervalului muzical).</p>
 <p>📤 <strong>Export Audiogram</strong>: salvează rezultatele testului auditiv ca CSV sau JSON.</p>`,
-      tip: (window.currentLang==='en'?'Calculator: 440 Hz and 528 Hz → shows +319 cents, close to a major third. Solfeggio vs 440 in numbers.':'Calculatorul: 440 Hz și 528 Hz → afișează +319 cents, aproape de terța majoră. Solfeggio vs. 440.')
+      get tip() { return (window.currentLang==='en'?'Calculator: 440 Hz and 528 Hz → shows +319 cents, close to a major third. Solfeggio vs 440 in numbers.':'Calculatorul: 440 Hz și 528 Hz → afișează +319 cents, aproape de terța majoră. Solfeggio vs. 440.'); }
     },
 
     'drum machine · 4 voices × 16 steps': {
@@ -14314,7 +14327,7 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
 🟡 <strong>Hi-Hat</strong> = cinelul, dă ritmul mai rapid<br>
 👏 <strong>Clap</strong> = palme, accent</p>
 <p>Click pe square = activat (verde) / dezactivat. Preseturile ROCK și HOUSE umplu automat un ritm clasic.</p>`,
-      tip: (window.currentLang==='en'?'House: kick on every beat (1,2,3,4) = "four on the floor". That\'s the foundation of dance music.':'House: kick pe fiecare timp (1,2,3,4) = "four on the floor". Ăsta este fundamentul muzicii de dans.')
+      get tip() { return (window.currentLang==='en'?'House: kick on every beat (1,2,3,4) = "four on the floor". That\'s the foundation of dance music.':'House: kick pe fiecare timp (1,2,3,4) = "four on the floor". Ăsta este fundamentul muzicii de dans.'); }
     },
   };
 
@@ -14902,8 +14915,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'core',
       icon: '🎵',
-      name: (window.currentLang==='en'?'Core Generator':'Generator de bază'),
-      eli5: (window.currentLang==='en'?'Main oscillators, visualisation screens, master volume. The heart of the app — always on.':'Oscilatoarele principale, ecranele de vizualizare, volumul master. Inima aplicației — mereu activ.'),
+      get name() { return (window.currentLang==='en'?'Core Generator':'Generator de bază'); },
+      get eli5() { return (window.currentLang==='en'?'Main oscillators, visualisation screens, master volume. The heart of the app — always on.':'Oscilatoarele principale, ecranele de vizualizare, volumul master. Inima aplicației — mereu activ.'); },
       sections: ['sec-oscillators'],
       alwaysOn: true,
       presets: ['meditation', 'music', 'science', 'sleep', 'pro']
@@ -14911,8 +14924,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'effects',
       icon: '🎛',
-      name: (window.currentLang==='en'?'Audio Effects':'Efecte audio'),
-      eli5: (window.currentLang==='en'?'Filter, drive (warm distortion), reverb (space simulation), delay (echo), EQ. Changes the character of the sound.':'Filtru, drive (drive caldă), reverb (simulare spațiu), delay (eco), EQ. Schimbă caracterul sunetului.'),
+      get name() { return (window.currentLang==='en'?'Audio Effects':'Efecte audio'); },
+      get eli5() { return (window.currentLang==='en'?'Filter, drive (warm distortion), reverb (space simulation), delay (echo), EQ. Changes the character of the sound.':'Filtru, drive (drive caldă), reverb (simulare spațiu), delay (eco), EQ. Schimbă caracterul sunetului.'); },
       sections: ['sec-effects'],
       alwaysOn: false,
       presets: ['music', 'pro']
@@ -14920,8 +14933,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'generators',
       icon: '🌿',
-      name: (window.currentLang==='en'?'Special Sounds':'Sunete speciale'),
-      eli5: (window.currentLang==='en'?'Rain, ocean, wind — generated mathematically. Binaural beats. White/pink/brown noise. Ideal for meditation and sleep.':'Ploaie, ocean, wind — generate matematic. Sunete binaurale (bătaie între urechi). Zgomot alb/roz/maro. Ideal pentru meditație și somn.'),
+      get name() { return (window.currentLang==='en'?'Special Sounds':'Sunete speciale'); },
+      get eli5() { return (window.currentLang==='en'?'Rain, ocean, wind — generated mathematically. Binaural beats. White/pink/brown noise. Ideal for meditation and sleep.':'Ploaie, ocean, wind — generate matematic. Sunete binaurale (bătaie între urechi). Zgomot alb/roz/maro. Ideal pentru meditație și somn.'); },
       sections: ['sec-generators'],
       alwaysOn: false,
       presets: ['meditation', 'sleep']
@@ -14929,8 +14942,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'analysis',
       icon: '📊',
-      name: (window.currentLang==='en'?'Analysis & Visualisation':'Analiză și vizualizare'),
-      eli5: (window.currentLang==='en'?'Real-time spectrum analyser (RTA), phase scope, room test. Visualise sound professionally.':'Analizor spectral în timp real (RTA), phase scope, test cameră. Vizualizează sunetul în mod profesional.'),
+      get name() { return (window.currentLang==='en'?'Analysis & Visualisation':'Analiză și vizualizare'); },
+      get eli5() { return (window.currentLang==='en'?'Real-time spectrum analyser (RTA), phase scope, room test. Visualise sound professionally.':'Analizor spectral în timp real (RTA), phase scope, test cameră. Vizualizează sunetul în mod profesional.'); },
       sections: ['sec-analysis'],
       alwaysOn: false,
       presets: ['science', 'pro']
@@ -14938,8 +14951,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'rhythm',
       icon: '🥁',
-      name: (window.currentLang==='en'?'Rhythm & Sequencing':'Ritm și secvențiere'),
-      eli5: (window.currentLang==='en'?'Drum machine with 4 synthesised instruments, melodic step sequencer, metronome. For music and composition.':'Drum machine cu 4 instrumente sintetizate, step sequencer melodic, metronom. Pentru muzică și compoziție.'),
+      get name() { return (window.currentLang==='en'?'Rhythm & Sequencing':'Ritm și secvențiere'); },
+      get eli5() { return (window.currentLang==='en'?'Drum machine with 4 synthesised instruments, melodic step sequencer, metronome. For music and composition.':'Drum machine cu 4 instrumente sintetizate, step sequencer melodic, metronom. Pentru muzică și compoziție.'); },
       sections: ['sec-rhythm'],
       alwaysOn: false,
       presets: ['music', 'pro']
@@ -14947,8 +14960,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'tools',
       icon: '🔬',
-      name: (window.currentLang==='en'?'Educational Tools':'Unelte educative'),
-      eli5: (window.currentLang==='en'?'Microphone tuner, ear training game, interactive audiogram, musical interval calculator.':'Tuner prin microfon, joc de antrenament auditiv, audiogramă interactivă, calculator de intervale muzicale.'),
+      get name() { return (window.currentLang==='en'?'Educational Tools':'Unelte educative'); },
+      get eli5() { return (window.currentLang==='en'?'Microphone tuner, ear training game, interactive audiogram, musical interval calculator.':'Tuner prin microfon, joc de antrenament auditiv, audiogramă interactivă, calculator de intervale muzicale.'); },
       sections: ['sec-tools'],
       alwaysOn: false,
       presets: ['science', 'music']
@@ -14956,8 +14969,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'modulation',
       icon: '〰',
-      name: (window.currentLang==='en'?'Advanced Modulators':'Modulatori avansați'),
-      eli5: (window.currentLang==='en'?'Random walk (frequency wanders), Sample & Hold LFO (filter jumps to random values), looper with overdub, granular synthesis on WAV.':'Random walk (freq hoinărește), Sample & Hold LFO (filtrul sare la valori random), looper cu overdub, sinteză granulară pe WAV.'),
+      get name() { return (window.currentLang==='en'?'Advanced Modulators':'Modulatori avansați'); },
+      get eli5() { return (window.currentLang==='en'?'Random walk (frequency wanders), Sample & Hold LFO (filter jumps to random values), looper with overdub, granular synthesis on WAV.':'Random walk (freq hoinărește), Sample & Hold LFO (filtrul sare la valori random), looper cu overdub, sinteză granulară pe WAV.'); },
       sections: ['sec-modulation'],
       alwaysOn: false,
       presets: ['pro']
@@ -14965,8 +14978,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'presets',
       icon: '📚',
-      name: (window.currentLang==='en'?'Presets & Library':'Preseturi și bibliotecă'),
-      eli5: (window.currentLang==='en'?'86+ catalogued frequencies (notes, planets, brainwaves, DTMF...), personal preset saving, scheduled sessions.':'86+ frecvențe catalogate (note, planete, brainwave, DTMF...), salvare preseturi personale, sesiuni programate.'),
+      get name() { return (window.currentLang==='en'?'Presets & Library':'Preseturi și bibliotecă'); },
+      get eli5() { return (window.currentLang==='en'?'86+ catalogued frequencies (notes, planets, brainwaves, DTMF...), personal preset saving, scheduled sessions.':'86+ frecvențe catalogate (note, planete, brainwave, DTMF...), salvare preseturi personale, sesiuni programate.'); },
       sections: ['sec-presets'],
       alwaysOn: false,
       presets: ['meditation', 'music', 'science', 'sleep', 'pro']
@@ -14974,8 +14987,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'settings',
       icon: '⚙',
-      name: (window.currentLang==='en'?'Settings & Interface':'Setări și interfață'),
-      eli5: (window.currentLang==='en'?'Colour theme (phosphor/amber/blue/mono), share config, keyboard shortcuts.':'Temă de culori (phosphor/amber/blue/mono), share config, scurtături tastatură.'),
+      get name() { return (window.currentLang==='en'?'Settings & Interface':'Setări și interfață'); },
+      get eli5() { return (window.currentLang==='en'?'Colour theme (phosphor/amber/blue/mono), share config, keyboard shortcuts.':'Temă de culori (phosphor/amber/blue/mono), share config, scurtături tastatură.'); },
       sections: ['sec-settings'],
       alwaysOn: false,
       presets: ['pro']
@@ -14987,36 +15000,36 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     {
       id: 'sleep',
       icon: '😴',
-      name: (window.currentLang==='en'?'Meditation / Sleep':'Meditație / Somn'),
-      desc: (window.currentLang==='en'?'Natural and binaural sounds for relaxation, focus or sleep. Simple and quiet.':'Sunete naturale și binaurale pentru relaxare, concentrare sau adormire. Simplu și liniștit.'),
+      get name() { return (window.currentLang==='en'?'Meditation / Sleep':'Meditație / Somn'); },
+      get desc() { return (window.currentLang==='en'?'Natural and binaural sounds for relaxation, focus or sleep. Simple and quiet.':'Sunete naturale și binaurale pentru relaxare, concentrare sau adormire. Simplu și liniștit.'); },
       modules: ['core', 'generators', 'presets']
     },
     {
       id: 'music',
       icon: '🎵',
-      name: (window.currentLang==='en'?'Music':'Muzică'),
-      desc: (window.currentLang==='en'?'Synthesiser with effects, rhythm, piano, MIDI. Compose or explore musical sounds.':'Sintetizator cu efecte, ritm, pian, MIDI. Compui sau explorezi sunete muzicale.'),
+      get name() { return (window.currentLang==='en'?'Music':'Muzică'); },
+      get desc() { return (window.currentLang==='en'?'Synthesiser with effects, rhythm, piano, MIDI. Compose or explore musical sounds.':'Sintetizator cu efecte, ritm, pian, MIDI. Compui sau explorezi sunete muzicale.'); },
       modules: ['core', 'effects', 'rhythm', 'tools', 'presets']
     },
     {
       id: 'science',
       icon: '🔬',
-      name: (window.currentLang==='en'?'Science / Education':'Știință / Educație'),
-      desc: (window.currentLang==='en'?'Analyse sound, test hearing, calculate intervals, explore catalogued frequencies.':'Analizează sunetul, testează auzul, calculează intervale, explorează frecvențe catalogate.'),
+      get name() { return (window.currentLang==='en'?'Science / Education':'Știință / Educație'); },
+      get desc() { return (window.currentLang==='en'?'Analyse sound, test hearing, calculate intervals, explore catalogued frequencies.':'Analizează sunetul, testează auzul, calculează intervale, explorează frecvențe catalogate.'); },
       modules: ['core', 'analysis', 'tools', 'presets']
     },
     {
       id: 'pro',
       icon: '🎚',
-      name: (window.currentLang==='en'?'Full Production':'Producție completă'),
-      desc: (window.currentLang==='en'?'All modules active. Multi-band compressor, vocoder, MIDI, advanced synthesis.':'Toate modulele active. Compressor multi-band, vocoder, MIDI, sinteză avansată.'),
+      get name() { return (window.currentLang==='en'?'Full Production':'Producție completă'); },
+      get desc() { return (window.currentLang==='en'?'All modules active. Multi-band compressor, vocoder, MIDI, advanced synthesis.':'Toate modulele active. Compressor multi-band, vocoder, MIDI, sinteză avansată.'); },
       modules: MODULES.map(function(m) { return m.id; })
     },
     {
       id: 'custom',
       icon: '✏️',
-      name: (window.currentLang==='en'?'Custom':'Personalizat'),
-      desc: (window.currentLang==='en'?'Choose exactly the modules you want.':'Alege exact ce module vrei tu.'),
+      get name() { return (window.currentLang==='en'?'Custom':'Personalizat'); },
+      get desc() { return (window.currentLang==='en'?'Choose exactly the modules you want.':'Alege exact ce module vrei tu.'); },
       modules: null // user picks manually
     }
   ];
@@ -15123,25 +15136,73 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
   }
 
   // ===== WELCOME MODAL (3 pași) =====
+
+  // --- welcome overlay: bilingual helper (RO source text -> EN) ---
+  const WLT = {
+    '1 · Bun venit': '1 · Welcome', '2 · Cum vrei să folosești': '2 · How will you use it', '3 · Module': '3 · Modules',
+    'LABORATOR<br>FRECVENȚE': 'FREQUENCY<br>LABORATORY',
+    'generator audio · single file · offline': 'audio generator · single file · offline',
+    'Un instrument audio complet în browser, fără instalare și fără internet.': 'A complete audio instrument in your browser, no installation and no internet needed.',
+    'Oscillator → Efecte → Vizualizare → Analiză → Ritm → Relaxare': 'Oscillator → Effects → Visualisation → Analysis → Rhythm → Relaxation',
+    'Totul într-un singur fișier HTML.': 'Everything in a single HTML file.',
+    'Prima utilizare': 'First launch', 'CONTINUĂ →': 'CONTINUE →', '← ÎNAPOI': '← BACK', 'SELECTEAZĂ →': 'SELECT →',
+    'Pentru ce vrei să folosești aplicația? ': 'What do you want to use the app for? ', '(poți schimba oricând)': '(you can change this anytime)',
+    'Alege modulele dorite': 'Choose the modules you want', 'Module activate pentru profilul tău': 'Modules enabled for your profile',
+    'Poți activa module suplimentare oricând din bara de jos sau cu butonul ⊞ MODULE.': 'You can enable more modules anytime from the bottom bar or with the ⊞ MODULES button.',
+    ' <span style="font-size:10px;color:var(--txt-faint);">(mereu activ)</span>': ' <span style="font-size:10px;color:var(--txt-faint);">(always on)</span>',
+    'PORNEȘTE APLICAȚIA ▶': 'LAUNCH APP ▶', 'SARI PESTE': 'SKIP', 'Bun venit': 'Welcome'
+  };
+  function isEN() { return window.currentLang === 'en'; }
+  function W(k) { return (isEN() && WLT[k] !== undefined) ? WLT[k] : k; }
   let wlStep = 1;
   let wlSelectedPreset = null;
   let wlCustomModules = [];
 
+  function wlStepBarHTML() {
+    return '<div class="wl-step' + (wlStep === 1 ? ' active' : (wlStep > 1 ? ' done' : '')) + '" id="wlStep1">' + W('1 · Bun venit') + '</div>' +
+           '<div class="wl-step' + (wlStep === 2 ? ' active' : (wlStep > 2 ? ' done' : '')) + '" id="wlStep2">' + W('2 · Cum vrei să folosești') + '</div>' +
+           '<div class="wl-step' + (wlStep === 3 ? ' active' : '') + '" id="wlStep3">' + W('3 · Module') + '</div>';
+  }
+  function wlSkip() {
+    // sare peste ghid: profil implicit (core + generatoare + presetări), marcat ca parcurs
+    activeModules = ['core', 'generators', 'presets'];
+    saveModules();
+    try { localStorage.setItem(STORAGE_KEY_ONBOARDED, '1'); } catch(_) {}
+    dismissWelcome();
+  }
+  function wlSetLang(l) {
+    if (typeof window.applyLang === 'function') window.applyLang(l);
+    window.currentLang = l;
+    const bar = document.getElementById('wlStepBar'); if (bar) bar.innerHTML = wlStepBarHTML();
+    document.querySelectorAll('#welcomeOverlay .wl-lang').forEach(function(b) { b.setAttribute('aria-pressed', String(b.dataset.l === l)); });
+    const sk = document.getElementById('wlSkip'); if (sk) sk.textContent = W('SARI PESTE');
+    renderStep(wlStep);
+  }
   window.buildWelcomeModal = function buildWelcomeModal() {
     const overlay = document.createElement('div');
     overlay.className = 'welcome-overlay';
     overlay.id = 'welcomeOverlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Frequency Laboratory — Bun venit / Welcome');
     overlay.innerHTML =
       '<div class="welcome-box" id="welcomeBox">' +
-        '<div class="wl-step-bar">' +
-          '<div class="wl-step active" id="wlStep1">1 · Bun venit</div>' +
-          '<div class="wl-step" id="wlStep2">2 · Cum vrei să folosești</div>' +
-          '<div class="wl-step" id="wlStep3">3 · Module</div>' +
+        '<div class="wl-topbar">' +
+          '<span class="wl-langs" role="group" aria-label="Language / Limbă">' +
+            '<button type="button" class="wl-lang" data-l="ro" aria-pressed="' + (!isEN()) + '">RO</button>' +
+            '<button type="button" class="wl-lang" data-l="en" aria-pressed="' + isEN() + '">EN</button>' +
+          '</span>' +
+          '<button type="button" class="wl-skip" id="wlSkip">' + W('SARI PESTE') + '</button>' +
         '</div>' +
+        '<div class="wl-step-bar" id="wlStepBar">' + wlStepBarHTML() + '</div>' +
         '<div id="wlContent"></div>' +
       '</div>';
     document.body.appendChild(overlay);
+    overlay.querySelectorAll('.wl-lang').forEach(function(b) { b.addEventListener('click', function() { wlSetLang(b.dataset.l); }); });
+    overlay.querySelector('#wlSkip').addEventListener('click', wlSkip);
+    overlay.addEventListener('keydown', function(e) { if (e.key === 'Escape') { e.preventDefault(); wlSkip(); } });
     renderStep(1);
+    const first = overlay.querySelector('#wlNext1'); if (first) { try { first.focus(); } catch(_) {} }
     return overlay;
   }
 
@@ -15169,24 +15230,24 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
   function renderStep1(el) {
     el.innerHTML =
       '<div class="wl-hero">' +
-        '<div class="wl-logo">LABORATOR<br>FRECVENȚE</div>' +
-        '<div class="wl-tagline">generator audio · single file · offline</div>' +
+        '<div class="wl-logo">' + W('LABORATOR<br>FRECVENȚE') + '</div>' +
+        '<div class="wl-tagline">' + W('generator audio · single file · offline') + '</div>' +
         '<p class="wl-desc">' +
-          'Un instrument audio complet în browser, fără instalare și fără internet.<br>' +
-          '<strong>Oscillator → Efecte → Vizualizare → Analiză → Ritm → Relaxare</strong><br>' +
-          'Totul într-un singur fișier HTML.' +
+          W('Un instrument audio complet în browser, fără instalare și fără internet.') + '<br>' +
+          '<strong>' + W('Oscillator → Efecte → Vizualizare → Analiză → Ritm → Relaxare') + '</strong><br>' +
+          W('Totul într-un singur fișier HTML.') +
         '</p>' +
       '</div>' +
       '<div class="wl-nav">' +
-        '<span style="font-size:10px;color:var(--txt-faint);">Prima utilizare</span>' +
-        '<button class="wl-nav-next" id="wlNext1">CONTINUĂ →</button>' +
+        '<span style="font-size:10px;color:var(--txt-faint);">' + W('Prima utilizare') + '</span>' +
+        '<button class="wl-nav-next" id="wlNext1">' + W('CONTINUĂ →') + '</button>' +
       '</div>';
     document.getElementById('wlNext1').addEventListener('click', function() { setStep(2); });
   }
 
   function renderStep2(el) {
     let html = '<div style="padding:16px 24px 0;">' +
-      '<p style="font-size:12px;color:var(--txt-dim);margin:0 0 12px;">Pentru ce vrei să folosești aplicația? <span style="color:var(--txt-faint);">(poți schimba oricând)</span></p>' +
+      '<p style="font-size:12px;color:var(--txt-dim);margin:0 0 12px;">' + W('Pentru ce vrei să folosești aplicația? ') + '<span style="color:var(--txt-faint);">' + W('(poți schimba oricând)') + '</span></p>' +
       '</div>';
     html += '<div class="wl-presets">';
     USE_CASES.forEach(function(uc) {
@@ -15198,8 +15259,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     });
     html += '</div>';
     html += '<div class="wl-nav">' +
-      '<button class="wl-nav-back" id="wlBack2">← ÎNAPOI</button>' +
-      '<button class="wl-nav-next" id="wlNext2" disabled>SELECTEAZĂ →</button>' +
+      '<button class="wl-nav-back" id="wlBack2">' + W('← ÎNAPOI') + '</button>' +
+      '<button class="wl-nav-next" id="wlNext2" disabled>' + W('SELECTEAZĂ →') + '</button>' +
       '</div>';
     el.innerHTML = html;
 
@@ -15223,7 +15284,7 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
   function renderStep3(el) {
     const isCustom = wlSelectedPreset === 'custom';
     let html = '<div class="wl-summary">' +
-      '<div class="wl-summary-title">' + (isCustom ? 'Alege modulele dorite' : 'Module activate pentru profilul tău') + '</div>';
+      '<div class="wl-summary-title">' + (isCustom ? W('Alege modulele dorite') : W('Module activate pentru profilul tău')) + '</div>';
 
     if (!isCustom) {
       // Show summary chips of auto-selected modules
@@ -15233,7 +15294,7 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
         if (mod) html += '<span class="wl-chip">' + mod.icon + ' ' + mod.name + '</span>';
       });
       html += '</div>';
-      html += '<p style="font-size:11px;color:var(--txt-dim);margin:0 0 8px;">Poți activa module suplimentare oricând din bara de jos sau cu butonul ⊞ MODULE.</p>';
+      html += '<p style="font-size:11px;color:var(--txt-dim);margin:0 0 8px;">' + W('Poți activa module suplimentare oricând din bara de jos sau cu butonul ⊞ MODULE.') + '</p>';
     }
     html += '</div>';
 
@@ -15245,7 +15306,7 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
       html +=
         '<div class="wl-module-card' + (isSelected ? ' selected' : '') + (isAlwaysOn ? ' always-on' : '') + '" data-modid="' + mod.id + '">' +
           '<span class="wl-mc-icon">' + mod.icon + '</span>' +
-          '<div><div class="wl-mc-name">' + mod.name + (isAlwaysOn ? ' <span style="font-size:10px;color:var(--txt-faint);">(mereu activ)</span>' : '') + '</div>' +
+          '<div><div class="wl-mc-name">' + mod.name + (isAlwaysOn ? W(' <span style="font-size:10px;color:var(--txt-faint);">(mereu activ)</span>') : '') + '</div>' +
           '<div class="wl-mc-desc">' + mod.eli5 + '</div></div>' +
           '<div class="wl-mc-check"></div>' +
         '</div>';
@@ -15253,8 +15314,8 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
     html += '</div>';
     html +=
       '<div class="wl-nav">' +
-        '<button class="wl-nav-back" id="wlBack3">← ÎNAPOI</button>' +
-        '<button class="wl-nav-next" id="wlFinish">PORNEȘTE APLICAȚIA ▶</button>' +
+        '<button class="wl-nav-back" id="wlBack3">' + W('← ÎNAPOI') + '</button>' +
+        '<button class="wl-nav-next" id="wlFinish">' + W('PORNEȘTE APLICAȚIA ▶') + '</button>' +
       '</div>';
 
     el.innerHTML = html;
@@ -16460,8 +16521,8 @@ Oscillator A becomes the <strong>carrier</strong>: supplies the synth tone.</p>
   // Full translation dictionary extension
   const T_EXTRA = {
     // Meta / page title
-    'Frequency Laboratory v4.0 — Complete Audio Generator': { en: 'Frequency Laboratory v4.0 — Complete Audio Generator' },
-    'Frequency Laboratory v4.0 — Complete Audio Generator': { en: 'Frequency Laboratory v4.0 — Complete Audio Generator' },
+    'Frequency Laboratory v4.1.1 — Complete Audio Generator': { en: 'Frequency Laboratory v4.1.1 — Complete Audio Generator' },
+    'Frequency Laboratory v4.1.1 — Complete Audio Generator': { en: 'Frequency Laboratory v4.1.1 — Complete Audio Generator' },
 
     // Quick-nav labels
     'Osc A': { en: 'Osc A' },
@@ -16865,8 +16926,8 @@ Oscillator A becomes the <strong>carrier</strong>: supplies the synth tone.</p>
     '(multi-tap noise). 16 steps at the selected BPM. Click cells to enable/disable.': { en: '(multi-tap noise). 16 steps at the selected BPM. Click cells to toggle.' },
 
     // Footer
-    'Frequency Laboratory v4.0 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.0 · Web Audio API · Single-file HTML ·' },
-    'Frequency Laboratory v4.0 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.0 · Web Audio API · Single-file HTML ·' },
+    'Frequency Laboratory v4.1.1 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.1.1 · Web Audio API · Single-file HTML ·' },
+    'Frequency Laboratory v4.1.1 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.1.1 · Web Audio API · Single-file HTML ·' },
 
     // Drawer
     '◉ NAVIGHEAZĂ': { en: '◉ NAVIGATE' },
@@ -25160,7 +25221,7 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
 })();
 </script>
 <!-- tf-donate: sprijin voluntar (Patreon + Buy Me a Coffee) — self-contained, fără resurse externe, fără JS -->
-<div id="tf-donate" aria-label="Sprijină autorul">
+<aside id="tf-donate" aria-label="Sprijină autorul">
 <style>
 #tf-donate{position:fixed;right:14px;bottom:14px;z-index:2147483600;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1}
 #tf-donate *{box-sizing:border-box}
@@ -25188,7 +25249,7 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
 <label for="tf-donate-cb" class="tf-x" title="Ascunde" aria-label="Ascunde">✕</label>
 </div>
 <label for="tf-donate-cb" class="tf-open" title="Sprijină" aria-label="Sprijină">♥</label>
-</div>
+</aside>
 <script id="tf-a11y-labels">
 (function(){
   /* Audit 2026-10-10: nume accesibile pentru controale fără etichetă (WCAG 4.1.2 / 1.3.1). Doar atribute ARIA; nu modifică comportamentul. */
@@ -25248,6 +25309,27 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
   function sched(){ if(t)return; t=setTimeout(function(){t=null;run();},250); }
   function start(){ run(); try{ new MutationObserver(sched).observe(document.body,{childList:true,subtree:true}); }catch(e){} }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start); else start();
+})();
+</script>
+<script>
+/* Diacritice: fonturile de afișaj încorporate (Bungee, Major Mono Display, VT323) nu conțin Ă ă Ș ș Ț ț;
+   elementele care le folosesc și conțin aceste litere trec pe fontul de text (clasa dia-fb), ca titlul să nu amestece glifuri. */
+(function(){
+  var RE=/[ĂăȘșȚțŞşŢţ]/, FAM=/Bungee|Major Mono|VT323/i, q=null;
+  function fix(root){
+    try{
+      var w=document.createTreeWalker(root||document.body,NodeFilter.SHOW_TEXT,null), n;
+      while((n=w.nextNode())){
+        if(!RE.test(n.nodeValue)) continue;
+        var p=n.parentElement; if(!p||p.classList.contains('dia-fb')) continue;
+        var t=p.tagName; if(t==='SCRIPT'||t==='STYLE') continue;
+        if(FAM.test(getComputedStyle(p).fontFamily)) p.classList.add('dia-fb');
+      }
+    }catch(e){}
+  }
+  function sched(){ if(q) return; q=setTimeout(function(){ q=null; fix(); },250); }
+  function start(){ fix(); try{ new MutationObserver(sched).observe(document.body,{childList:true,subtree:true,characterData:true}); }catch(e){} }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
 })();
 </script>
 </body>
