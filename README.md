@@ -10,7 +10,7 @@ Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian
 
 ## Ce este
 
-Frequency Laboratory (v4.1.1 în titlul aplicației) este un laborator audio dintr-un singur fișier HTML, bazat pe Web Audio API. Combină generator de tonuri, sinteză, efecte, sesiuni programabile, instrumente de măsurare cu microfonul și o bază de date de frecvențe (Solfeggio, Schumann, binaurale, acordaje etc.). Aplicația precizează că nu este tratament medical și că categoriile de frecvențe sunt informative.
+Frequency Laboratory (v4.1.2 în titlul aplicației) este un laborator audio dintr-un singur fișier HTML, bazat pe Web Audio API. Combină generator de tonuri, sinteză, efecte, sesiuni programabile, instrumente de măsurare cu microfonul și o bază de date de frecvențe (Solfeggio, Schumann, binaurale, acordaje etc.). Aplicația precizează că nu este tratament medical și că categoriile de frecvențe sunt informative.
 
 ## Funcții
 
@@ -33,7 +33,7 @@ Funcțiile de mai jos apar ca secțiuni/controale în interfață:
 3. Apasă `START ▶` (sau Spațiu); `STOP ◼` oprește; `PANIC ✕` (sau `P`) oprește instant.
 4. Pentru binaural, pornește „Osc B”, activează „mod binaural” și setează „Δ binaural”; folosește căști.
 5. Explorează secțiunile din bara de module (Acorduri, Efecte, Pian, RTA, Audiogram, Ambient, Presets, Database ș.a.).
-6. Scurtături: Spațiu start/stop, `P` panic, `R` înregistrare, `↑/↓` frecvență A ±1 Hz, `Shift+↑/↓` ±10 Hz, `1–4` formă de undă, `S` snap la notă, `D` drone, `?` lista de scurtături, `Esc` închide.
+6. Scurtături: Spațiu start/stop, `P` panic, `R` înregistrare, `↑/↓` frecvență A ±1 Hz, `Shift+↑/↓` ±10 Hz, `1–4` formă de undă, `[` / `]` volum master ∓5%, `S` snap la notă, `D` drone, `?` lista de scurtături, `Esc` închide.
 7. Înregistrare: `▶ START RECORDING`, apoi `↓ DOWNLOAD WAV`.
 8. Presetări: salvează cu nume, apoi `↑ EXPORT JSON` pentru backup și `↓ IMPORT JSON` pentru restaurare (importul se îmbină cu presetările existente).
 9. Microfonul (SPL, tuner, RTA pe microfon, room sweep) se activează doar la cerere; browserul cere permisiune.
@@ -73,7 +73,8 @@ Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaura
 ## Istoric / Changelog
 
 ### 11 octombrie 2026
-- Versiune unificată v4.1.1 (titlu, antet, manifest, subsol; înainte titlul spunea v4.0, iar subsolul v4.1).
+- v4.1.2: avertisment de volum (peste 60%, `role=status`, RO/EN) lângă volumul master; scurtături `[` / `]` pentru volum; CSP pe hash (fără `'unsafe-inline'` în `script-src`, `blob:` păstrat pentru worklet/înregistrare). Testat offline: 0 erori/încălcări CSP, 0 depășire orizontală, axe 0.
+- Versiune unificată v4.1.2 (titlu, antet, manifest, subsol; înainte titlul spunea v4.0, iar subsolul v4.1).
 - Ghidul de bun venit (prima rulare) are acum butoane RO/EN și „Sari peste” (plus tasta Esc), este un dialog accesibil și este tradus complet în engleză; modulele/profilurile sunt traduse la afișare. Pe ecrane joase nu mai taie partea de sus.
 - Fonturile de afișaj încorporate nu conțin Ă/Ș/Ț: elementele afectate trec pe fontul de text (clasa `dia-fb`), deci titlul nu mai amestecă glife (ex. „FRECVENȚE”, „CONTINUĂ”).
 - Axe: 0 încălcări (conținutul în `<main>`, 18 câmpuri cu `aria-label`, titluri h2 în „Usage notes”, `aside` pentru donații, containerul de notificări ca regiune). Corectat „uppended” → „suspended” în indicatorul CTX.
