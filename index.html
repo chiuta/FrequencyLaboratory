@@ -5093,10 +5093,11 @@
     <button class="btn small blue" data-bin-preset="focus-high" style="min-height:40px;font-size:10px;padding:4px;">Focus High<br><span style="color:var(--txt-dim);font-size:9px;">20Hz B 315Hz</span></button>
     <button class="btn small blue" data-bin-preset="alert" style="min-height:40px;font-size:10px;padding:4px;">Alert<br><span style="color:var(--txt-dim);font-size:9px;">25Hz B 320Hz</span></button>
     <button class="btn small danger" data-bin-preset="gamma" style="min-height:40px;font-size:10px;padding:4px;">Gamma<br><span style="color:var(--txt-dim);font-size:9px;">40Hz G 440Hz</span></button>
-    <button class="btn small danger" data-bin-preset="peak" style="min-height:40px;font-size:10px;padding:4px;">Peak Perf.<br><span style="color:var(--txt-dim);font-size:9px;">40Hz G 528Hz</span></button>
-    <button class="btn small" data-bin-preset="pain" style="min-height:40px;font-size:10px;padding:4px;">Pain Rel.<br><span style="color:var(--txt-dim);font-size:9px;">174Hz 432Hz</span></button>
-    <button class="btn small" data-bin-preset="solfeggio" style="min-height:40px;font-size:10px;padding:4px;">Solfeggio<br><span style="color:var(--txt-dim);font-size:9px;">528Hz 3Hz</span></button>
+    <button class="btn small danger" data-bin-preset="peak" title="Fără efect medical dovedit / No proven medical effect" style="min-height:40px;font-size:10px;padding:4px;">Peak Perf.<br><span style="color:var(--txt-dim);font-size:9px;">40Hz G 528Hz</span></button>
+    <button class="btn small" data-bin-preset="pain" title="Fără efect medical dovedit / No proven medical effect" style="min-height:40px;font-size:10px;padding:4px;">Pain Rel.<br><span style="color:var(--txt-dim);font-size:9px;">174Hz 432Hz</span></button>
+    <button class="btn small" data-bin-preset="solfeggio" title="Fără efect medical dovedit / No proven medical effect" style="min-height:40px;font-size:10px;padding:4px;">Solfeggio<br><span style="color:var(--txt-dim);font-size:9px;">528Hz 3Hz</span></button>
   </div>
+  <div id="binauralPresetDisclaimer" role="note" data-tf-ro="Nume de presetări orientative (ex. „Pain Relief”, „Peak Performance”, „Solfeggio”): fără efect medical dovedit; nu sunt tratament. Un ritm binaural eficace se discută doar sub ~30 Hz." data-tf-en="Indicative preset names (e.g. “Pain Relief”, “Peak Performance”, “Solfeggio”): no proven medical effect; not a treatment. A binaural beat is only discussed as effective below ~30 Hz." style="font-size:11px;color:var(--txt-dim);padding:2px 8px 8px;">Nume de presetări orientative (ex. „Pain Relief”, „Peak Performance”, „Solfeggio”): fără efect medical dovedit; nu sunt tratament. Un ritm binaural eficace se discută doar sub ~30 Hz.</div>
   <div id="binauralBankStatus" style="font-size:11px;color:var(--txt-faint);font-family:'JetBrains Mono',monospace;padding:4px 8px;background:var(--bg-inset);border-radius:3px;">Click preset - aplica carrier + binaural freq automat. Foloseste casca!</div>
 </div>
 
@@ -5529,7 +5530,7 @@
 <footer>
   Frequency Laboratory v4.1 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
-  <br><small>Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio", „Schumann", binaurale și presetările „Pain Relief"/„Peak Performance" nu au validare științifică ca terapie. Volum redus, mai ales cu căști. Not a medical device or treatment.</small>
+  <br><small data-tf-ro="Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio&quot;, „Schumann&quot;, binaurale și presetările „Pain Relief&quot;/„Peak Performance&quot; nu au validare științifică ca terapie și nu au efect medical dovedit. Volum redus, mai ales cu căști." data-tf-en="Informational/educational content; not a medical device or treatment and not a substitute for medical advice. The “Solfeggio”, “Schumann” and binaural frequencies and the “Pain Relief”/“Peak Performance” presets have no scientific validation as therapy and no proven medical effect. Keep the volume low, especially with headphones.">Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio", „Schumann", binaurale și presetările „Pain Relief"/„Peak Performance" nu au validare științifică ca terapie și nu au efect medical dovedit. Volum redus, mai ales cu căști.</small>
 </footer>
 </div>
 <script>
@@ -24868,7 +24869,7 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
 
       document.querySelectorAll('[data-bin-preset]').forEach(b => b.classList.remove('primary'));
       btn.classList.add('primary');
-      if (statusEl) statusEl.textContent = p.label + ' — CASCA NECESARA! L=' + p.carrier + 'Hz R=' + (p.carrier + p.beat) + 'Hz';
+      if (statusEl) statusEl.textContent = p.label + ' — CASCA NECESARA! L=' + p.carrier + 'Hz R=' + (p.carrier + p.beat) + 'Hz' + ((key==='pain'||key==='peak'||key==='solfeggio') ? (document.documentElement.lang==='en' ? ' — no proven medical effect' : ' — fără efect medical dovedit') : '');
       appToast('🎧 Binaural: ' + p.label, {kind:'amber', duration:3000});
     });
   });
@@ -25220,20 +25221,29 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
       var r=derive(el),g=el.closest('.ctrl,.small-row,.row');
       var multi=g&&g.querySelectorAll(SEL).length>1;
       var suffix='';
-      if(multi){ suffix=el.tagName==='SELECT'?' (opțiune)':(el.type==='number'?' (valoare)':''); if(el.tagName==='SELECT'&&el.id&&/unit/i.test(el.id))suffix=' (unitate)'; }
+      var EN=document.documentElement.lang==='en';
+      if(multi){ suffix=el.tagName==='SELECT'?(EN?' (option)':' (opțiune)'):(el.type==='number'?(EN?' (value)':' (valoare)'):''); if(el.tagName==='SELECT'&&el.id&&/unit/i.test(el.id))suffix=EN?' (unit)':' (unitate)'; }
       if(el.type==='file')r=null;
       if(r&&!suffix){
         if(!r.n.id)r.n.id='tf-lbl-'+(++cnt);
         el.setAttribute('aria-labelledby',r.n.id);
       } else if(r){
-        el.setAttribute('aria-label',txt(r.n)+suffix);
+        el.setAttribute('aria-label',txt(r.n)+suffix);el.setAttribute('data-tf-gen','1');
       } else {
         var s=el.getAttribute('placeholder')||el.id||el.className||el.type||'control';
         var idx=Array.prototype.indexOf.call(el.parentElement?el.parentElement.parentElement?el.parentElement.parentElement.children:[]:[],el.parentElement)+1;
-        el.setAttribute('aria-label',String(s).replace(/([a-z])([A-Z0-9])/g,'$1 $2').replace(/[-_]+/g,' ').trim()+(idx>0?' '+idx:''));
+        el.setAttribute('aria-label',String(s).replace(/([a-z])([A-Z0-9])/g,'$1 $2').replace(/[-_]+/g,' ').trim()+(idx>0?' '+idx:''));el.setAttribute('data-tf-gen','1');
       }
     });
   }
+  /* Runda 3: texte adăugate de audit, RO/EN; reaplicate la schimbarea limbii (html[lang]). Necesită revizie nativă. */
+  function i18nExtra(){
+    var EN=document.documentElement.lang==='en';
+    document.querySelectorAll('[data-tf-ro]').forEach(function(e){ e.textContent=EN?e.getAttribute('data-tf-en'):e.getAttribute('data-tf-ro'); });
+    document.querySelectorAll('[data-tf-gen]').forEach(function(e){ e.removeAttribute('aria-label'); e.removeAttribute('data-tf-gen'); });
+    run();
+  }
+  try{ new MutationObserver(i18nExtra).observe(document.documentElement,{attributes:true,attributeFilter:['lang']}); }catch(e){}
   var t=null;
   function sched(){ if(t)return; t=setTimeout(function(){t=null;run();},250); }
   function start(){ run(); try{ new MutationObserver(sched).observe(document.body,{childList:true,subtree:true}); }catch(e){} }
