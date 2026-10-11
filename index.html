@@ -25,7 +25,7 @@
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
 }
 </style>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' blob: 'sha256-zDs/vWLyCL0/D/FYddKAtyxGBMaBIRkNfAaDTmb9WnM=' 'sha256-Ox8uTFrS/bxWjNkor+K9nIVQ3RScY6E8gj+fARhYvgs=' 'sha256-b7q8aIh05jY0DwbPTXETX1MwAXT+oC2EjHNWkBx3msI='; connect-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' blob: 'sha256-zgUpv114MCl8GT/gXAEySE1ZhpCrVAfhtPInB7jNt00=' 'sha256-Ox8uTFrS/bxWjNkor+K9nIVQ3RScY6E8gj+fARhYvgs=' 'sha256-XRAy90gON/I7wwO7n6bjpozs1wi/Oekj6LCHzyUP5k0='; connect-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n="Frequency Laboratory v4.1.2 — Complete Audio Generator" data-ro="Frequency Laboratory v4.1.2 — Complete Audio Generator">Frequency Laboratory v4.1.2 — Complete Audio Generator</title>
 <meta name="description" content="Generator de frecvențe v4.1.2: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.">
@@ -10273,10 +10273,7 @@ if (typeof setupPhaseAnalyser === 'function') {
 
   // ===== Phase scope text label correction (already done above in D10) =====
 
-  // Final init message
-  setTimeout(function() {
-    toast('v4.1.2 încărcat · ' + (typeof navigator !== 'undefined' && navigator.requestMIDIAccess ? 'MIDI disponibil' : 'MIDI indisponibil în acest browser'), { kind: 'blue', duration: 2500 });
-  }, 600);
+  // (mesajul de pornire „v4.1.2 încărcat · MIDI …” a fost eliminat: 3 toast-uri la încărcare acopereau antetul)
 
 })(); // end v4.0 patch
 
@@ -15971,11 +15968,14 @@ Oscillatorul A devine <strong>carrierul</strong>: furnizează tonul de sintetiza
   'use strict';
 
   const LANG_KEY = 'lab_frecv_lang';
-  let currentLang = 'ro';
+  // Prima vizită: limba browserului (română → RO, altfel EN); alegerea făcută cu butonul RO/EN rămâne salvată.
+  window.__FL_DEF_LANG = /^ro(\b|-)/i.test((navigator.language || '')) ? 'ro' : 'en';
+  let currentLang = window.__FL_DEF_LANG;
 
   try {
     const saved = localStorage.getItem(LANG_KEY);
     if (saved === 'en') currentLang = 'en';
+    else if (saved === 'ro') currentLang = 'ro';
   } catch(_) {}
 
   // =============================================
@@ -17218,7 +17218,7 @@ Oscillator A becomes the <strong>carrier</strong>: supplies the synth tone.</p>
   (function() {
     try {
       const savedLang = localStorage.getItem('lab_frecv_lang');
-      if (savedLang === 'en') {
+      if (savedLang === 'en' || (!savedLang && window.__FL_DEF_LANG === 'en')) {
         document.documentElement.lang = 'en';
         document.documentElement.classList.add('lang-en');
         // Will be properly applied when applyLang runs at 600ms
@@ -17230,7 +17230,7 @@ Oscillator A becomes the <strong>carrier</strong>: supplies the synth tone.</p>
   // ===== F4: currentLang as localStorage getter =====
   Object.defineProperty(window, 'currentLang', {
     get: function() {
-      try { return localStorage.getItem('lab_frecv_lang') || 'ro'; } catch(_) { return 'ro'; }
+      try { return localStorage.getItem('lab_frecv_lang') || window.__FL_DEF_LANG || 'ro'; } catch(_) { return window.__FL_DEF_LANG || 'ro'; }
     },
     set: function(v) {
       try { localStorage.setItem('lab_frecv_lang', v); } catch(_) {}
@@ -23134,7 +23134,6 @@ registerProcessor('multi-dist', MultiDistProcessor);
     if (_origPianoDown2) _origPianoDown2(k);
   };
 
-  appToast('🎶 Portamento prêt — activează toggle Glide în panoul Osc A.', {kind:'blue',duration:2500});
 })();
 
 // ── B. 16-STEP SEQUENCER EXTENSION ───────────────────────────
@@ -23674,7 +23673,6 @@ registerProcessor('multi-dist', MultiDistProcessor);
     };
     // Re-patch noteToFreq too
     window.noteToFreq = function(midi) { return window.tuningFreq(midi); };
-    appToast('🎵 ' + Object.keys(NEW_TUNINGS).length + ' sisteme micro-tuning adăugate.', {kind:'blue',duration:2500});
   }
   setTimeout(hookTuningFreq, 800);
 })();
@@ -25337,6 +25335,21 @@ registerProcessor('transient-shaper', TransientShaperProcessor);
   function sched(){ if(q) return; q=setTimeout(function(){ q=null; fix(); },250); }
   function start(){ fix(); try{ new MutationObserver(sched).observe(document.body,{childList:true,subtree:true,characterData:true}); }catch(e){} }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+})();
+/* Pastila de donații urmează limba interfeței (RO/EN, window.currentLang). */
+(function(){
+  var D={ro:['Sprijină autorul','Sprijină:','Sprijină pe Patreon','Ascunde','Sprijină'],en:['Support the author','Support:','Support on Patreon','Hide','Support']};
+  function loc(){
+    var root=document.getElementById('tf-donate'); if(!root) return;
+    var d=D[window.currentLang==='ro'?'ro':'en'];
+    root.setAttribute('aria-label',d[0]);
+    var l=root.querySelector('.tf-lbl'); if(l&&l.textContent!==d[1]) l.textContent=d[1];
+    var a=root.querySelector('.tf-pat'); if(a) a.setAttribute('aria-label',d[2]);
+    var x=root.querySelector('.tf-x'); if(x){ x.setAttribute('aria-label',d[3]); x.title=d[3]; }
+    var o=root.querySelector('.tf-open'); if(o){ o.setAttribute('aria-label',d[4]); o.title=d[4]; }
+  }
+  loc(); setTimeout(loc,700);
+  document.addEventListener('click',function(){ setTimeout(loc,80); },true);
 })();
 </script>
 </body>

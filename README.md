@@ -24,7 +24,7 @@ Funcțiile de mai jos apar ca secțiuni/controale în interfață:
 - **Sunete ambientale** generate procedural (ploaie, ocean, vânt, foc, pădure).
 - **Sesiuni:** etape programabile cu crossfade, șabloane Meditation / Adormire / Solfeggio, sleep timer cu fade, înregistrare WAV pe 16 biți cu pre-roll.
 - **Date:** presetări utilizator, favorite, export/import JSON, undo/redo, partajare configurație prin URL, partajare WAV/JSON (Web Share), teme de culoare (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
-- Interfață în română și engleză.
+- Interfață în română și engleză; la prima vizită limba urmează limba browserului (română → RO, altfel EN), iar alegerea făcută cu butoanele RO/EN se păstrează. Atenție: în varianta RO multe etichete tehnice rămân în engleză (waveform, reverb, cutoff etc.).
 
 ## Manual de utilizare
 
@@ -73,6 +73,9 @@ Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaura
 ## Istoric / Changelog
 
 ### 11 octombrie 2026
+- Prima vizită: limba implicită urmează limba browserului (română → RO, altfel EN) în loc să fie mereu RO; înainte vizitatorii cu browser englezesc vedeau interfața amestecată RO/EN.
+- Eliminate cele trei notificări (toast) de la încărcare (portamento, micro-tuning, „v4.1.2 încărcat · MIDI”), care se suprapuneau peste antet; mesajul despre MIDI apare la utilizarea MIDI. Dispare și cuvântul francez „prêt” dintr-unul dintre ele.
+- Pastila de donații urmează limba interfeței (RO/EN), inclusiv etichetele ARIA.
 - v4.1.2: avertisment de volum (peste 60%, `role=status`, RO/EN) lângă volumul master; scurtături `[` / `]` pentru volum; CSP pe hash (fără `'unsafe-inline'` în `script-src`, `blob:` păstrat pentru worklet/înregistrare). Testat offline: 0 erori/încălcări CSP, 0 depășire orizontală, axe 0.
 - Versiune unificată v4.1.2 (titlu, antet, manifest, subsol; înainte titlul spunea v4.0, iar subsolul v4.1).
 - Ghidul de bun venit (prima rulare) are acum butoane RO/EN și „Sari peste” (plus tasta Esc), este un dialog accesibil și este tradus complet în engleză; modulele/profilurile sunt traduse la afișare. Pe ecrane joase nu mai taie partea de sus.
