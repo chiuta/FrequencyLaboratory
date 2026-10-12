@@ -1,6 +1,6 @@
 # Frequency Laboratory
 
-**Ultima actualizare:** 11 octombrie 2026
+**Versiune:** 4.1.3 · **Ultima actualizare:** 12 octombrie 2026
 
 Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian, analizoare și teste auditive.
 
@@ -10,7 +10,7 @@ Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian
 
 ## Ce este
 
-Frequency Laboratory (v4.1.2 în titlul aplicației) este un laborator audio dintr-un singur fișier HTML, bazat pe Web Audio API. Combină generator de tonuri, sinteză, efecte, sesiuni programabile, instrumente de măsurare cu microfonul și o bază de date de frecvențe (Solfeggio, Schumann, binaurale, acordaje etc.). Aplicația precizează că nu este tratament medical și că categoriile de frecvențe sunt informative.
+Frequency Laboratory (v4.1.3 în titlul aplicației) este un laborator audio dintr-un singur fișier HTML, bazat pe Web Audio API. Combină generator de tonuri, sinteză, efecte, sesiuni programabile, instrumente de măsurare cu microfonul și o bază de date de frecvențe (Solfeggio, Schumann, binaurale, acordaje etc.). Aplicația precizează că nu este tratament medical și că categoriile de frecvențe sunt informative.
 
 ## Funcții
 
@@ -71,6 +71,9 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. Romanian/English UI. State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
 ## Istoric / Changelog
+
+### 12 octombrie 2026 (v4.1.3)
+- 4.1.3 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 
 ### 11 octombrie 2026
 - Prima vizită: limba implicită urmează limba browserului (română → RO, altfel EN) în loc să fie mereu RO; înainte vizitatorii cu browser englezesc vedeau interfața amestecată RO/EN.

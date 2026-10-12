@@ -19,16 +19,18 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
+<meta name="application-version" content="4.1.3">
+<meta name="last-updated" content="2026-10-12">
 <style id="tf-a11y-motion">
 /* Accesibilitate: respectă preferința utilizatorului pentru mai puțină mișcare (TROM/a11y). */
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
 }
 </style>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' blob: 'sha256-zgUpv114MCl8GT/gXAEySE1ZhpCrVAfhtPInB7jNt00=' 'sha256-Ox8uTFrS/bxWjNkor+K9nIVQ3RScY6E8gj+fARhYvgs=' 'sha256-XRAy90gON/I7wwO7n6bjpozs1wi/Oekj6LCHzyUP5k0='; connect-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self' blob: data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:; script-src 'self' blob: 'sha256-ajSztOgzUsgZBLWRiJWifEA7rJdTOLnCiKKX2RNQXmU=' 'sha256-Ox8uTFrS/bxWjNkor+K9nIVQ3RScY6E8gj+fARhYvgs=' 'sha256-XRAy90gON/I7wwO7n6bjpozs1wi/Oekj6LCHzyUP5k0='; connect-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="Frequency Laboratory v4.1.2 — Complete Audio Generator" data-ro="Frequency Laboratory v4.1.2 — Complete Audio Generator">Frequency Laboratory v4.1.2 — Complete Audio Generator</title>
-<meta name="description" content="Generator de frecvențe v4.1.2: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.">
+<title data-i18n="Frequency Laboratory v4.1.3 — Complete Audio Generator" data-ro="Frequency Laboratory v4.1.3 — Complete Audio Generator">Frequency Laboratory v4.1.3 — Complete Audio Generator</title>
+<meta name="description" content="Generator de frecvențe v4.1.3: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.">
 
 <!-- ===== PWA: instalabil direct din browser, fără App Store ===== -->
 <meta name="theme-color" content="#0a0f0a">
@@ -37,7 +39,7 @@
 <meta name="apple-mobile-web-app-title" content="FreqLab">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='32' fill='%230a0f0a'/%3E%3Ccircle cx='96' cy='96' r='60' fill='none' stroke='%237eff95' stroke-width='4'/%3E%3Ccircle cx='96' cy='96' r='20' fill='none' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='96' y1='36' x2='96' y2='56' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='96' y1='136' x2='96' y2='156' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='36' y1='96' x2='56' y2='96' stroke='%237eff95' stroke-width='3'/%3E%3Cline x1='136' y1='96' x2='156' y2='96' stroke='%237eff95' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Frequency+Laboratory+v4.1.2%22%2C%22short_name%22%3A%22FreqLab%22%2C%22description%22%3A%22Generator+complet+de+frecvente+audio%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230a0f0a%22%2C%22theme_color%22%3A%22%230a0f0a%22%2C%22orientation%22%3A%22any%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg+xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'+viewBox%3D'0+0+512+512'%253E%253Crect+width%3D'512'+height%3D'512'+rx%3D'80'+fill%3D'%25230a0f0a'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'160'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'12'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'60'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'8'%2F%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any+maskable%22%7D%5D%7D">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Frequency+Laboratory+v4.1.3%22%2C%22short_name%22%3A%22FreqLab%22%2C%22description%22%3A%22Generator+complet+de+frecvente+audio%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230a0f0a%22%2C%22theme_color%22%3A%22%230a0f0a%22%2C%22orientation%22%3A%22any%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg+xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'+viewBox%3D'0+0+512+512'%253E%253Crect+width%3D'512'+height%3D'512'+rx%3D'80'+fill%3D'%25230a0f0a'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'160'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'12'%2F%253E%253Ccircle+cx%3D'256'+cy%3D'256'+r%3D'60'+fill%3D'none'+stroke%3D'%25237eff95'+stroke-width%3D'8'%2F%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any+maskable%22%7D%5D%7D">
 
 <style>
 @font-face {
@@ -2409,7 +2411,7 @@
       <svg viewBox="0 0 24 24"><path d="M2 12 Q 5 2, 8 12 T 14 12 T 20 12 H 22"/></svg>
     </div>
     <div class="brand-text">
-      <h1>FREQUENCY LABORATORY<span class="ver-tag">v4.1.2</span></h1>
+      <h1>FREQUENCY LABORATORY<span class="ver-tag">v4.1.3</span></h1>
       <div class="sub">audio generator · piano · chords · effects · audiogram · ambient</div>
     </div>
   </div>
@@ -5539,8 +5541,9 @@
 
 </main>
 <footer>
-  Frequency Laboratory v4.1.2 · Web Audio API · Single-file HTML ·
+  Frequency Laboratory v4.1.3 · Web Audio API · Single-file HTML ·
   <a href="https://alexio.tf" target="_blank" rel="noopener">alexio.tf</a>
+  <br><small id="app-version" data-tf-ro="Versiune: v 4.1.3 · 2026-10-12" data-tf-en="Version: v 4.1.3 · 2026-10-12">Versiune: v 4.1.3 · 2026-10-12</small>
   <br><small data-tf-ro="Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio&quot;, „Schumann&quot;, binaurale și presetările „Pain Relief&quot;/„Peak Performance&quot; nu au validare științifică ca terapie și nu au efect medical dovedit. Volum redus, mai ales cu căști." data-tf-en="Informational/educational content; not a medical device or treatment and not a substitute for medical advice. The “Solfeggio”, “Schumann” and binaural frequencies and the “Pain Relief”/“Peak Performance” presets have no scientific validation as therapy and no proven medical effect. Keep the volume low, especially with headphones.">Conținut informativ/educațional; nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical. Frecvențele „Solfeggio", „Schumann", binaurale și presetările „Pain Relief"/„Peak Performance" nu au validare științifică ca terapie și nu au efect medical dovedit. Volum redus, mai ales cu căști.</small>
 </footer>
 </div>
@@ -16528,8 +16531,8 @@ Oscillator A becomes the <strong>carrier</strong>: supplies the synth tone.</p>
   const T_EXTRA = {
     // Meta / page title
     'High volume: lower the level before listening on headphones and raise it gradually. Loud or prolonged sound can damage hearing.': { en: 'High volume: lower the level before listening on headphones and raise it gradually. Loud or prolonged sound can damage hearing.' },
-    'Frequency Laboratory v4.1.2 — Complete Audio Generator': { en: 'Frequency Laboratory v4.1.2 — Complete Audio Generator' },
-    'Frequency Laboratory v4.1.2 — Complete Audio Generator': { en: 'Frequency Laboratory v4.1.2 — Complete Audio Generator' },
+    'Frequency Laboratory v4.1.3 — Complete Audio Generator': { en: 'Frequency Laboratory v4.1.3 — Complete Audio Generator' },
+    'Frequency Laboratory v4.1.3 — Complete Audio Generator': { en: 'Frequency Laboratory v4.1.3 — Complete Audio Generator' },
 
     // Quick-nav labels
     'Osc A': { en: 'Osc A' },
@@ -16933,8 +16936,8 @@ Oscillator A becomes the <strong>carrier</strong>: supplies the synth tone.</p>
     '(multi-tap noise). 16 steps at the selected BPM. Click cells to enable/disable.': { en: '(multi-tap noise). 16 steps at the selected BPM. Click cells to toggle.' },
 
     // Footer
-    'Frequency Laboratory v4.1.2 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.1.2 · Web Audio API · Single-file HTML ·' },
-    'Frequency Laboratory v4.1.2 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.1.2 · Web Audio API · Single-file HTML ·' },
+    'Frequency Laboratory v4.1.3 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.1.3 · Web Audio API · Single-file HTML ·' },
+    'Frequency Laboratory v4.1.3 · Web Audio API · Single-file HTML ·': { en: 'Frequency Laboratory v4.1.3 · Web Audio API · Single-file HTML ·' },
 
     // Drawer
     '◉ NAVIGHEAZĂ': { en: '◉ NAVIGATE' },
