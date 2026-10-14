@@ -1,6 +1,6 @@
 # Frequency Laboratory
 
-**Versiune:** 4.1.3 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 4.2.0 · **Ultima actualizare:** 14 octombrie 2026
 
 Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian, analizoare și teste auditive.
 
@@ -71,6 +71,9 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. Romanian/English UI. State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
 ## Istoric / Changelog
+
+### 4.2.0 — 2026-10-14
+- Copie de rezervă și etichetare date (fff-kit).
 
 ### 12 octombrie 2026 (v4.1.3)
 - 4.1.3 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
