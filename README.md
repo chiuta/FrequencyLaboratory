@@ -54,7 +54,7 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet. MIDI f
 
 ## Licență
 
-CC0 1.0 Universal (domeniu public) — vezi fișierul LICENSE
+MIT — vezi fișierul LICENSE
 
 ## Audit
 
