@@ -21,8 +21,8 @@
     "lab_frecv_theme",
     "lab_frecv_wn_seen"
   ],
-  "sizeBytes": 1453442,
-  "sha256": "93657bae86836c69e4a8f9122aff0927c9d0da57e714b20ad5f5044d182a3501",
+  "sizeBytes": 1453411,
+  "sha256": "b6d7d2e0ce36f713d37b3bb6c2b03660c2286a6d511b8c5386cfdecfcb24aec1",
   "csp": {
     "present": true,
     "directives": {
