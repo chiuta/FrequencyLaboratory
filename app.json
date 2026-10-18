@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "frequencylaboratory",
   "name": "Frequency Laboratory v4.2.0 — Complete Audio Generator",
-  "version": "4.2.0",
-  "updated": "2026-10-14",
+  "version": "4.2.1",
+  "updated": "2026-10-19",
   "description": "Generator de frecvențe v4.2.0: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.",
   "egress": [],
   "permissions": [
@@ -17,12 +17,16 @@
     "lab_frecv_favorites_v1",
     "lab_frecv_lang",
     "lab_frecv_midi_mappings",
+    "lab_frecv_modules_v1",
+    "lab_frecv_onboarded_v1",
+    "lab_frecv_panel_collapse_v1",
+    "lab_frecv_presets_v1",
     "lab_frecv_sections_state",
     "lab_frecv_theme",
     "lab_frecv_wn_seen"
   ],
-  "sizeBytes": 1444962,
-  "sha256": "12cd1a5124bcfd3ba7a3428da4e18df7ee2b9952d1c85e81faa8a0a3b8e96306",
+  "sizeBytes": 1445039,
+  "sha256": "00e2c8cdbf38c6956d18cc5c59a09d33d499f58f6598735d952f6052052b072d",
   "csp": {
     "present": true,
     "directives": {
@@ -35,7 +39,7 @@
       "base-uri": "'self'",
       "form-action": "'self'",
       "worker-src": "'self' blob:",
-      "script-src": "'self' blob: sha256×4",
+      "script-src": "'self' blob: sha256×2",
       "connect-src": "'self'"
     },
     "scriptInline": "hash",
@@ -56,7 +60,7 @@
     ]
   },
   "kit": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "modules": [
       "core",
       "label",
