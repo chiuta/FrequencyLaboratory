@@ -10,7 +10,7 @@ Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian
 
 **Live:** https://chiuta.github.io/FrequencyLaboratory/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

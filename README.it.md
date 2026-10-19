@@ -10,7 +10,7 @@ Generatore audio completo nel browser: oscillatori, binaurale, filtri, effetti, 
 
 **App online:** https://chiuta.github.io/FrequencyLaboratory/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

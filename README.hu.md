@@ -10,7 +10,7 @@ Teljes értékű hanggenerátor a böngészőben: oszcillátorok, binaurális, s
 
 **Online alkalmazás:** https://chiuta.github.io/FrequencyLaboratory/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

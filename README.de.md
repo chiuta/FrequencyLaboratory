@@ -10,7 +10,7 @@ Kompletter Audiogenerator im Browser: Oszillatoren, Binaural, Filter, Effekte, K
 
 **Live-App:** https://chiuta.github.io/FrequencyLaboratory/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

@@ -10,7 +10,7 @@ Generador de audio completo en el navegador: osciladores, binaural, filtros, efe
 
 **Aplicación en línea:** https://chiuta.github.io/FrequencyLaboratory/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 

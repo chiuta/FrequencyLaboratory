@@ -10,7 +10,7 @@ A complete audio generator in the browser: oscillators, binaural, filters, effec
 
 **Live app:** https://chiuta.github.io/FrequencyLaboratory/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 
