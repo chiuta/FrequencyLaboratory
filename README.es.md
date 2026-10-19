@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 4.2.1 · **Última actualización:** 2026-10-19
+**Versión:** 4.3.0 · **Última actualización:** 2026-10-19
+
+Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Generador de audio completo en el navegador: osciladores, binaural, filtros, efectos, piano, analizadores y pruebas auditivas.
 
@@ -26,7 +28,7 @@ Las funciones siguientes aparecen como secciones/controles en la interfaz:
 - **Sonidos ambientales** generados de forma procedural (lluvia, océano, viento, fuego, bosque).
 - **Sesiones:** etapas programables con crossfade, plantillas de Meditación / Conciliar el sueño / Solfeggio, temporizador de sueño con fundido, grabación WAV de 16 bits con pre-roll.
 - **Datos:** preajustes de usuario, favoritos, exportación/importación JSON, deshacer/rehacer, compartir la configuración por URL, compartir WAV/JSON (Web Share), temas de color (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
-- Interfaz en rumano e inglés; en la primera visita el idioma sigue al del navegador (rumano → RO, en otro caso EN), y se conserva la elección hecha con los botones RO/EN. Atención: en la versión RO muchas etiquetas técnicas siguen en inglés (waveform, reverb, cutoff, etc.).
+- Interfaz en 8 idiomas (RO, EN, FR, IT, ES, PT, DE, HU); se usa primero el idioma guardado, luego el del navegador (en otro caso EN), y se conserva la elección hecha con el selector de idioma. Atención: en la versión RO muchas etiquetas técnicas siguen en inglés (waveform, reverb, cutoff, etc.).
 
 ## Manual de uso
 

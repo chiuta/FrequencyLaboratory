@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 4.2.1 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 4.3.0 · **Ultima actualizare:** 2026-10-19
+
+Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian, analizoare și teste auditive.
 
@@ -26,7 +28,7 @@ Funcțiile de mai jos apar ca secțiuni/controale în interfață:
 - **Sunete ambientale** generate procedural (ploaie, ocean, vânt, foc, pădure).
 - **Sesiuni:** etape programabile cu crossfade, șabloane Meditation / Adormire / Solfeggio, sleep timer cu fade, înregistrare WAV pe 16 biți cu pre-roll.
 - **Date:** presetări utilizator, favorite, export/import JSON, undo/redo, partajare configurație prin URL, partajare WAV/JSON (Web Share), teme de culoare (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
-- Interfață în română și engleză; la prima vizită limba urmează limba browserului (română → RO, altfel EN), iar alegerea făcută cu butoanele RO/EN se păstrează. Atenție: în varianta RO multe etichete tehnice rămân în engleză (waveform, reverb, cutoff etc.).
+- Interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU); se folosește mai întâi limba salvată, apoi limba browserului (altfel EN), iar alegerea făcută cu selectorul de limbă se păstrează. Atenție: în varianta RO multe etichete tehnice rămân în engleză (waveform, reverb, cutoff etc.).
 
 ## Manual de utilizare
 

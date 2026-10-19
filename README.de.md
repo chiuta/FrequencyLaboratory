@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 4.2.1 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 4.3.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Kompletter Audiogenerator im Browser: Oszillatoren, Binaural, Filter, Effekte, Klavier, Analysatoren und Hörtests.
 
@@ -26,7 +28,7 @@ Die folgenden Funktionen erscheinen als Abschnitte/Bedienelemente in der Oberfl�
 - **Umgebungsklänge**, prozedural erzeugt (Regen, Ozean, Wind, Feuer, Wald).
 - **Sessions:** programmierbare Phasen mit Crossfade, Vorlagen Meditation / Einschlafen / Solfeggio, Sleep-Timer mit Ausblenden, 16-Bit-WAV-Aufnahme mit Pre-Roll.
 - **Daten:** Benutzer-Presets, Favoriten, JSON-Export/-Import, Undo/Redo, Teilen der Konfiguration per URL, Teilen von WAV/JSON (Web Share), Farbthemen (Phosphor, Amber, Blue, Mono), Wake Lock, Tutorial.
-- Oberfläche auf Rumänisch und Englisch; beim ersten Besuch folgt die Sprache der Browsersprache (Rumänisch → RO, sonst EN), und die mit den Schaltflächen RO/EN getroffene Wahl bleibt erhalten. Achtung: In der RO-Variante bleiben viele technische Bezeichnungen auf Englisch (Waveform, Reverb, Cutoff usw.).
+- Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU); zuerst wird die gespeicherte Sprache verwendet, dann die Browsersprache (sonst EN), und die mit dem Sprachwähler getroffene Wahl bleibt erhalten. Achtung: In der RO-Variante bleiben viele technische Bezeichnungen auf Englisch (Waveform, Reverb, Cutoff usw.).
 
 ## Bedienungsanleitung
 

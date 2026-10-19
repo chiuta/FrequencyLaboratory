@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 4.2.1 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 4.3.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Teljes értékű hanggenerátor a böngészőben: oszcillátorok, binaurális, szűrők, effektek, zongora, analizátorok és hallásvizsgálatok.
 
@@ -26,7 +28,7 @@ Az alábbi funkciók szakaszokként/vezérlőkként jelennek meg a felületen:
 - **Környezeti hangok**, procedurálisan generálva (eső, óceán, szél, tűz, erdő).
 - **Munkamenetek:** programozható szakaszok crossfade-del, Meditáció / Elalvás / Solfeggio sablonok, alvásidőzítő kihalkítással, 16 bites WAV-felvétel pre-roll-lal.
 - **Adatok:** felhasználói előbeállítások, kedvencek, JSON-export/-import, visszavonás/újra, a konfiguráció megosztása URL-en keresztül, WAV/JSON megosztása (Web Share), színtémák (Phosphor, Amber, Blue, Mono), Wake Lock, bemutató.
-- A felület román és angol nyelvű; az első látogatáskor a nyelv a böngésző nyelvét követi (román → RO, egyébként EN), és az RO/EN gombokkal hozott választás megmarad. Figyelem: az RO változatban sok műszaki felirat angol marad (waveform, reverb, cutoff stb.).
+- 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU); először a mentett nyelv érvényes, utána a böngészőé (egyébként EN), és a nyelvválasztóval hozott választás megmarad. Figyelem: az RO változatban sok műszaki felirat angol marad (waveform, reverb, cutoff stb.).
 
 ## Használati útmutató
 
