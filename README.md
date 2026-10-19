@@ -1,92 +1,94 @@
 # Frequency Laboratory
 
-**Versiune:** 4.2.1 · **Ultima actualizare:** 2026-10-19
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Generator audio complet în browser: oscilatoare, binaural, filtre, efecte, pian, analizoare și teste auditive.
+**Version:** 4.2.1 · **Last updated:** 2026-10-19
 
-**Live:** https://chiuta.github.io/FrequencyLaboratory/
+A complete audio generator in the browser: oscillators, binaural, filters, effects, piano, analyzers and hearing tests.
 
-![Captura de ecran](screenshot.png)
+**Live app:** https://chiuta.github.io/FrequencyLaboratory/
 
-## Ce este
+![Screenshot](screenshot.png)
 
-Frequency Laboratory (v4.2.0 în titlul aplicației) este un laborator audio dintr-un singur fișier HTML, bazat pe Web Audio API. Combină generator de tonuri, sinteză, efecte, sesiuni programabile, instrumente de măsurare cu microfonul și o bază de date de frecvențe (Solfeggio, Schumann, binaurale, acordaje etc.). Aplicația precizează că nu este tratament medical și că categoriile de frecvențe sunt informative.
+## What it is
 
-## Funcții
+Frequency Laboratory (v4.2.0 in the app's title) is an audio laboratory in a single HTML file, based on the Web Audio API. It combines a tone generator, synthesis, effects, programmable sessions, microphone-based measurement tools and a database of frequencies (Solfeggio, Schumann, binaural, tunings, etc.). The app states that it is not a medical treatment and that the frequency categories are informational.
 
-Funcțiile de mai jos apar ca secțiuni/controale în interfață:
+## Features
 
-- **Generare:** Osc A și Osc B (sinus, pătrat, triunghi, fierăstrău), mod binaural (Δ binaural), hard sync, ADSR, portamento, filtre (low/high/band-pass, notch, shelf, peaking, comb), sweep, modulare AM/izocronică (ISO 2/6/10/40 Hz), zgomot alb/roz/brun.
-- **Sinteză și efecte:** acorduri și arpegiator, sub-oscilator și supersaw, FM, ring, auto-pan, drive/compresor/EQ 5 benzi/gate/chorus/flanger/delay/reverb, filtru de formanți vocale, matrice de modulare LFO, player de progresii de acorduri, step sequencer cu 8 pași, Karplus-Strong, sintetizator granular, looper, acordaje (ET-12, just, pitagoreic, 19-TET, 31-TET, raga, gamelan ș.a.).
-- **Pian și MIDI:** claviatură, note scrise (ex. A4), tap tempo, MIDI IN (Web MIDI, doar în browsere care îl suportă), mapări MIDI.
-- **Analiză:** osciloscop, spectru FFT, spectrogramă, histogramă, scop de fază (Lissajous), RTA pe 1/3 de octavă, THD estimat, tuner cu microfon, contor SPL cu calibrare, măsurare de cameră (room sweep) cu export CSV.
-- **Teste:** identificare canale, polaritate, impuls/chirp, break-in pentru boxe, audiogramă interactivă (export PNG), joc „identifică frecvența”, tinnitus matcher cu mascare notch, tonuri „mosquito”.
-- **Sunete ambientale** generate procedural (ploaie, ocean, vânt, foc, pădure).
-- **Sesiuni:** etape programabile cu crossfade, șabloane Meditation / Adormire / Solfeggio, sleep timer cu fade, înregistrare WAV pe 16 biți cu pre-roll.
-- **Date:** presetări utilizator, favorite, export/import JSON, undo/redo, partajare configurație prin URL, partajare WAV/JSON (Web Share), teme de culoare (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
-- Interfață în română și engleză; la prima vizită limba urmează limba browserului (română → RO, altfel EN), iar alegerea făcută cu butoanele RO/EN se păstrează. Atenție: în varianta RO multe etichete tehnice rămân în engleză (waveform, reverb, cutoff etc.).
+The features below appear as sections/controls in the interface:
 
-## Manual de utilizare
+- **Generation:** Osc A and Osc B (sine, square, triangle, sawtooth), binaural mode (binaural Δ), hard sync, ADSR, portamento, filters (low/high/band-pass, notch, shelf, peaking, comb), sweep, AM/isochronic modulation (ISO 2/6/10/40 Hz), white/pink/brown noise.
+- **Synthesis and effects:** chords and arpeggiator, sub-oscillator and supersaw, FM, ring, auto-pan, drive/compressor/5-band EQ/gate/chorus/flanger/delay/reverb, vocal formant filter, LFO modulation matrix, chord progression player, 8-step step sequencer, Karplus-Strong, granular synthesizer, looper, tunings (12-TET, just, Pythagorean, 19-TET, 31-TET, raga, gamelan, etc.).
+- **Piano and MIDI:** keyboard, typed notes (e.g. A4), tap tempo, MIDI IN (Web MIDI, only in browsers that support it), MIDI mappings.
+- **Analysis:** oscilloscope, FFT spectrum, spectrogram, histogram, phase scope (Lissajous), 1/3-octave RTA, estimated THD, microphone tuner, SPL meter with calibration, room measurement (room sweep) with CSV export.
+- **Tests:** channel identification, polarity, impulse/chirp, speaker break-in, interactive audiogram (PNG export), "identify the frequency" game, tinnitus matcher with notch masking, "mosquito" tones.
+- **Ambient sounds** generated procedurally (rain, ocean, wind, fire, forest).
+- **Sessions:** programmable stages with crossfade, Meditation / Sleep / Solfeggio templates, sleep timer with fade, 16-bit WAV recording with pre-roll.
+- **Data:** user presets, favorites, JSON export/import, undo/redo, configuration sharing via URL, WAV/JSON sharing (Web Share), colour themes (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
+- Interface in Romanian and English; on the first visit the language follows the browser language (Romanian → RO, otherwise EN), and the choice made with the RO/EN buttons is kept. Note: in the RO version many technical labels remain in English (waveform, reverb, cutoff, etc.).
 
-1. Deschide pagina și, la nevoie, parcurge tutorialul (`★ TUTORIAL`).
-2. Setează frecvența în „Osc A” și forma de undă; ține volumul „master” sub 20% la început (avertisment din aplicație).
-3. Apasă `START ▶` (sau Spațiu); `STOP ◼` oprește; `PANIC ✕` (sau `P`) oprește instant.
-4. Pentru binaural, pornește „Osc B”, activează „mod binaural” și setează „Δ binaural”; folosește căști.
-5. Explorează secțiunile din bara de module (Acorduri, Efecte, Pian, RTA, Audiogram, Ambient, Presets, Database ș.a.).
-6. Scurtături: Spațiu start/stop, `P` panic, `R` înregistrare, `↑/↓` frecvență A ±1 Hz, `Shift+↑/↓` ±10 Hz, `1–4` formă de undă, `[` / `]` volum master ∓5%, `S` snap la notă, `D` drone, `?` lista de scurtături, `Esc` închide.
-7. Înregistrare: `▶ START RECORDING`, apoi `↓ DOWNLOAD WAV`.
-8. Presetări: salvează cu nume, apoi `↑ EXPORT JSON` pentru backup și `↓ IMPORT JSON` pentru restaurare (importul se îmbină cu presetările existente).
-9. Microfonul (SPL, tuner, RTA pe microfon, room sweep) se activează doar la cerere; browserul cere permisiune.
+## User guide
 
-## Confidențialitate și rețea
+1. Open the page and, if needed, go through the tutorial (`★ TUTORIAL`).
+2. Set the frequency in "Osc A" and the waveform; keep the "master" volume below 20% at first (warning from the app).
+3. Press `START ▶` (or Space); `STOP ◼` stops; `PANIC ✕` (or `P`) stops instantly.
+4. For binaural, start "Osc B", enable "binaural mode" and set "binaural Δ"; use headphones.
+5. Explore the sections in the module bar (Chords, Effects, Piano, RTA, Audiogram, Ambient, Presets, Database, etc.).
+6. Shortcuts: Space start/stop, `P` panic, `R` record, `↑/↓` frequency A ±1 Hz, `Shift+↑/↓` ±10 Hz, `1–4` waveform, `[` / `]` master volume ∓5%, `S` snap to note, `D` drone, `?` list of shortcuts, `Esc` closes.
+7. Recording: `▶ START RECORDING`, then `↓ DOWNLOAD WAV`.
+8. Presets: save with a name, then `↑ EXPORT JSON` for backup and `↓ IMPORT JSON` for restoring (the import is merged with the existing presets).
+9. The microphone (SPL, tuner, microphone RTA, room sweep) is activated only on request; the browser asks for permission.
 
-- **Stocare locală:** `localStorage`, chei cu prefixul `lab_frecv_` (limbă, temă, presetări, favorite, mapări MIDI, ordinea/starea modulelor, marcaje de onboarding). Ștergerea datelor site-ului șterge presetările; folosește exportul JSON pentru backup.
-- **Rețea:** aplicația nu face cereri `fetch` și nu încarcă scripturi sau fonturi externe. Politica CSP din pagină limitează `connect-src` la `'self'`. Linkurile (Buy Me a Coffee, alexio.tf, creativecommons.org) sunt hiperlegături deschise doar la click.
-- Microfonul este folosit local, doar după acordarea permisiunii; audio-ul nu este trimis nicăieri de aplicație.
+## Privacy and network
 
-## Avertisment
+- **Local storage:** `localStorage`, keys with the prefix `lab_frecv_` (language, theme, presets, favorites, MIDI mappings, module order/state, onboarding markers). Clearing the site data deletes the presets; use the JSON export for backup.
+- **Network:** the app makes no `fetch` requests and loads no external scripts or fonts. The CSP in the page limits `connect-src` to `'self'`. The links (Buy Me a Coffee, alexio.tf, creativecommons.org) are hyperlinks opened only on click.
+- The microphone is used locally, only after permission is granted; the app does not send the audio anywhere.
 
-Conținut informativ/educațional. Aplicația nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical (inclusiv pentru tinnitus, durere sau probleme de auz). Frecvențele „Solfeggio", „Schumann", ritmurile binaurale/izocronice și presetările din interfață denumite „Pain Relief" sau „Peak Performance" nu au validare științifică ca terapie și nu au efect medical dovedit (numele presetărilor sunt păstrate ca denumiri orientative; interfața afișează disclaimerul lângă ele, în RO și EN); pagina însăși avertizează în panoul de presetări. Folosește volum redus (sub 20% la început), mai ales cu căști; evită frecvențe înalte la volum mare. Audiograma nu înlocuiește un audiogram medical.
+## Disclaimer
 
-## Rulare locală / offline
+Informational/educational content. The app is not a medical device or treatment and does not replace medical advice (including for tinnitus, pain or hearing problems). The "Solfeggio", "Schumann" frequencies, the binaural/isochronic rhythms and the presets in the interface named "Pain Relief" or "Peak Performance" have no scientific validation as therapy and no proven medical effect (the preset names are kept as indicative labels; the interface shows the disclaimer next to them, in RO and EN); the page itself warns in the presets panel. Use a low volume (below 20% at first), especially with headphones; avoid high frequencies at high volume. The audiogram does not replace a medical audiogram.
 
-Descarcă `index.html` și deschide-l în browser; nu necesită internet. MIDI funcționează doar unde există Web MIDI (de ex. Chrome desktop), iar accesul la microfon necesită context sigur (HTTPS sau fișier local, în funcție de browser).
+## Running locally / offline
 
-## Licență
+Download `index.html` and open it in a browser; it requires no internet. MIDI works only where Web MIDI exists (e.g. desktop Chrome), and microphone access requires a secure context (HTTPS or a local file, depending on the browser).
 
-MIT — vezi fișierul LICENSE
+## License
+
+MIT — see the LICENSE file
 
 ## Audit
 
-2026-10-11 (runda 3): etichetele adăugate de audit și disclaimerul sunt traduse RO/EN (necesită revizie nativă); disclaimer „fără efect medical dovedit” lângă presetările Pain Relief / Peak Performance / Solfeggio.
+2026-10-11 (round 3): the labels added by the audit and the disclaimer are translated RO/EN (they need native review); disclaimer "no proven medical effect" next to the Pain Relief / Peak Performance / Solfeggio presets.
 
-2026-10-10: verificat (fără cereri de rețea în cod, CSP `connect-src 'self'`); adăugate nume accesibile pentru controale, contrast, avertisment în subsol.
+2026-10-10: verified (no network requests in the code, CSP `connect-src 'self'`); accessible names added for controls, contrast, warning in the footer.
 
-## Autor
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
-## English summary
+## Summary
 
 Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. Romanian/English UI. State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
-## Istoric / Changelog
+## History / Changelog
 
 ### 4.2.1 — 2026-10-19
-- Corecție: la încărcarea din `#state=<base64>` parametrii în plus din adresă (de ex. `&from=generator-frecvente`) nu mai strică decodarea stării.
+- Fix: when loading from `#state=<base64>`, extra parameters in the address (e.g. `&from=generator-frecvente`) no longer break the decoding of the state.
 
 ### 4.2.0 — 2026-10-14
-- Copie de rezervă și etichetare date (fff-kit).
+- Backup and data labelling (fff-kit).
 
-### 12 octombrie 2026 (v4.1.3)
-- 4.1.3 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
+### 12 October 2026 (v4.1.3)
+- 4.1.3 — 2026-10-12: the version and the date of the last update are displayed in the app
 
-### 11 octombrie 2026
-- Prima vizită: limba implicită urmează limba browserului (română → RO, altfel EN) în loc să fie mereu RO; înainte vizitatorii cu browser englezesc vedeau interfața amestecată RO/EN.
-- Eliminate cele trei notificări (toast) de la încărcare (portamento, micro-tuning, „v4.1.2 încărcat · MIDI”), care se suprapuneau peste antet; mesajul despre MIDI apare la utilizarea MIDI. Dispare și cuvântul francez „prêt” dintr-unul dintre ele.
-- Pastila de donații urmează limba interfeței (RO/EN), inclusiv etichetele ARIA.
-- v4.1.2: avertisment de volum (peste 60%, `role=status`, RO/EN) lângă volumul master; scurtături `[` / `]` pentru volum; CSP pe hash (fără `'unsafe-inline'` în `script-src`, `blob:` păstrat pentru worklet/înregistrare). Testat offline: 0 erori/încălcări CSP, 0 depășire orizontală, axe 0.
-- Versiune unificată v4.1.2 (titlu, antet, manifest, subsol; înainte titlul spunea v4.0, iar subsolul v4.1).
-- Ghidul de bun venit (prima rulare) are acum butoane RO/EN și „Sari peste” (plus tasta Esc), este un dialog accesibil și este tradus complet în engleză; modulele/profilurile sunt traduse la afișare. Pe ecrane joase nu mai taie partea de sus.
-- Fonturile de afișaj încorporate nu conțin Ă/Ș/Ț: elementele afectate trec pe fontul de text (clasa `dia-fb`), deci titlul nu mai amestecă glife (ex. „FRECVENȚE”, „CONTINUĂ”).
-- Axe: 0 încălcări (conținutul în `<main>`, 18 câmpuri cu `aria-label`, titluri h2 în „Usage notes”, `aside` pentru donații, containerul de notificări ca regiune). Corectat „uppended” → „suspended” în indicatorul CTX.
+### 11 October 2026
+- First visit: the default language follows the browser language (Romanian → RO, otherwise EN) instead of always being RO; previously visitors with an English browser saw a mixed RO/EN interface.
+- Removed the three notifications (toasts) at load (portamento, micro-tuning, "v4.1.2 loaded · MIDI"), which overlapped the header; the MIDI message appears when MIDI is used. The French word "prêt" in one of them also disappears.
+- The donation pill follows the interface language (RO/EN), including the ARIA labels.
+- v4.1.2: volume warning (above 60%, `role=status`, RO/EN) next to the master volume; `[` / `]` shortcuts for volume; CSP on hash (no `'unsafe-inline'` in `script-src`, `blob:` kept for the worklet/recording). Tested offline: 0 CSP errors/violations, 0 horizontal overflow, axe 0.
+- Unified version v4.1.2 (title, header, manifest, footer; previously the title said v4.0 and the footer v4.1).
+- The welcome guide (first run) now has RO/EN buttons and "Skip" (plus the Esc key), is an accessible dialog and is fully translated into English; the modules/profiles are translated on display. On short screens it no longer cuts off the top.
+- The embedded display fonts do not contain Ă/Ș/Ț: the affected elements switch to the text font (class `dia-fb`), so the title no longer mixes glyphs (e.g. "FRECVENȚE", "CONTINUĂ").
+- Axe: 0 violations (content in `<main>`, 18 fields with `aria-label`, h2 headings in "Usage notes", `aside` for donations, the notification container as a region). Corrected "uppended" → "suspended" in the CTX indicator.
