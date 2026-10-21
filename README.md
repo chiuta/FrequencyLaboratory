@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.3.2 · **Last updated:** 2026-10-19
+**Version:** 4.3.3 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,9 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. UI in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU). State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
 ## History / Changelog
+
+### 4.3.3 — 2026-10-22
+- Fixed: the Romanian accessible name of the Wake lock button now starts with the visible text ("Wake lock – menține ecranul activ"), satisfying WCAG Label in Name.
 
 ### 4.3.2 — 2026-10-19
 - The accessibility scripts of the app are present again: automatic accessible names for controls without a label, the fallback font for the letters Ă ă Ș ș Ț ț in the display fonts, and the visible-text-in-the-accessible-name rule (WCAG 2.5.3). They had been removed by mistake in an earlier cleanup and were restored, with the suffixes of the generated names in 8 languages. Known minor issue: in the RO interface the accessible name of the "Wake lock" button does not start with its visible text.

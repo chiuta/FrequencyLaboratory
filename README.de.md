@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 4.3.2 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 4.3.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,9 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 Frequency Laboratory ist ein Web-Audio-Werkzeugkasten in einer einzigen Datei: Oszillatoren und binaurale Schwebungen, Filter und Effekte, Klavier/MIDI, Sequencer, Analysatoren (FFT, RTA, Phasenscope), mikrofonbasierte SPL- und Raummessung, Hörtests, Umgebungsklänge, programmierbare Sessions, WAV-Aufnahme und eine Frequenzdatenbank. Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU). Der Zustand wird in localStorage gehalten (Schlüssel `lab_frecv_`); die App stellt keine Netzwerkanfragen (CSP `connect-src 'self'`). Sie ist kein Medizinprodukt.
 
 ## Verlauf / Changelog
+
+### 4.3.3 — 2026-10-22
+- Behoben: Der rumänische zugängliche Name der Schaltfläche Wake lock beginnt jetzt mit dem sichtbaren Text („Wake lock – menține ecranul activ“), gemäß WCAG Label in Name.
 
 ### 4.3.2 — 2026-10-19
 - Die Barrierefreiheits-Skripte der App sind wieder vorhanden: automatische zugängliche Namen für Steuerelemente ohne Beschriftung, Ersatzschrift für die Buchstaben Ă ă Ș ș Ț ț in den Anzeigeschriften und die Regel „sichtbarer Text im zugänglichen Namen“ (WCAG 2.5.3). Sie waren bei einer früheren Bereinigung versehentlich entfernt worden und wurden wiederhergestellt, mit den Suffixen der erzeugten Namen in 8 Sprachen. Bekanntes kleines Problem: In der RO-Oberfläche beginnt der zugängliche Name der Schaltfläche „Wake lock“ nicht mit ihrem sichtbaren Text.

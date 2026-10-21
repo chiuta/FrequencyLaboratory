@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "frequencylaboratory",
   "name": "Frequency Laboratory v4.2.0 — Complete Audio Generator",
-  "version": "4.3.2",
-  "updated": "2026-10-19",
+  "version": "4.3.3",
+  "updated": "2026-10-22",
   "description": "Generator de frecvențe v4.2.0: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.",
   "egress": [],
   "permissions": [
@@ -25,8 +25,8 @@
     "lab_frecv_theme",
     "lab_frecv_wn_seen"
   ],
-  "sizeBytes": 2310798,
-  "sha256": "56d4bc9eb903c42f424a545f8595620cf1da6726f3086945e5dae39dbe0e53bd",
+  "sizeBytes": 2310800,
+  "sha256": "bb9f45a0b9b28523a37d65b97cb3645c2a7877a0eee6e1db7eb939403f549be3",
   "csp": {
     "present": true,
     "directives": {
