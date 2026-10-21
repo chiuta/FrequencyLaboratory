@@ -28,7 +28,7 @@ The features below appear as sections/controls in the interface:
 - **Ambient sounds** generated procedurally (rain, ocean, wind, fire, forest).
 - **Sessions:** programmable stages with crossfade, Meditation / Sleep / Solfeggio templates, sleep timer with fade, 16-bit WAV recording with pre-roll.
 - **Data:** user presets, favorites, JSON export/import, undo/redo, configuration sharing via URL, WAV/JSON sharing (Web Share), colour themes (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
-- Interface in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU); the saved language is used first, then the browser language (otherwise EN), and the choice made with the language selector is kept. Note: in the RO version many technical labels remain in English (waveform, reverb, cutoff, etc.).
+- Interface in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU); the saved language is used first, then the browser language (otherwise EN), and the choice made with the language selector is kept. The help (ELI5), usage notes, tutorial, changelogs and the frequency catalogue (about 230 entries with names and descriptions) exist in all 8 languages, and the Romanian version, in which about 800 texts used to be English only, is now translated; proper names, formats/codes and the standard names of the musical modes are left as they are. The translations other than RO and EN are automatic and have not been verified by native speakers.
 
 ## User guide
 
@@ -50,7 +50,7 @@ The features below appear as sections/controls in the interface:
 
 ## Disclaimer
 
-Informational/educational content. The app is not a medical device or treatment and does not replace medical advice (including for tinnitus, pain or hearing problems). The "Solfeggio", "Schumann" frequencies, the binaural/isochronic rhythms and the presets in the interface named "Pain Relief" or "Peak Performance" have no scientific validation as therapy and no proven medical effect (the preset names are kept as indicative labels; the interface shows the disclaimer next to them, in RO and EN); the page itself warns in the presets panel. Use a low volume (below 20% at first), especially with headphones; avoid high frequencies at high volume. The audiogram does not replace a medical audiogram.
+Informational/educational content. The app is not a medical device or treatment and does not replace medical advice (including for tinnitus, pain or hearing problems). The "Solfeggio", "Schumann" frequencies, the binaural/isochronic rhythms and the presets in the interface named "Pain Relief" or "Peak Performance" have no scientific validation as therapy and no proven medical effect (the preset names are kept as indicative labels; the interface shows the disclaimer next to them, in the interface language); the page itself warns in the presets panel. Use a low volume (below 20% at first), especially with headphones; avoid high frequencies at high volume. The audiogram does not replace a medical audiogram. The hearing-test and safety notes and the descriptions in the frequency catalogue (solfeggio, brainwave, Schumann etc., which carry therapeutic claims in the sources) are translated automatically and need review by a specialist.
 
 ## Running locally / offline
 
@@ -72,9 +72,15 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## Summary
 
-Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. Romanian/English UI. State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
+Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. UI in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU). State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
 ## History / Changelog
+
+### 4.3.2 — 2026-10-19
+- The accessibility scripts of the app are present again: automatic accessible names for controls without a label, the fallback font for the letters Ă ă Ș ș Ț ț in the display fonts, and the visible-text-in-the-accessible-name rule (WCAG 2.5.3). They had been removed by mistake in an earlier cleanup and were restored, with the suffixes of the generated names in 8 languages. Known minor issue: in the RO interface the accessible name of the "Wake lock" button does not start with its visible text.
+
+### 4.3.1 — 2026-10-19
+- All the long texts (ELI5 help, usage notes, tutorial, changelogs, frequency catalogue) in 8 languages; the Romanian interface, which still had about 800 English-only texts, is translated.
 
 ### 4.2.1 — 2026-10-19
 - Fix: when loading from `#state=<base64>`, extra parameters in the address (e.g. `&from=generator-frecvente`) no longer break the decoding of the state.

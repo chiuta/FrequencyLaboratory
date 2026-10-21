@@ -28,7 +28,7 @@ Die folgenden Funktionen erscheinen als Abschnitte/Bedienelemente in der Oberfl�
 - **Umgebungsklänge**, prozedural erzeugt (Regen, Ozean, Wind, Feuer, Wald).
 - **Sessions:** programmierbare Phasen mit Crossfade, Vorlagen Meditation / Einschlafen / Solfeggio, Sleep-Timer mit Ausblenden, 16-Bit-WAV-Aufnahme mit Pre-Roll.
 - **Daten:** Benutzer-Presets, Favoriten, JSON-Export/-Import, Undo/Redo, Teilen der Konfiguration per URL, Teilen von WAV/JSON (Web Share), Farbthemen (Phosphor, Amber, Blue, Mono), Wake Lock, Tutorial.
-- Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU); zuerst wird die gespeicherte Sprache verwendet, dann die Browsersprache (sonst EN), und die mit dem Sprachwähler getroffene Wahl bleibt erhalten. Achtung: In der RO-Variante bleiben viele technische Bezeichnungen auf Englisch (Waveform, Reverb, Cutoff usw.).
+- Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU); zuerst wird die gespeicherte Sprache verwendet, dann die Browsersprache (sonst EN), und die mit dem Sprachwähler getroffene Wahl bleibt erhalten. Die Hilfe (ELI5), die Nutzungshinweise, das Tutorial, die Änderungsprotokolle und der Frequenzkatalog (rund 230 Einträge mit Namen und Beschreibungen) gibt es in allen 8 Sprachen, und die RO-Variante, in der rund 800 Texte nur auf Englisch vorlagen, ist jetzt übersetzt; Eigennamen, Formate/Codes und die Standardnamen der musikalischen Modi bleiben unverändert. Die Übersetzungen außer RO und EN sind automatisch und nicht von Muttersprachlern geprüft.
 
 ## Bedienungsanleitung
 
@@ -50,7 +50,7 @@ Die folgenden Funktionen erscheinen als Abschnitte/Bedienelemente in der Oberfl�
 
 ## Hinweis
 
-Informativer/bildender Inhalt. Die App ist kein Medizinprodukt und keine Behandlung und ersetzt keinen ärztlichen Rat (auch nicht bei Tinnitus, Schmerzen oder Hörproblemen). Die „Solfeggio“-, „Schumann“-Frequenzen, die binauralen/isochronen Rhythmen und die in der Oberfläche als „Pain Relief“ oder „Peak Performance“ bezeichneten Presets haben keine wissenschaftliche Validierung als Therapie und keine nachgewiesene medizinische Wirkung (die Namen der Presets bleiben als Richtbezeichnungen erhalten; die Oberfläche zeigt den Hinweis daneben an, in RO und EN); die Seite selbst warnt im Preset-Bereich. Verwende eine niedrige Lautstärke (anfangs unter 20 %), besonders mit Kopfhörern; vermeide hohe Frequenzen bei hoher Lautstärke. Das Audiogramm ersetzt kein ärztliches Audiogramm.
+Informativer/bildender Inhalt. Die App ist kein Medizinprodukt und keine Behandlung und ersetzt keinen ärztlichen Rat (auch nicht bei Tinnitus, Schmerzen oder Hörproblemen). Die „Solfeggio“-, „Schumann“-Frequenzen, die binauralen/isochronen Rhythmen und die in der Oberfläche als „Pain Relief“ oder „Peak Performance“ bezeichneten Presets haben keine wissenschaftliche Validierung als Therapie und keine nachgewiesene medizinische Wirkung (die Namen der Presets bleiben als Richtbezeichnungen erhalten; die Oberfläche zeigt den Hinweis daneben an, in der Oberflächensprache); die Seite selbst warnt im Preset-Bereich. Verwende eine niedrige Lautstärke (anfangs unter 20 %), besonders mit Kopfhörern; vermeide hohe Frequenzen bei hoher Lautstärke. Das Audiogramm ersetzt kein ärztliches Audiogramm. Die Hinweise zum Hörtest und zur Sicherheit sowie die Beschreibungen im Frequenzkatalog (Solfeggio, Gehirnwellen, Schumann usw., die in den Quellen therapeutische Behauptungen tragen) wurden automatisch übersetzt und müssen von einer Fachperson geprüft werden.
 
 ## Lokale Ausführung / offline
 
@@ -72,9 +72,15 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 
 ## Zusammenfassung
 
-Frequency Laboratory ist ein Web-Audio-Werkzeugkasten in einer einzigen Datei: Oszillatoren und binaurale Schwebungen, Filter und Effekte, Klavier/MIDI, Sequencer, Analysatoren (FFT, RTA, Phasenscope), mikrofonbasierte SPL- und Raummessung, Hörtests, Umgebungsklänge, programmierbare Sessions, WAV-Aufnahme und eine Frequenzdatenbank. Oberfläche auf Rumänisch/Englisch. Der Zustand wird in localStorage gehalten (Schlüssel `lab_frecv_`); die App stellt keine Netzwerkanfragen (CSP `connect-src 'self'`). Sie ist kein Medizinprodukt.
+Frequency Laboratory ist ein Web-Audio-Werkzeugkasten in einer einzigen Datei: Oszillatoren und binaurale Schwebungen, Filter und Effekte, Klavier/MIDI, Sequencer, Analysatoren (FFT, RTA, Phasenscope), mikrofonbasierte SPL- und Raummessung, Hörtests, Umgebungsklänge, programmierbare Sessions, WAV-Aufnahme und eine Frequenzdatenbank. Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU). Der Zustand wird in localStorage gehalten (Schlüssel `lab_frecv_`); die App stellt keine Netzwerkanfragen (CSP `connect-src 'self'`). Sie ist kein Medizinprodukt.
 
 ## Verlauf / Changelog
+
+### 4.3.2 — 2026-10-19
+- Die Barrierefreiheits-Skripte der App sind wieder vorhanden: automatische zugängliche Namen für Steuerelemente ohne Beschriftung, Ersatzschrift für die Buchstaben Ă ă Ș ș Ț ț in den Anzeigeschriften und die Regel „sichtbarer Text im zugänglichen Namen“ (WCAG 2.5.3). Sie waren bei einer früheren Bereinigung versehentlich entfernt worden und wurden wiederhergestellt, mit den Suffixen der erzeugten Namen in 8 Sprachen. Bekanntes kleines Problem: In der RO-Oberfläche beginnt der zugängliche Name der Schaltfläche „Wake lock“ nicht mit ihrem sichtbaren Text.
+
+### 4.3.1 — 2026-10-19
+- Alle langen Texte (ELI5-Hilfe, Nutzungshinweise, Tutorial, Änderungsprotokolle, Frequenzkatalog) in 8 Sprachen; die rumänische Oberfläche, die noch rund 800 nur englische Texte hatte, ist übersetzt.
 
 ### 4.2.1 — 2026-10-19
 - Korrektur: Beim Laden aus `#state=<base64>` stören zusätzliche Parameter in der Adresse (z. B. `&from=generator-frecvente`) die Dekodierung des Zustands nicht mehr.

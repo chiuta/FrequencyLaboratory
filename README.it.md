@@ -28,7 +28,7 @@ Le funzioni qui sotto compaiono come sezioni/controlli nell'interfaccia:
 - **Suoni ambientali** generati proceduralmente (pioggia, oceano, vento, fuoco, foresta).
 - **Sessioni:** fasi programmabili con crossfade, modelli Meditazione / Addormentamento / Solfeggio, sleep timer con dissolvenza, registrazione WAV a 16 bit con pre-roll.
 - **Dati:** preset utente, preferiti, esportazione/importazione JSON, annulla/ripeti, condivisione della configurazione tramite URL, condivisione WAV/JSON (Web Share), temi di colore (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
-- Interfaccia in 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU); si usa prima la lingua salvata, poi quella del browser (altrimenti EN), e la scelta fatta con il selettore di lingua viene conservata. Attenzione: nella versione RO molte etichette tecniche restano in inglese (waveform, reverb, cutoff, ecc.).
+- Interfaccia in 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU); si usa prima la lingua salvata, poi quella del browser (altrimenti EN), e la scelta fatta con il selettore di lingua viene conservata. La guida (ELI5), le note d'uso, il tutorial, i registri delle modifiche e il catalogo delle frequenze (circa 230 voci con nomi e descrizioni) esistono in tutte e 8 le lingue, e la versione RO, in cui circa 800 testi erano solo in inglese, è ora tradotta; i nomi propri, i formati/codici e i nomi standard dei modi musicali restano invariati. Le traduzioni diverse da RO e EN sono automatiche e non sono state verificate da madrelingua.
 
 ## Guida all'uso
 
@@ -50,7 +50,7 @@ Le funzioni qui sotto compaiono come sezioni/controlli nell'interfaccia:
 
 ## Avvertenza
 
-Contenuto informativo/educativo. L'applicazione non è un dispositivo né un trattamento medico e non sostituisce il parere medico (anche per acufene, dolore o problemi di udito). Le frequenze «Solfeggio», «Schumann», i ritmi binaurali/isocronici e i preset dell'interfaccia denominati «Pain Relief» o «Peak Performance» non hanno validazione scientifica come terapia e non hanno alcun effetto medico dimostrato (i nomi dei preset sono mantenuti come denominazioni indicative; l'interfaccia mostra l'avvertenza accanto a essi, in RO e EN); la pagina stessa avverte nel pannello dei preset. Usa un volume basso (sotto il 20% all'inizio), soprattutto con le cuffie; evita le frequenze alte a volume elevato. L'audiogramma non sostituisce un audiogramma medico.
+Contenuto informativo/educativo. L'applicazione non è un dispositivo né un trattamento medico e non sostituisce il parere medico (anche per acufene, dolore o problemi di udito). Le frequenze «Solfeggio», «Schumann», i ritmi binaurali/isocronici e i preset dell'interfaccia denominati «Pain Relief» o «Peak Performance» non hanno validazione scientifica come terapia e non hanno alcun effetto medico dimostrato (i nomi dei preset sono mantenuti come denominazioni indicative; l'interfaccia mostra l'avvertenza accanto a essi, nella lingua dell'interfaccia); la pagina stessa avverte nel pannello dei preset. Usa un volume basso (sotto il 20% all'inizio), soprattutto con le cuffie; evita le frequenze alte a volume elevato. L'audiogramma non sostituisce un audiogramma medico. Le note sul test dell'udito e sulla sicurezza e le descrizioni del catalogo delle frequenze (solfeggio, onde cerebrali, Schumann ecc., che nelle fonti hanno pretese terapeutiche) sono tradotte automaticamente e richiedono la revisione di uno specialista.
 
 ## Esecuzione locale / offline
 
@@ -72,9 +72,15 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf
 
 ## Riepilogo
 
-Frequency Laboratory è un toolkit Web Audio in un unico file: oscillatori e battimenti binaurali, filtri ed effetti, pianoforte/MIDI, sequencer, analizzatori (FFT, RTA, scope di fase), misura SPL e dell'ambiente con il microfono, test uditivi, suoni ambientali, sessioni programmabili, registrazione WAV e una banca dati di frequenze. Interfaccia rumeno/inglese. Lo stato è conservato in localStorage (chiavi `lab_frecv_`); l'applicazione non effettua richieste di rete (CSP `connect-src 'self'`). Non è un dispositivo medico.
+Frequency Laboratory è un toolkit Web Audio in un unico file: oscillatori e battimenti binaurali, filtri ed effetti, pianoforte/MIDI, sequencer, analizzatori (FFT, RTA, scope di fase), misura SPL e dell'ambiente con il microfono, test uditivi, suoni ambientali, sessioni programmabili, registrazione WAV e una banca dati di frequenze. Interfaccia in 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU). Lo stato è conservato in localStorage (chiavi `lab_frecv_`); l'applicazione non effettua richieste di rete (CSP `connect-src 'self'`). Non è un dispositivo medico.
 
 ## Cronologia / Changelog
+
+### 4.3.2 — 2026-10-19
+- Gli script di accessibilità dell'app sono di nuovo presenti: nomi accessibili automatici per i controlli senza etichetta, font di riserva per le lettere Ă ă Ș ș Ț ț nei font di visualizzazione e regola del testo visibile nel nome accessibile (WCAG 2.5.3). Erano stati rimossi per errore in una pulizia precedente e sono stati ripristinati, con i suffissi dei nomi generati in 8 lingue. Problema minore noto: nell'interfaccia RO il nome accessibile del pulsante «Wake lock» non inizia con il suo testo visibile.
+
+### 4.3.1 — 2026-10-19
+- Tutti i testi lunghi (guida ELI5, note d'uso, tutorial, registri delle modifiche, catalogo delle frequenze) in 8 lingue; l'interfaccia in rumeno, che aveva ancora circa 800 testi solo in inglese, è tradotta.
 
 ### 4.2.1 — 2026-10-19
 - Correzione: durante il caricamento da `#state=<base64>`, i parametri aggiuntivi presenti nell'indirizzo (ad es. `&from=generator-frecvente`) non compromettono più la decodifica dello stato.

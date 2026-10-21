@@ -28,7 +28,7 @@ Funcțiile de mai jos apar ca secțiuni/controale în interfață:
 - **Sunete ambientale** generate procedural (ploaie, ocean, vânt, foc, pădure).
 - **Sesiuni:** etape programabile cu crossfade, șabloane Meditation / Adormire / Solfeggio, sleep timer cu fade, înregistrare WAV pe 16 biți cu pre-roll.
 - **Date:** presetări utilizator, favorite, export/import JSON, undo/redo, partajare configurație prin URL, partajare WAV/JSON (Web Share), teme de culoare (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.
-- Interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU); se folosește mai întâi limba salvată, apoi limba browserului (altfel EN), iar alegerea făcută cu selectorul de limbă se păstrează. Atenție: în varianta RO multe etichete tehnice rămân în engleză (waveform, reverb, cutoff etc.).
+- Interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU); se folosește mai întâi limba salvată, apoi limba browserului (altfel EN), iar alegerea făcută cu selectorul de limbă se păstrează. Ajutorul (ELI5), notele de utilizare, tutorialul, jurnalele de modificări și catalogul de frecvențe (circa 230 de intrări cu nume și descrieri) există în toate cele 8 limbi, iar varianta RO, în care circa 800 de texte erau doar în engleză, este acum tradusă; numele proprii, formatele/codurile și denumirile standard ale modurilor muzicale rămân ca atare. Traducerile în afară de RO și EN sunt automate și neverificate de vorbitori nativi.
 
 ## Manual de utilizare
 
@@ -50,7 +50,7 @@ Funcțiile de mai jos apar ca secțiuni/controale în interfață:
 
 ## Avertisment
 
-Conținut informativ/educațional. Aplicația nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical (inclusiv pentru tinnitus, durere sau probleme de auz). Frecvențele „Solfeggio", „Schumann", ritmurile binaurale/izocronice și presetările din interfață denumite „Pain Relief" sau „Peak Performance" nu au validare științifică ca terapie și nu au efect medical dovedit (numele presetărilor sunt păstrate ca denumiri orientative; interfața afișează disclaimerul lângă ele, în RO și EN); pagina însăși avertizează în panoul de presetări. Folosește volum redus (sub 20% la început), mai ales cu căști; evită frecvențe înalte la volum mare. Audiograma nu înlocuiește un audiogram medical.
+Conținut informativ/educațional. Aplicația nu este dispozitiv sau tratament medical și nu înlocuiește sfatul medical (inclusiv pentru tinnitus, durere sau probleme de auz). Frecvențele „Solfeggio", „Schumann", ritmurile binaurale/izocronice și presetările din interfață denumite „Pain Relief" sau „Peak Performance" nu au validare științifică ca terapie și nu au efect medical dovedit (numele presetărilor sunt păstrate ca denumiri orientative; interfața afișează disclaimerul lângă ele, în limba interfeței); pagina însăși avertizează în panoul de presetări. Folosește volum redus (sub 20% la început), mai ales cu căști; evită frecvențe înalte la volum mare. Audiograma nu înlocuiește un audiogram medical. Notele despre testul auditiv și siguranță și descrierile din catalogul de frecvențe (solfeggio, unde cerebrale, Schumann etc., care poartă în surse pretenții terapeutice) sunt traduse automat și necesită revizuire de către un specialist.
 
 ## Rulare locală / offline
 
@@ -72,9 +72,15 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## Rezumat
 
-Frequency Laboratory este un set de instrumente Web Audio într-un singur fișier: oscilatoare și bătăi binaurale, filtre și efecte, pian/MIDI, secvențiator, analizoare (FFT, RTA, osciloscop de fază), măsurare SPL și a camerei cu microfonul, teste de auz, sunete ambientale, sesiuni programabile, înregistrare WAV și o bază de date de frecvențe. Interfață în română/engleză. Starea se păstrează în localStorage (chei `lab_frecv_`); aplicația nu face cereri de rețea (CSP `connect-src 'self'`). Nu este un dispozitiv medical.
+Frequency Laboratory este un set de instrumente Web Audio într-un singur fișier: oscilatoare și bătăi binaurale, filtre și efecte, pian/MIDI, secvențiator, analizoare (FFT, RTA, osciloscop de fază), măsurare SPL și a camerei cu microfonul, teste de auz, sunete ambientale, sesiuni programabile, înregistrare WAV și o bază de date de frecvențe. Interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU). Starea se păstrează în localStorage (chei `lab_frecv_`); aplicația nu face cereri de rețea (CSP `connect-src 'self'`). Nu este un dispozitiv medical.
 
 ## Istoric / Changelog
+
+### 4.3.2 — 2026-10-19
+- Scripturile de accesibilitate ale aplicației sunt din nou prezente: nume accesibile automate pentru controalele fără etichetă, fontul de rezervă pentru literele Ă ă Ș ș Ț ț în fonturile de afișare și regula „textul vizibil în numele accesibil” (WCAG 2.5.3). Fuseseră eliminate din greșeală într-o curățare anterioară și au fost restaurate, cu sufixele numelor generate în 8 limbi. Problemă minoră cunoscută: în interfața RO numele accesibil al butonului „Wake lock” nu începe cu textul lui vizibil.
+
+### 4.3.1 — 2026-10-19
+- Toate textele lungi (ajutor ELI5, note de utilizare, tutorial, jurnale de modificări, catalog de frecvențe) în 8 limbi; interfața în română, care avea încă circa 800 de texte doar în engleză, este tradusă.
 
 ### 4.2.1 — 2026-10-19
 - Corecție: la încărcarea din `#state=<base64>` parametrii în plus din adresă (de ex. `&from=generator-frecvente`) nu mai strică decodarea stării.

@@ -28,7 +28,7 @@ Az alábbi funkciók szakaszokként/vezérlőkként jelennek meg a felületen:
 - **Környezeti hangok**, procedurálisan generálva (eső, óceán, szél, tűz, erdő).
 - **Munkamenetek:** programozható szakaszok crossfade-del, Meditáció / Elalvás / Solfeggio sablonok, alvásidőzítő kihalkítással, 16 bites WAV-felvétel pre-roll-lal.
 - **Adatok:** felhasználói előbeállítások, kedvencek, JSON-export/-import, visszavonás/újra, a konfiguráció megosztása URL-en keresztül, WAV/JSON megosztása (Web Share), színtémák (Phosphor, Amber, Blue, Mono), Wake Lock, bemutató.
-- 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU); először a mentett nyelv érvényes, utána a böngészőé (egyébként EN), és a nyelvválasztóval hozott választás megmarad. Figyelem: az RO változatban sok műszaki felirat angol marad (waveform, reverb, cutoff stb.).
+- 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU); először a mentett nyelv érvényes, utána a böngészőé (egyébként EN), és a nyelvválasztóval hozott választás megmarad. A súgó (ELI5), a használati megjegyzések, az oktatóanyag, a változásnaplók és a frekvenciakatalógus (mintegy 230 bejegyzés névvel és leírással) mind a 8 nyelven megvan, és az RO változat, amelyben mintegy 800 szöveg csak angolul volt, most le van fordítva; a tulajdonnevek, a formátumok/kódok és a zenei módok szabványos nevei változatlanok maradnak. Az RO-tól és EN-től eltérő fordítások gépiek, és anyanyelvi beszélők nem ellenőrizték őket.
 
 ## Használati útmutató
 
@@ -50,7 +50,7 @@ Az alábbi funkciók szakaszokként/vezérlőkként jelennek meg a felületen:
 
 ## Figyelmeztetés
 
-Tájékoztató/oktatási tartalom. Az alkalmazás nem orvosi eszköz vagy kezelés, és nem helyettesíti az orvosi tanácsot (beleértve a fülzúgást, a fájdalmat vagy a hallásproblémákat). A „Solfeggio”, „Schumann” frekvenciák, a binaurális/izokron ritmusok és a felületen „Pain Relief” vagy „Peak Performance” néven szereplő előbeállítások terápiaként nem rendelkeznek tudományos validálással, és nincs bizonyított orvosi hatásuk (az előbeállítások nevei tájékoztató elnevezésként maradtak meg; a felület mellettük megjeleníti a figyelmeztetést, RO és EN nyelven); maga az oldal is figyelmeztet az előbeállítások panelén. Használj alacsony hangerőt (kezdetben 20% alatt), különösen fejhallgatóval; kerüld a magas frekvenciákat nagy hangerőn. Az audiogram nem helyettesíti az orvosi audiogramot.
+Tájékoztató/oktatási tartalom. Az alkalmazás nem orvosi eszköz vagy kezelés, és nem helyettesíti az orvosi tanácsot (beleértve a fülzúgást, a fájdalmat vagy a hallásproblémákat). A „Solfeggio”, „Schumann” frekvenciák, a binaurális/izokron ritmusok és a felületen „Pain Relief” vagy „Peak Performance” néven szereplő előbeállítások terápiaként nem rendelkeznek tudományos validálással, és nincs bizonyított orvosi hatásuk (az előbeállítások nevei tájékoztató elnevezésként maradtak meg; a felület mellettük megjeleníti a figyelmeztetést, a felület nyelvén); maga az oldal is figyelmeztet az előbeállítások panelén. Használj alacsony hangerőt (kezdetben 20% alatt), különösen fejhallgatóval; kerüld a magas frekvenciákat nagy hangerőn. Az audiogram nem helyettesíti az orvosi audiogramot. A hallásvizsgálati és biztonsági megjegyzések, valamint a frekvenciakatalógus leírásai (solfeggio, agyhullámok, Schumann stb., amelyek a forrásokban terápiás állításokat hordoznak) gépi fordítások, és szakértői felülvizsgálatot igényelnek.
 
 ## Futtatás helyben / offline
 
@@ -72,9 +72,15 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf
 
 ## Összefoglaló
 
-A Frequency Laboratory egyetlen fájlból álló Web Audio eszköztár: oszcillátorok és binaurális ütemek, szűrők és effektek, zongora/MIDI, szekvencer, analizátorok (FFT, RTA, fázisszkóp), mikrofonos SPL- és szobamérés, hallásvizsgálatok, környezeti hangok, programozható munkamenetek, WAV-felvétel és egy frekvencia-adatbázis. Román/angol felület. Az állapot a localStorage-ban van tárolva (`lab_frecv_` kulcsok); az alkalmazás nem indít hálózati kéréseket (CSP `connect-src 'self'`). Nem orvosi eszköz.
+A Frequency Laboratory egyetlen fájlból álló Web Audio eszköztár: oszcillátorok és binaurális ütemek, szűrők és effektek, zongora/MIDI, szekvencer, analizátorok (FFT, RTA, fázisszkóp), mikrofonos SPL- és szobamérés, hallásvizsgálatok, környezeti hangok, programozható munkamenetek, WAV-felvétel és egy frekvencia-adatbázis. 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU). Az állapot a localStorage-ban van tárolva (`lab_frecv_` kulcsok); az alkalmazás nem indít hálózati kéréseket (CSP `connect-src 'self'`). Nem orvosi eszköz.
 
 ## Előzmények / Changelog
+
+### 4.3.2 — 2026-10-19
+- Az alkalmazás akadálymentességi szkriptjei ismét megvannak: automatikus hozzáférhető nevek a címke nélküli vezérlőkhöz, tartalékbetűtípus az Ă ă Ș ș Ț ț betűkhöz a megjelenítő betűtípusokban, és a „látható szöveg a hozzáférhető névben” szabály (WCAG 2.5.3). Egy korábbi takarításkor tévedésből eltávolították őket, és helyreállítottuk őket, a generált nevek utótagjai 8 nyelven. Ismert kisebb hiba: az RO felületen a „Wake lock” gomb hozzáférhető neve nem a látható szöveggel kezdődik.
+
+### 4.3.1 — 2026-10-19
+- Az összes hosszú szöveg (ELI5-súgó, használati megjegyzések, oktatóanyag, változásnaplók, frekvenciakatalógus) 8 nyelven; a román felület, amelyben még mintegy 800 csak angol szöveg volt, le van fordítva.
 
 ### 4.2.1 — 2026-10-19
 - Javítás: a `#state=<base64>` címről történő betöltéskor a címben lévő további paraméterek (pl. `&from=generator-frecvente`) már nem rontják el az állapot dekódolását.
