@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 4.3.5 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 4.3.6 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -44,7 +44,7 @@ Az alábbi funkciók szakaszokként/vezérlőkként jelennek meg a felületen:
 
 ## Adatvédelem és hálózat
 
-- **Helyi tárolás:** `localStorage`, `lab_frecv_` előtagú kulcsok (nyelv, téma, előbeállítások, kedvencek, MIDI-hozzárendelések, a modulok sorrendje/állapota, onboarding-jelölők). A webhelyadatok törlése törli az előbeállításokat; biztonsági mentéshez használd a JSON-exportot.
+- **Helyi tárolás:** `localStorage`, `frequencylaboratory.` előtagú kulcsok (nyelv, téma, előbeállítások, kedvencek, MIDI-hozzárendelések, a modulok sorrendje/állapota, onboarding-jelölők). A webhelyadatok törlése törli az előbeállításokat; biztonsági mentéshez használd a JSON-exportot.
 - **Hálózat:** az alkalmazás nem indít `fetch` kéréseket, és nem tölt be külső szkripteket vagy betűtípusokat. Az oldalban lévő CSP a `connect-src` értékét `'self'`-re korlátozza. A hivatkozások (Buy Me a Coffee, alexio.tf, creativecommons.org) hiperhivatkozások, amelyek csak kattintásra nyílnak meg.
 - A mikrofont helyben használja, csak az engedély megadása után; az alkalmazás a hangot sehová nem küldi el.
 
@@ -72,9 +72,13 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf
 
 ## Összefoglaló
 
-A Frequency Laboratory egyetlen fájlból álló Web Audio eszköztár: oszcillátorok és binaurális ütemek, szűrők és effektek, zongora/MIDI, szekvencer, analizátorok (FFT, RTA, fázisszkóp), mikrofonos SPL- és szobamérés, hallásvizsgálatok, környezeti hangok, programozható munkamenetek, WAV-felvétel és egy frekvencia-adatbázis. 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU). Az állapot a localStorage-ban van tárolva (`lab_frecv_` kulcsok); az alkalmazás nem indít hálózati kéréseket (CSP `connect-src 'self'`). Nem orvosi eszköz.
+A Frequency Laboratory egyetlen fájlból álló Web Audio eszköztár: oszcillátorok és binaurális ütemek, szűrők és effektek, zongora/MIDI, szekvencer, analizátorok (FFT, RTA, fázisszkóp), mikrofonos SPL- és szobamérés, hallásvizsgálatok, környezeti hangok, programozható munkamenetek, WAV-felvétel és egy frekvencia-adatbázis. 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU). Az állapot a localStorage-ban van tárolva (`frequencylaboratory.` kulcsok); az alkalmazás nem indít hálózati kéréseket (CSP `connect-src 'self'`). Nem orvosi eszköz.
 
 ## Előzmények / Changelog
+
+### 4.3.6 — 2026-10-22
+
+saját `localStorage` kulcsok `frequencylaboratory.` előtaggal, a régi `lab_frecv_` kulcsokból automatikusan átemelve (amelyek ugyanazon az origin-en ütköztek a Generator de frecvențe-vel); az importált előbeállítások ellenőrzése (csak ismert mezők, helyes típusok, véges számok: egy `1e309` érték többé nem rontja el a hangparamétereket); valódi service worker és manifest (offline indítás, telepíthető); a verziószám kikerült az oldalcímből; látható billentyűzetfókusz minden vezérlőn. mobil és kisegítő finomítások: legalább 12 px-es szöveg és legalább 24 px-es érintési felületek.
 
 ### 4.3.5 — 2026-10-22
 - Fordítási javítás: négy, a román felületen félig angol súgószöveg most teljesen román; a sleep-fade, a mátrix, a MIDI-óra, a spektrogrampuffer és az audiokontextus állapotfeliratai mostantól a felület nyelvét követik.

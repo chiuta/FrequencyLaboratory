@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.3.5 · **Last updated:** 2026-10-22
+**Version:** 4.3.6 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -44,7 +44,7 @@ The features below appear as sections/controls in the interface:
 
 ## Privacy and network
 
-- **Local storage:** `localStorage`, keys with the prefix `lab_frecv_` (language, theme, presets, favorites, MIDI mappings, module order/state, onboarding markers). Clearing the site data deletes the presets; use the JSON export for backup.
+- **Local storage:** `localStorage`, keys with the prefix `frequencylaboratory.` (language, theme, presets, favorites, MIDI mappings, module order/state, onboarding markers). Clearing the site data deletes the presets; use the JSON export for backup.
 - **Network:** the app makes no `fetch` requests and loads no external scripts or fonts. The CSP in the page limits `connect-src` to `'self'`. The links (Buy Me a Coffee, alexio.tf, creativecommons.org) are hyperlinks opened only on click.
 - The microphone is used locally, only after permission is granted; the app does not send the audio anywhere.
 
@@ -72,9 +72,13 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## Summary
 
-Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. UI in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU). State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
+Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. UI in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU). State is kept in localStorage (`frequencylaboratory.` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
 ## History / Changelog
+
+### 4.3.6 — 2026-10-22
+
+own `localStorage` keys with the `frequencylaboratory.` prefix, migrated automatically from the old `lab_frecv_` keys (which collided with Generator de frecvențe on the same origin); imported presets are validated (only known fields, correct types, finite numbers: a `1e309` value no longer breaks the audio parameters); real service worker and manifest (offline start, installable); version number removed from the page title; visible keyboard focus on every control. mobile and accessibility polish: text at least 12 px and touch targets at least 24 px.
 
 ### 4.3.5 — 2026-10-22
 - Translation fix: four help texts that were still half-English in the Romanian interface are now fully Romanian; the sleep-fade, matrix, MIDI-clock, spectrogram-buffer and audio-context status labels now follow the interface language.

@@ -16,7 +16,7 @@ for (const L of ['en', 'ro', 'fr', 'it', 'es', 'pt', 'de', 'hu']) {
   const ctx = await b.newContext({viewport: {width: 1280, height: 800}, locale: L});
   const net = [];
   await ctx.route(/^https?:/, (r) => { net.push(r.request().url()); r.abort(); });
-  await ctx.addInitScript((l) => { try { localStorage.setItem('lab_frecv_lang', l); } catch (e) {} }, L);
+  await ctx.addInitScript((l) => { try { localStorage.setItem('frequencylaboratory.lang', l); } catch (e) {} }, L);
   const page = await ctx.newPage();
   const errs = [];
   page.on('pageerror', (e) => errs.push(e.message));

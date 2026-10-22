@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 4.3.5 · **Última atualização:** 2026-10-22
+**Versão:** 4.3.6 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -44,7 +44,7 @@ As funcionalidades abaixo surgem como secções/controlos na interface:
 
 ## Privacidade e rede
 
-- **Armazenamento local:** `localStorage`, chaves com o prefixo `lab_frecv_` (idioma, tema, predefinições, favoritos, mapeamentos MIDI, ordem/estado dos módulos, marcas de onboarding). Apagar os dados do sítio elimina as predefinições; use a exportação JSON como cópia de segurança.
+- **Armazenamento local:** `localStorage`, chaves com o prefixo `frequencylaboratory.` (idioma, tema, predefinições, favoritos, mapeamentos MIDI, ordem/estado dos módulos, marcas de onboarding). Apagar os dados do sítio elimina as predefinições; use a exportação JSON como cópia de segurança.
 - **Rede:** a aplicação não faz pedidos `fetch` e não carrega scripts nem tipos de letra externos. A CSP da página limita `connect-src` a `'self'`. As ligações (Buy Me a Coffee, alexio.tf, creativecommons.org) são hiperligações abertas apenas ao clicar.
 - O microfone é usado localmente, apenas após a concessão da permissão; a aplicação não envia o áudio para lado nenhum.
 
@@ -72,9 +72,13 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf
 
 ## Resumo
 
-O Frequency Laboratory é um conjunto de ferramentas Web Audio num único ficheiro: osciladores e batimentos binaurais, filtros e efeitos, piano/MIDI, sequenciador, analisadores (FFT, RTA, osciloscópio de fase), medição de SPL e de sala com microfone, testes auditivos, sons ambiente, sessões programáveis, gravação WAV e uma base de dados de frequências. Interface em 8 línguas (RO, EN, FR, IT, ES, PT, DE, HU). O estado é guardado em localStorage (chaves `lab_frecv_`); a aplicação não faz pedidos de rede (CSP `connect-src 'self'`). Não é um dispositivo médico.
+O Frequency Laboratory é um conjunto de ferramentas Web Audio num único ficheiro: osciladores e batimentos binaurais, filtros e efeitos, piano/MIDI, sequenciador, analisadores (FFT, RTA, osciloscópio de fase), medição de SPL e de sala com microfone, testes auditivos, sons ambiente, sessões programáveis, gravação WAV e uma base de dados de frequências. Interface em 8 línguas (RO, EN, FR, IT, ES, PT, DE, HU). O estado é guardado em localStorage (chaves `frequencylaboratory.`); a aplicação não faz pedidos de rede (CSP `connect-src 'self'`). Não é um dispositivo médico.
 
 ## Histórico / Changelog
+
+### 4.3.6 — 2026-10-22
+
+chaves `localStorage` próprias com o prefixo `frequencylaboratory.`, migradas automaticamente das antigas chaves `lab_frecv_` (que colidiam com o Generator de frecvențe na mesma origem); as predefinições importadas são validadas (só campos conhecidos, tipos corretos, números finitos: um valor `1e309` já não estraga os parâmetros de áudio); service worker e manifesto reais (arranque offline, instalável); número de versão retirado do título da página; foco de teclado visível em todos os controlos. melhorias para telemóvel e acessibilidade: texto de pelo menos 12 px e áreas táteis de pelo menos 24 px.
 
 ### 4.3.5 — 2026-10-22
 - Correção de tradução: quatro textos de ajuda que continuavam meio em inglês na interface romena estão agora totalmente em romeno; os rótulos de estado do sleep-fade, da matriz, do clock MIDI, do buffer do espetrograma e do contexto de áudio seguem agora o idioma da interface.

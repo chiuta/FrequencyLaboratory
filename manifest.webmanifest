@@ -1,0 +1,37 @@
+{
+  "name": "Frequency Laboratory",
+  "short_name": "FreqLab",
+  "description": "Generator de frecvențe: secțiuni colapsabile (navigare 80 panouri), drum buffers pre-alocate (fără GC), MBC→master limiter routing, granular reverse corect, S/H LFO restore cutoff, vocoder gain compensat, beat detection cu prag dinamic. Plus toate funcțiile v2.0.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "ro",
+  "background_color": "#0a0f0a",
+  "theme_color": "#0a0f0a",
+  "categories": [
+    "music",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "x_fff_pwa": 1
+}
