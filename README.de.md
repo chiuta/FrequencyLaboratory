@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 4.3.10 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 4.3.11 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ Frequency Laboratory ist ein Web-Audio-Werkzeugkasten in einer einzigen Datei: O
 
 ## Verlauf / Changelog
 - **4.3.9 — 2026-10-22:** Touch-Ziele: die ELI5-„?“-Marken erreichen 24×24 px (44 px bei grobem Zeiger). Erneute Prüfung bei 360 und 1366 px (Anfangszustand, aufgeklappte Abschnitte, verborgene Panels): kein Ziel unter 24 px und kein Text unter 12 px mehr.
+
+### 4.3.11 — 2026-10-23
+
+- Dialoge: Die nativen Boxen `alert`/`confirm`/`prompt` wurden durch barrierefreie, übersetzte `FFF.dialog`-Dialoge ersetzt (Tastatur, Fokusfalle, Esc) – mit unverändertem Verhalten (fff-kit 1.2.0).
 
 ### 4.3.8 — 2026-10-22
 

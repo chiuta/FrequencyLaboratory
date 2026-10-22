@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 4.3.10 · **Ultima actualizare:** 2026-10-23
+**Versiune:** 4.3.11 · **Ultima actualizare:** 2026-10-23
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ Frequency Laboratory este un set de instrumente Web Audio într-un singur fișie
 
 ## Istoric / Changelog
 - **4.3.9 — 2026-10-22:** Ținte tactile: insignele „?” ELI5 ajung la 24×24 px (44 px pe pointer grosier). Re-audit la 360 și 1366 px (stare inițială, secțiuni extinse, panouri ascunse): nu mai rămâne nicio țintă sub 24 px și niciun text sub 12 px.
+
+### 4.3.11 — 2026-10-23
+
+- Dialoguri: casetele native `alert`/`confirm`/`prompt` au fost înlocuite cu dialoguri `FFF.dialog` accesibile și traduse (tastatură, capcană de focus, Escape), cu același comportament (fff-kit 1.2.0).
 
 ### 4.3.8 — 2026-10-22
 
