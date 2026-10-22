@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 4.3.8 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 4.3.9 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,7 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf
 A Frequency Laboratory egyetlen fájlból álló Web Audio eszköztár: oszcillátorok és binaurális ütemek, szűrők és effektek, zongora/MIDI, szekvencer, analizátorok (FFT, RTA, fázisszkóp), mikrofonos SPL- és szobamérés, hallásvizsgálatok, környezeti hangok, programozható munkamenetek, WAV-felvétel és egy frekvencia-adatbázis. 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU). Az állapot a localStorage-ban van tárolva (`frequencylaboratory.` kulcsok); az alkalmazás nem indít hálózati kéréseket (CSP `connect-src 'self'`). Nem orvosi eszköz.
 
 ## Előzmények / Changelog
+- **4.3.9 — 2026-10-22:** Érintési célpontok: az ELI5 „?” jelvények elérik a 24×24 px-t (durva mutatónál 44 px). Újabb ellenőrzés 360 és 1366 px-en (kezdőállapot, kinyitott szakaszok, rejtett panelek): nem marad 24 px alatti célpont és 12 px alatti szöveg.
 
 ### 4.3.8 — 2026-10-22
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 4.3.8 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 4.3.9 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,7 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf
 Frequency Laboratory è un toolkit Web Audio in un unico file: oscillatori e battimenti binaurali, filtri ed effetti, pianoforte/MIDI, sequencer, analizzatori (FFT, RTA, scope di fase), misura SPL e dell'ambiente con il microfono, test uditivi, suoni ambientali, sessioni programmabili, registrazione WAV e una banca dati di frequenze. Interfaccia in 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU). Lo stato è conservato in localStorage (chiavi `frequencylaboratory.`); l'applicazione non effettua richieste di rete (CSP `connect-src 'self'`). Non è un dispositivo medico.
 
 ## Cronologia / Changelog
+- **4.3.9 — 2026-10-22:** Bersagli touch: i badge «?» ELI5 raggiungono 24×24 px (44 px su puntatore grossolano). Nuovo audit a 360 e 1366 px (stato iniziale, sezioni espanse, pannelli nascosti): non restano bersagli sotto 24 px né testo sotto 12 px.
 
 ### 4.3.8 — 2026-10-22
 
