@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 4.3.3 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 4.3.4 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,9 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 Frequency Laboratory ist ein Web-Audio-Werkzeugkasten in einer einzigen Datei: Oszillatoren und binaurale Schwebungen, Filter und Effekte, Klavier/MIDI, Sequencer, Analysatoren (FFT, RTA, Phasenscope), mikrofonbasierte SPL- und Raummessung, Hörtests, Umgebungsklänge, programmierbare Sessions, WAV-Aufnahme und eine Frequenzdatenbank. Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU). Der Zustand wird in localStorage gehalten (Schlüssel `lab_frecv_`); die App stellt keine Netzwerkanfragen (CSP `connect-src 'self'`). Sie ist kein Medizinprodukt.
 
 ## Verlauf / Changelog
+
+### 4.3.4 — 2026-10-22
+- Übersetzungskorrektur: Die barrierefreien Namen (Share URL, Pluck, Module, Schaltflächen „einfache Erklärung“) folgen jetzt der Oberflächensprache, statt Rumänisch einzumischen; der Seitentitel folgt der Sprache; sieben rumänische Hilfetexte (und ein Hinweis zur Drum-Machine) wurden korrekt neu geschrieben, statt Englisch und Rumänisch zu mischen.
 
 ### 4.3.3 — 2026-10-22
 - Behoben: Der rumänische zugängliche Name der Schaltfläche Wake lock beginnt jetzt mit dem sichtbaren Text („Wake lock – menține ecranul activ“), gemäß WCAG Label in Name.
