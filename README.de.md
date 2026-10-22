@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 4.3.7 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 4.3.8 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,10 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 Frequency Laboratory ist ein Web-Audio-Werkzeugkasten in einer einzigen Datei: Oszillatoren und binaurale Schwebungen, Filter und Effekte, Klavier/MIDI, Sequencer, Analysatoren (FFT, RTA, Phasenscope), mikrofonbasierte SPL- und Raummessung, Hörtests, Umgebungsklänge, programmierbare Sessions, WAV-Aufnahme und eine Frequenzdatenbank. Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU). Der Zustand wird in localStorage gehalten (Schlüssel `frequencylaboratory.`); die App stellt keine Netzwerkanfragen (CSP `connect-src 'self'`). Sie ist kein Medizinprodukt.
 
 ## Verlauf / Changelog
+
+### 4.3.8 — 2026-10-22
+
+fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße. Touch-Ziele/Text in der App korrigiert.
 
 ### 4.3.7 — 2026-10-22
 
