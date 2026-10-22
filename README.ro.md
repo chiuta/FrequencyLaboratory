@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 4.3.4 · **Ultima actualizare:** 2026-10-22
+**Versiune:** 4.3.5 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,9 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 Frequency Laboratory este un set de instrumente Web Audio într-un singur fișier: oscilatoare și bătăi binaurale, filtre și efecte, pian/MIDI, secvențiator, analizoare (FFT, RTA, osciloscop de fază), măsurare SPL și a camerei cu microfonul, teste de auz, sunete ambientale, sesiuni programabile, înregistrare WAV și o bază de date de frecvențe. Interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU). Starea se păstrează în localStorage (chei `lab_frecv_`); aplicația nu face cereri de rețea (CSP `connect-src 'self'`). Nu este un dispozitiv medical.
 
 ## Istoric / Changelog
+
+### 4.3.5 — 2026-10-22
+- Remediere de traducere: patru texte de ajutor rămase pe jumătate în engleză în interfața română sunt acum complet în română; etichetele de stare pentru sleep-fade, matrice, MIDI clock, bufferul spectrogramei și contextul audio urmează acum limba interfeței.
 
 ### 4.3.4 — 2026-10-22
 - Corecție de traducere: numele accesibile (Share URL, Pluck, Module, butoanele „explicație simplă”) urmează acum limba interfeței în loc să amestece româna; titlul paginii urmează limba; șapte texte de ajutor în română (și o notă la toba electronică) au fost rescrise corect, în loc să amestece engleza cu româna.

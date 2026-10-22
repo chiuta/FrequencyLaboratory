@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.3.4 · **Last updated:** 2026-10-22
+**Version:** 4.3.5 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,6 +75,9 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. UI in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU). State is kept in localStorage (`lab_frecv_` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
 ## History / Changelog
+
+### 4.3.5 — 2026-10-22
+- Translation fix: four help texts that were still half-English in the Romanian interface are now fully Romanian; the sleep-fade, matrix, MIDI-clock, spectrogram-buffer and audio-context status labels now follow the interface language.
 
 ### 4.3.4 — 2026-10-22
 - Translation fix: accessible names (Share URL, Pluck, Modules, “simple explanation” buttons) now follow the interface language instead of mixing in Romanian; the page title follows the language; seven help texts in Romanian (and a drum-machine note) were rewritten properly instead of mixing English and Romanian.
