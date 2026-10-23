@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 4.3.11 · **Last updated:** 2026-10-23
+**Version:** 4.3.13 · **Last updated:** 2026-10-23
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,14 @@ Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaura
 
 ## History / Changelog
 - **4.3.9 — 2026-10-22:** Touch targets: the ELI5 “?” badges reach 24×24 px (44 px on coarse pointers). Re-audit at 360 and 1366 px (initial state, expanded sections, hidden panels): no target under 24 px and no text under 12 px remains.
+
+### 4.3.13 — 2026-10-23
+
+- Fix: user presets with wrongly typed fields (e.g. string `freqA`, missing `beatRate`) no longer break the presets panel; CSP hash recalculated.
+
+### 4.3.12 — 2026-10-23
+
+- Fix: startup no longer fails when `module_order_v1` or `midi_mappings` in localStorage are corrupt (object/`null`/number); CSP hash recalculated.
 
 ### 4.3.11 — 2026-10-23
 

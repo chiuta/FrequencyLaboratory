@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 4.3.11 · **Última actualización:** 2026-10-23
+**Versión:** 4.3.13 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,14 @@ Frequency Laboratory es un conjunto de herramientas Web Audio en un único archi
 
 ## Historial / Changelog
 - **4.3.9 — 2026-10-22:** Objetivos táctiles: las insignias «?» ELI5 llegan a 24×24 px (44 px con puntero grueso). Nueva auditoría a 360 y 1366 px (estado inicial, secciones expandidas, paneles ocultos): no queda ningún objetivo por debajo de 24 px ni texto por debajo de 12 px.
+
+### 4.3.13 — 2026-10-23
+
+- Fix: user presets with wrongly typed fields (e.g. string `freqA`, missing `beatRate`) no longer break the presets panel; CSP hash recalculated.
+
+### 4.3.12 — 2026-10-23
+
+- Fix: startup no longer fails when `module_order_v1` or `midi_mappings` in localStorage are corrupt (object/`null`/number); CSP hash recalculated.
 
 ### 4.3.11 — 2026-10-23
 
