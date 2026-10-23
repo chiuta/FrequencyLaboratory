@@ -101,5 +101,17 @@ const b = await chromium.launch({executablePath: '/opt/pw-browsers/chromium', ar
     await ctx.close();
   }
 }
+// 5. presetări utilizator cu câmpuri de tip greșit nu opresc panoul (4.3.13)
+{
+  for (const val of ['[{"name":"a","state":{"freqA":"440"}}]', '[{"name":"a","state":{"freqA":440,"binaural":true}}]']) {
+    const ctx = await b.newContext({viewport: {width: 1280, height: 800}});
+    await ctx.addInitScript((v) => { try { localStorage.setItem('frequencylaboratory.onboarded_v1', '1'); localStorage.setItem('frequencylaboratory.wn_seen', 'v4.0'); localStorage.setItem('frequencylaboratory.presets_v1', v); } catch (e) {} }, val);
+    const p = await ctx.newPage(); const errs = [];
+    p.on('pageerror', (e) => errs.push(e.message));
+    await p.goto(BASE); await p.waitForTimeout(1500);
+    t('presetare coruptă ' + val.slice(0, 40) + ': fără pageerror', errs.length === 0, errs);
+    await ctx.close();
+  }
+}
 await b.close(); srv.close();
 console.log('\n' + ok + ' reușite, ' + bad + ' eșuate'); process.exit(bad ? 1 : 0);

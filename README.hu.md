@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 4.3.12 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 4.3.13 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ A Frequency Laboratory egyetlen fájlból álló Web Audio eszköztár: oszcill�
 
 ## Előzmények / Changelog
 - **4.3.9 — 2026-10-22:** Érintési célpontok: az ELI5 „?” jelvények elérik a 24×24 px-t (durva mutatónál 44 px). Újabb ellenőrzés 360 és 1366 px-en (kezdőállapot, kinyitott szakaszok, rejtett panelek): nem marad 24 px alatti célpont és 12 px alatti szöveg.
+
+### 4.3.13 — 2026-10-23
+
+- Fix: user presets with wrongly typed fields (e.g. string `freqA`, missing `beatRate`) no longer break the presets panel; CSP hash recalculated.
 
 ### 4.3.12 — 2026-10-23
 
