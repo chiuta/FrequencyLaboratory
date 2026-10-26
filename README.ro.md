@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 4.3.14 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 5.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -25,6 +25,7 @@ Funcțiile de mai jos apar ca secțiuni/controale în interfață:
 - **Pian și MIDI:** claviatură, note scrise (ex. A4), tap tempo, MIDI IN (Web MIDI, doar în browsere care îl suportă), mapări MIDI.
 - **Analiză:** osciloscop, spectru FFT, spectrogramă, histogramă, scop de fază (Lissajous), RTA pe 1/3 de octavă, THD estimat, tuner cu microfon, contor SPL cu calibrare, măsurare de cameră (room sweep) cu export CSV.
 - **Teste:** identificare canale, polaritate, impuls/chirp, break-in pentru boxe, audiogramă interactivă (export PNG), joc „identifică frecvența”, tinnitus matcher cu mascare notch, tonuri „mosquito”.
+- **Patch modular (v5.0.0):** lanț de module conectabile (oscilator, LFO, zgomot, filtru, amplificare, delay, distorsiune, analizor, ieșire), cu verificare offline (FFT) a ce măsoară analizoarele, ieșire mereu limitată, configurații salvate local și partajate prin JSON sau cod `FLP1.`. Instrument experimental, informativ: nu este dispozitiv medical.
 - **Sunete ambientale** generate procedural (ploaie, ocean, vânt, foc, pădure).
 - **Sesiuni:** etape programabile cu crossfade, șabloane Meditation / Adormire / Solfeggio, sleep timer cu fade, înregistrare WAV pe 16 biți cu pre-roll.
 - **Date:** presetări utilizator, favorite, export/import JSON, undo/redo, partajare configurație prin URL, partajare WAV/JSON (Web Share), teme de culoare (Phosphor, Amber, Blue, Mono), Wake Lock, tutorial.

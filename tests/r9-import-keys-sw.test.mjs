@@ -101,7 +101,7 @@ const b = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || un
     await ctx.close();
   }
 }
-// 5. presetări utilizator cu câmpuri de tip greșit nu opresc panoul (4.3.14)
+// 5. presetări utilizator cu câmpuri de tip greșit nu opresc panoul (5.0.0)
 {
   for (const val of ['[{"name":"a","state":{"freqA":"440"}}]', '[{"name":"a","state":{"freqA":440,"binaural":true}}]']) {
     const ctx = await b.newContext({viewport: {width: 1280, height: 800}});
