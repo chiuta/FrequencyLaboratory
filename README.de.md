@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 5.0.0 · **Zuletzt aktualisiert:** 2026-10-26
+**Version:** 5.1.0 · **Zuletzt aktualisiert:** 2026-10-27
+
+**Status:** stabil · **Offline:** vollständig
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -74,7 +76,17 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 
 Frequency Laboratory ist ein Web-Audio-Werkzeugkasten in einer einzigen Datei: Oszillatoren und binaurale Schwebungen, Filter und Effekte, Klavier/MIDI, Sequencer, Analysatoren (FFT, RTA, Phasenscope), mikrofonbasierte SPL- und Raummessung, Hörtests, Umgebungsklänge, programmierbare Sessions, WAV-Aufnahme und eine Frequenzdatenbank. Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU). Der Zustand wird in localStorage gehalten (Schlüssel `frequencylaboratory.`); die App stellt keine Netzwerkanfragen (CSP `connect-src 'self'`). Sie ist kein Medizinprodukt.
 
+## Gehörschutz und Lautstärkebegrenzer (5.1.0)
+
+Beim Start erscheint ein Hinweis mit Bestätigung („Verstanden — Ton aktivieren“): bis dahin ist die Audioausgabe stumm. Ein **Lautstärkebegrenzer** (Obergrenze für den gesamten Ton an Lautsprecher/Kopfhörer, auch für den Hörtest) ist eingebaut: standardmäßig −6 dB, einstellbar von −30 dB bis 0 dB über das Feld „GRENZE … dB“ im Kopfbereich; die Grenze wird in `localStorage` (`frequencylaboratory.volcap`) gespeichert, die Bestätigung nur für die Sitzung. Die „Master“-Lautstärke bleibt innerhalb der Grenze; aufgenommene Dateien (WAV) sind nicht betroffen. Kein Medizinprodukt: beginne mit minimaler Gerätelautstärke.
+
+## Siehe auch: FrequencyLaboratory
+
+**FrequencyLaboratory** (diese App) und **Frequency Laboratory (generator-frecvente)** teilen sich eine Codebasis und überschneiden sich stark. FrequencyLaboratory ist die neuere, vollständigere Version; generator-frecvente behält die klassische Einzelpanel-Oberfläche und hat die Szenenbibliothek. Die beiden Apps wurden NICHT zusammengeführt; sie nutzen getrennte Speicherschlüssel und können eine Konfiguration per Link (`#state=`) übergeben. generator-frecvente: https://chiuta.github.io/generator-frecvente/
+
 ## Verlauf / Changelog
+
+- **5.1.0 — 2026-10-27:** Gehörschutz-Hinweis mit Bestätigung vor dem ersten Ton + Lautstärkebegrenzer (Obergrenze, Standard −6 dB, einstellbar); Hinweis „Siehe auch“ FrequencyLaboratory; Zeilen Status/Offline; CHANGELOG.md (vorher: v5.0.0).
 - **4.3.9 — 2026-10-22:** Touch-Ziele: die ELI5-„?“-Marken erreichen 24×24 px (44 px bei grobem Zeiger). Erneute Prüfung bei 360 und 1366 px (Anfangszustand, aufgeklappte Abschnitte, verborgene Panels): kein Ziel unter 24 px und kein Text unter 12 px mehr.
 
 ### 4.3.13 — 2026-10-23

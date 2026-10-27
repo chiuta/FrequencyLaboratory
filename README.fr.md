@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 5.0.0 · **Dernière mise à jour :** 2026-10-26
+**Version :** 5.1.0 · **Dernière mise à jour :** 2026-10-27
+
+**État:** stable · **Hors ligne:** complet
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -74,7 +76,17 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf
 
 Frequency Laboratory est une boîte à outils Web Audio dans un seul fichier : oscillateurs et battements binauraux, filtres et effets, piano/MIDI, séquenceur, analyseurs (FFT, RTA, scope de phase), mesure SPL et de pièce par microphone, tests auditifs, sons d'ambiance, sessions programmables, enregistrement WAV et base de données de fréquences. Interface en 8 langues (RO, EN, FR, IT, ES, PT, DE, HU). L'état est conservé dans localStorage (clés `frequencylaboratory.`) ; l'application n'effectue aucune requête réseau (CSP `connect-src 'self'`). Ce n'est pas un dispositif médical.
 
+## Protection de l’audition et limiteur de volume (5.1.0)
+
+Un avertissement avec confirmation (« J’ai compris — activer le son ») apparaît au démarrage : jusque-là la sortie audio est muette. Un **limiteur de volume** (plafond pour tout le son envoyé aux haut-parleurs/casque, test auditif compris) est intégré : −6 dB par défaut, réglable de −30 dB à 0 dB depuis la pastille « LIMITE … dB » de l’en-tête ; la limite est conservée dans `localStorage` (`frequencylaboratory.volcap`), la confirmation seulement pour la session. Le volume « Master » reste dans la limite ; les fichiers enregistrés (WAV) ne sont pas affectés. Ce n’est pas un dispositif médical : commencez avec le volume de l’appareil au minimum.
+
+## Voir aussi : FrequencyLaboratory
+
+**FrequencyLaboratory** (cette application) et **Frequency Laboratory (generator-frecvente)** partagent une base de code et se recoupent beaucoup. FrequencyLaboratory est la version plus récente et plus complète ; generator-frecvente garde l’interface classique en un seul panneau et possède la bibliothèque de scènes. Les deux applications n’ont PAS été fusionnées ; elles ont des clés de stockage séparées et peuvent échanger une configuration par un lien (`#state=`). generator-frecvente : https://chiuta.github.io/generator-frecvente/
+
 ## Historique / Changelog
+
+- **5.1.0 — 2026-10-27 :** avertissement de protection de l’audition avec confirmation avant le premier son + limiteur de volume (plafond, −6 dB par défaut, réglable) ; note « voir aussi » FrequencyLaboratory ; lignes État/Hors ligne ; CHANGELOG.md (précédente : v5.0.0).
 - **4.3.9 — 2026-10-22:** Cibles tactiles : les badges « ? » ELI5 atteignent 24×24 px (44 px sur pointeur grossier). Nouvel audit à 360 et 1366 px (état initial, sections développées, panneaux cachés) : plus aucune cible sous 24 px ni texte sous 12 px.
 
 ### 4.3.13 — 2026-10-23

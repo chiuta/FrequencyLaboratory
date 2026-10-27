@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 5.0.0 · **Last updated:** 2026-10-26
+**Version:** 5.1.0 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -74,7 +76,17 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 Frequency Laboratory is a single-file Web Audio toolkit: oscillators and binaural beats, filters and effects, piano/MIDI, sequencer, analyzers (FFT, RTA, phase scope), microphone-based SPL and room measurement, hearing tests, ambient sounds, programmable sessions, WAV recording and a frequency database. UI in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU). State is kept in localStorage (`frequencylaboratory.` keys); the app makes no network requests (CSP `connect-src 'self'`). It is not a medical device.
 
+## Hearing protection and volume limiter (5.1.0)
+
+A warning with confirmation (“I understand — enable sound”) appears at start-up: until then the audio output is muted. A **volume limiter** (a ceiling for all sound sent to speakers/headphones, including the hearing test) is built in: −6 dB by default, adjustable from −30 dB to 0 dB from the “LIMIT … dB” pill in the header; the limit is kept in `localStorage` (`frequencylaboratory.volcap`) and the confirmation only for the session. The “Master” volume stays within the limit; recorded files (WAV) are not affected. It is not a medical device and does not guarantee hearing safety: start with the device volume at minimum.
+
+## See also: FrequencyLaboratory
+
+**FrequencyLaboratory** (this app) and **Frequency Laboratory (generator-frecvente)** share a code base and overlap a lot. FrequencyLaboratory is the newer, more complete version (modular system, profiles, analysis tools); generator-frecvente keeps the classic single-panel interface and has the scene library (sequences of binaural stages). The two apps have NOT been merged; they use separate storage keys (own prefix) and can pass a configuration to each other through a link (`#state=`). generator-frecvente: https://chiuta.github.io/generator-frecvente/
+
 ## History / Changelog
+
+- **5.1.0 — 2026-10-27:** hearing-protection warning with confirmation before the first sound + volume limiter (ceiling, −6 dB default, adjustable); “see also” note for FrequencyLaboratory; Status/Offline lines; CHANGELOG.md (previous: v5.0.0).
 - **4.3.9 — 2026-10-22:** Touch targets: the ELI5 “?” badges reach 24×24 px (44 px on coarse pointers). Re-audit at 360 and 1366 px (initial state, expanded sections, hidden panels): no target under 24 px and no text under 12 px remains.
 
 ### 4.3.13 — 2026-10-23

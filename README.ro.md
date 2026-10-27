@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 5.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 5.1.0 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -75,7 +77,17 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 Frequency Laboratory este un set de instrumente Web Audio într-un singur fișier: oscilatoare și bătăi binaurale, filtre și efecte, pian/MIDI, secvențiator, analizoare (FFT, RTA, osciloscop de fază), măsurare SPL și a camerei cu microfonul, teste de auz, sunete ambientale, sesiuni programabile, înregistrare WAV și o bază de date de frecvențe. Interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU). Starea se păstrează în localStorage (chei `frequencylaboratory.`); aplicația nu face cereri de rețea (CSP `connect-src 'self'`). Nu este un dispozitiv medical.
 
+## Protecția auzului și limitator de volum (5.1.0)
+
+La pornire apare o avertizare cu confirmare („Am înțeles — activează sunetul”): până atunci ieșirea audio este mută. Există un **limitator de volum** (plafon pentru tot sunetul trimis la difuzoare/căști, inclusiv testul auditiv): implicit −6 dB, reglabil de la −30 dB la 0 dB din pastila „LIMITĂ … dB” din antet; limita se păstrează în `localStorage` (`frequencylaboratory.volcap`), iar confirmarea doar pe sesiune. Volumul „Master” rămâne în interiorul limitei; fișierele înregistrate (WAV) nu sunt afectate. Nu este dispozitiv medical și nu garantează siguranța auzului: începe cu volumul dispozitivului la minim.
+
+## Vezi și: FrequencyLaboratory
+
+**FrequencyLaboratory** (această aplicație) și **Generator de frecvențe** (`generator-frecvente`) pornesc din aceeași bază de cod și se suprapun mult. FrequencyLaboratory este versiunea mai nouă și mai completă (sistem modular, profiluri, instrumente de analiză); Generator de frecvențe păstrează interfața clasică într-un singur panou și are biblioteca de scene (secvențe de etape binaurale). Cele două aplicații NU au fost fuzionate; au chei de stocare separate (prefix propriu) și își pot transfera configurația printr-un link (`#state=`). Pagina Generator de frecvențe: https://chiuta.github.io/generator-frecvente/
+
 ## Istoric / Changelog
+
+- **5.1.0 — 2026-10-27:** avertizare de protecție a auzului cu confirmare înainte de primul sunet + limitator de volum (plafon, −6 dB implicit, reglabil); notă „vezi și” FrequencyLaboratory; linii Stare/Offline; CHANGELOG.md (anterior: v5.0.0).
 - **4.3.9 — 2026-10-22:** Ținte tactile: insignele „?” ELI5 ajung la 24×24 px (44 px pe pointer grosier). Re-audit la 360 și 1366 px (stare inițială, secțiuni extinse, panouri ascunse): nu mai rămâne nicio țintă sub 24 px și niciun text sub 12 px.
 
 ### 4.3.13 — 2026-10-23
