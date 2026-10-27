@@ -2,6 +2,25 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 5.2.0 — 2026-10-27 (anterior: v5.1.0)
+
+Stare: stabil · Offline: complet
+
+Aplicat în tura 2 a recenziei din 2026-10-27 (funcții noi → versiune minoră).
+
+### Adăugat
+- **Mod „Generator simplu”** (buton deasupra navigării rapide; reținut în `frequencylaboratory.simple`): arată doar cele panourile ale generatorului clasic `generator-frecvente` (oscilatoare A/B, afișaj, master, filtru, modulație, zgomot, înregistrare, sesiuni, presetări, măsurare, acorduri, efecte, pian, RTA, teste, audiogramă, ambient, tinitus, bază de date, tobe, secvențiator, looper, granular, vocoder, compresor multibandă…) plus biblioteca de scene. Restul panourilor (patch modular, laboratoare de sinteză, analizoare suplimentare) sunt ASCUNSE, nu eliminate. În acest mod, secțiunile cu panouri păstrate se afișează chiar dacă sistemul de module le-a dezactivat în modul complet.
+- **Bibliotecă de scene** (logică copiată din generator-frecvente), vizibilă în ambele moduri: 6 scene încorporate + scene proprii (max. 100, `frequencylaboratory.scenes_v1`), căutare, încărcare în sesiuni, rulare, export/import (pachet JSON `gf-scenes`), plan CSV (cu neutralizarea formulelor), cod de partajare `GF1.…` compatibil cu generator-frecvente; ștergere cu confirmare.
+- **Protecția auzului** (avertizare + limitator, introduse în 5.1.0) funcționează neschimbat în ambele moduri; test dedicat (în modul simplu, un oscilator la amplitudine 5 rămâne sub plafonul de −6 dB; fără confirmare apare dialogul).
+- Texte noi scrise în română și engleză (cu `_L`); traduceri fr/it/es/pt/de/hu adăugate ulterior ca rânduri în tabela de traduceri existentă a aplicației (41 de rânduri) — traducere automată, nevalidată de vorbitori nativi.
+- Test nou `tests/gen-simplu-v52.test.mjs` (37 de verificări).
+- README (8 limbi): secțiune nouă, istoric, versiune.
+
+### Neimplementat
+- Fuziunea cu generator-frecvente: aplicațiile rămân separate; generator-frecvente rămâne funcțional, neschimbat, la URL-ul lui.
+- Modul simplu NU este o interfață nouă, simplificată: este aceeași interfață FL cu aceleași panouri ca în generator-frecvente (afișarea selectivă a panourilor existente).
+- Limitatorul nu poate controla volumul hardware al dispozitivului/căștilor (ca în 5.1.0).
+
 ## 5.1.0 — 2026-10-27 (anterior: v5.0.0)
 
 Stare: stabil · Offline: complet

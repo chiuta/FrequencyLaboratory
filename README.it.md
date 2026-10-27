@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 5.1.0 · **Ultimo aggiornamento:** 2026-10-27
+**Versione:** 5.2.0 · **Ultimo aggiornamento:** 2026-10-27
 
 **Stato:** stabile · **Offline:** completo
 
@@ -84,8 +84,13 @@ All’avvio compare un avviso con conferma («Ho capito — attiva il suono»): 
 
 **FrequencyLaboratory** (questa app) e **Frequency Laboratory (generator-frecvente)** condividono la base di codice e si sovrappongono molto. FrequencyLaboratory è la versione più recente e completa; generator-frecvente mantiene l’interfaccia classica a pannello unico e ha la libreria di scene. Le due app NON sono state unite; hanno chiavi di archiviazione separate e possono scambiarsi la configurazione tramite un link (`#state=`). generator-frecvente: https://chiuta.github.io/generator-frecvente/
 
+## Modalità Generatore semplice e libreria di scene (v5.2.0)
+
+Il pulsante **«Modalità Generatore semplice»** mostra solo i pannelli del generatore classico [generator-frecvente](https://chiuta.github.io/generator-frecvente/) e la nuova libreria di scene; il resto è **nascosto, non rimosso**, e la modalità completa è a un clic (scelta memorizzata). La **libreria di scene** (logica copiata da generator-frecvente) offre 6 scene integrate e le tue: ricerca, caricamento nelle sessioni, esecuzione, esportazione/importazione (JSON `gf-scenes`), CSV del piano e codice di condivisione `GF1.…` compatibile con generator-frecvente. Sono semplici sequenze di frequenze e battimenti binaurali, a scopo informativo e sperimentale. L’avviso per l’udito e il limitatore di volume funzionano in entrambe le modalità. generator-frecvente resta disponibile, invariato. I nuovi testi sono stati scritti in rumeno e inglese; le traduzioni FR/IT/ES/PT/DE/HU sono automatiche (traduzione automatica, non verificata da madrelingua).
+
 ## Cronologia / Changelog
 
+- **5.2.0 — 2026-10-27:** «Modalità Generatore semplice» + libreria di scene (6 integrate, export/import, CSV, codice `GF1.`); avviso per l’udito e limitatore in entrambe le modalità; nuovo file di test; CHANGELOG.md (precedente: v5.1.0).
 - **5.1.0 — 2026-10-27:** avviso di protezione dell’udito con conferma prima del primo suono + limitatore di volume (tetto, −6 dB predefinito, regolabile); nota «vedi anche» FrequencyLaboratory; righe Stato/Offline; CHANGELOG.md (precedente: v5.0.0).
 - **4.3.9 — 2026-10-22:** Bersagli touch: i badge «?» ELI5 raggiungono 24×24 px (44 px su puntatore grossolano). Nuovo audit a 360 e 1366 px (stato iniziale, sezioni espanse, pannelli nascosti): non restano bersagli sotto 24 px né testo sotto 12 px.
 

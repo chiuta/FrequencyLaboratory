@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 5.1.0 · **Última actualización:** 2026-10-27
+**Versión:** 5.2.0 · **Última actualización:** 2026-10-27
 
 **Estado:** estable · **Sin conexión:** completo
 
@@ -84,8 +84,13 @@ Al iniciar aparece una advertencia con confirmación («Entendido — activar el
 
 **FrequencyLaboratory** (esta aplicación) y **Frequency Laboratory (generator-frecvente)** comparten base de código y se solapan mucho. FrequencyLaboratory es la versión más nueva y completa; generator-frecvente conserva la interfaz clásica de un solo panel y tiene la biblioteca de escenas. Las dos aplicaciones NO se han fusionado; usan claves de almacenamiento separadas y pueden pasarse la configuración mediante un enlace (`#state=`). generator-frecvente: https://chiuta.github.io/generator-frecvente/
 
+## Modo Generador simple y biblioteca de escenas (v5.2.0)
+
+El botón **«Modo Generador simple»** muestra solo los paneles del generador clásico [generator-frecvente](https://chiuta.github.io/generator-frecvente/) y la nueva biblioteca de escenas; el resto queda **oculto, no eliminado**, y el modo completo está a un clic (elección recordada). La **biblioteca de escenas** (lógica copiada de generator-frecvente) ofrece 6 escenas integradas y las tuyas: búsqueda, carga en sesiones, ejecución, exportación/importación (JSON `gf-scenes`), CSV del plan y código de uso compartido `GF1.…` compatible con generator-frecvente. Son simples secuencias de frecuencias y pulsos binaurales, informativas y experimentales. La advertencia auditiva y el limitador de volumen funcionan en ambos modos. generator-frecvente sigue disponible, sin cambios. Los textos nuevos se escribieron en rumano e inglés; las traducciones FR/IT/ES/PT/DE/HU son automáticas (traducción automática, no validada por hablantes nativos).
+
 ## Historial / Changelog
 
+- **5.2.0 — 2026-10-27:** «Modo Generador simple» + biblioteca de escenas (6 integradas, exportar/importar, CSV, código `GF1.`); advertencia auditiva y limitador en ambos modos; nuevo archivo de pruebas; CHANGELOG.md (anterior: v5.1.0).
 - **5.1.0 — 2026-10-27:** advertencia de protección auditiva con confirmación antes del primer sonido + limitador de volumen (techo, −6 dB por defecto, ajustable); nota «véase también» FrequencyLaboratory; líneas Estado/Sin conexión; CHANGELOG.md (anterior: v5.0.0).
 - **4.3.9 — 2026-10-22:** Objetivos táctiles: las insignias «?» ELI5 llegan a 24×24 px (44 px con puntero grueso). Nueva auditoría a 360 y 1366 px (estado inicial, secciones expandidas, paneles ocultos): no queda ningún objetivo por debajo de 24 px ni texto por debajo de 12 px.
 

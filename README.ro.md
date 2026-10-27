@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 5.1.0 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 5.2.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet
 
@@ -85,8 +85,17 @@ La pornire apare o avertizare cu confirmare („Am înțeles — activează sune
 
 **FrequencyLaboratory** (această aplicație) și **Generator de frecvențe** (`generator-frecvente`) pornesc din aceeași bază de cod și se suprapun mult. FrequencyLaboratory este versiunea mai nouă și mai completă (sistem modular, profiluri, instrumente de analiză); Generator de frecvențe păstrează interfața clasică într-un singur panou și are biblioteca de scene (secvențe de etape binaurale). Cele două aplicații NU au fost fuzionate; au chei de stocare separate (prefix propriu) și își pot transfera configurația printr-un link (`#state=`). Pagina Generator de frecvențe: https://chiuta.github.io/generator-frecvente/
 
+## Mod Generator simplu și biblioteca de scene (v5.2.0)
+
+Butonul **„Mod Generator simplu”** (deasupra navigării rapide) arată doar panourile generatorului clasic, [generator-frecvente](https://chiuta.github.io/generator-frecvente/) (oscilatoare A/B, afișaj, master, filtru, modulație, zgomot, înregistrare, sesiuni, presetări proprii, măsurare, bibliotecă de presetări, acorduri, efecte, pian, osciloscop de fază, RTA, teste, audiogramă, sunete ambientale, tinitus, bază de date, tobe, secvențiator, looper, granular, vocoder, compresor multibandă) și noua bibliotecă de scene. Restul (patch modular, laboratoare de sinteză, analizoare etc.) este **ascuns, nu eliminat**: poți reveni oricând la modul complet. Alegerea se reține (`frequencylaboratory.simple`).
+
+**Biblioteca de scene** (logică copiată din generator-frecvente) are 6 scene încorporate și scenele tale: căutare, încărcare în sesiuni, rulare, export/import (pachet JSON `gf-scenes`), plan CSV și un cod scurt de partajare `GF1.…` **compatibil cu generator-frecvente**. Scenele sunt doar secvențe de frecvențe și bătăi binaurale: informative și experimentale, nu tratament.
+
+Avertizarea pentru auz și limitatorul de volum funcționează în ambele moduri (acționează asupra `AudioContext`-ului paginii, nu asupra panourilor). generator-frecvente rămâne disponibil, neschimbat, la adresa lui; cele două aplicații rămân separate. Traduceri: textele noi au fost scrise în română și engleză; traducerile FR/IT/ES/PT/DE/HU (adăugate ca rânduri în tabela de traduceri a aplicației) sunt automate, nevalidate de vorbitori nativi.
+
 ## Istoric / Changelog
 
+- **5.2.0 — 2026-10-27:** „Mod Generator simplu” (doar panourile din generator-frecvente, reținut) + bibliotecă de scene (6 încorporate, scene proprii, export/import, plan CSV, cod de partajare `GF1.`); avertizarea pentru auz și limitatorul în ambele moduri; fișier nou de teste; CHANGELOG.md (anterior: v5.1.0).
 - **5.1.0 — 2026-10-27:** avertizare de protecție a auzului cu confirmare înainte de primul sunet + limitator de volum (plafon, −6 dB implicit, reglabil); notă „vezi și” FrequencyLaboratory; linii Stare/Offline; CHANGELOG.md (anterior: v5.0.0).
 - **4.3.9 — 2026-10-22:** Ținte tactile: insignele „?” ELI5 ajung la 24×24 px (44 px pe pointer grosier). Re-audit la 360 și 1366 px (stare inițială, secțiuni extinse, panouri ascunse): nu mai rămâne nicio țintă sub 24 px și niciun text sub 12 px.
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 5.1.0 · **Dernière mise à jour :** 2026-10-27
+**Version :** 5.2.0 · **Dernière mise à jour :** 2026-10-27
 
 **État:** stable · **Hors ligne:** complet
 
@@ -84,8 +84,13 @@ Un avertissement avec confirmation (« J’ai compris — activer le son ») app
 
 **FrequencyLaboratory** (cette application) et **Frequency Laboratory (generator-frecvente)** partagent une base de code et se recoupent beaucoup. FrequencyLaboratory est la version plus récente et plus complète ; generator-frecvente garde l’interface classique en un seul panneau et possède la bibliothèque de scènes. Les deux applications n’ont PAS été fusionnées ; elles ont des clés de stockage séparées et peuvent échanger une configuration par un lien (`#state=`). generator-frecvente : https://chiuta.github.io/generator-frecvente/
 
+## Mode Générateur simple et bibliothèque de scènes (v5.2.0)
+
+Le bouton **« Mode Générateur simple »** n’affiche que les panneaux du générateur classique [generator-frecvente](https://chiuta.github.io/generator-frecvente/) et la nouvelle bibliothèque de scènes ; le reste est **masqué, pas supprimé**, et le mode complet est un clic plus loin (choix mémorisé). La **bibliothèque de scènes** (logique copiée de generator-frecvente) propose 6 scènes intégrées et les vôtres : recherche, chargement dans les sessions, lecture, export/import (JSON `gf-scenes`), CSV du plan et code de partage `GF1.…` compatible avec generator-frecvente. Ce sont de simples séquences de fréquences et de battements binauraux, à titre informatif et expérimental. L’avertissement d’audition et le limiteur de volume fonctionnent dans les deux modes. generator-frecvente reste disponible, inchangé. Les nouveaux textes ont été écrits en roumain et en anglais ; les traductions FR/IT/ES/PT/DE/HU sont automatiques (traduction automatique, non validée par des locuteurs natifs).
+
 ## Historique / Changelog
 
+- **5.2.0 — 2026-10-27 :** « Mode Générateur simple » + bibliothèque de scènes (6 intégrées, export/import, CSV, code `GF1.`) ; avertissement d’audition et limiteur dans les deux modes ; nouveau fichier de tests ; CHANGELOG.md (précédente : v5.1.0).
 - **5.1.0 — 2026-10-27 :** avertissement de protection de l’audition avec confirmation avant le premier son + limiteur de volume (plafond, −6 dB par défaut, réglable) ; note « voir aussi » FrequencyLaboratory ; lignes État/Hors ligne ; CHANGELOG.md (précédente : v5.0.0).
 - **4.3.9 — 2026-10-22:** Cibles tactiles : les badges « ? » ELI5 atteignent 24×24 px (44 px sur pointeur grossier). Nouvel audit à 360 et 1366 px (état initial, sections développées, panneaux cachés) : plus aucune cible sous 24 px ni texte sous 12 px.
 
