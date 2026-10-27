@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 5.0.0 · **Utolsó frissítés:** 2026-10-26
+**Verzió:** 5.1.0 · **Utolsó frissítés:** 2026-10-27
+
+**Állapot:** stabil · **Offline:** teljes
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -74,7 +76,17 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf
 
 A Frequency Laboratory egyetlen fájlból álló Web Audio eszköztár: oszcillátorok és binaurális ütemek, szűrők és effektek, zongora/MIDI, szekvencer, analizátorok (FFT, RTA, fázisszkóp), mikrofonos SPL- és szobamérés, hallásvizsgálatok, környezeti hangok, programozható munkamenetek, WAV-felvétel és egy frekvencia-adatbázis. 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU). Az állapot a localStorage-ban van tárolva (`frequencylaboratory.` kulcsok); az alkalmazás nem indít hálózati kéréseket (CSP `connect-src 'self'`). Nem orvosi eszköz.
 
+## Halláskárosodás elleni védelem és hangerőkorlátozó (5.1.0)
+
+Induláskor megerősítést kérő figyelmeztetés jelenik meg („Értem — hang bekapcsolása”): addig a hangkimenet néma. Beépített **hangerőkorlátozó** (felső határ a hangszórókra/fejhallgatóra küldött teljes hangra, a hallásvizsgálatot is beleértve): alapértelmezés −6 dB, −30 dB és 0 dB között állítható a fejléc „KORLÁT … dB” jelvényén; a korlát a `localStorage`-ban marad (`frequencylaboratory.volcap`), a megerősítés csak a munkamenetre érvényes. A „Master” hangerő a korláton belül marad; a felvett (WAV) fájlokat nem érinti. Nem orvostechnikai eszköz: a készülék hangerejét kezdetben a minimumra állítsd.
+
+## Lásd még: FrequencyLaboratory
+
+A **FrequencyLaboratory** (ez az alkalmazás) és a **Frequency Laboratory (generator-frecvente)** közös kódalapról indul, és erősen átfedik egymást. A FrequencyLaboratory az újabb, teljesebb változat; a generator-frecvente a klasszikus egypaneles felületet őrzi, és megvan benne a jelenettár. A két alkalmazást NEM vontuk össze; külön tárolókulcsokat használnak, és hivatkozással (`#state=`) átadhatják egymásnak a beállítást. generator-frecvente: https://chiuta.github.io/generator-frecvente/
+
 ## Előzmények / Changelog
+
+- **5.1.0 — 2026-10-27:** hallásvédelmi figyelmeztetés megerősítéssel az első hang előtt + hangerőkorlátozó (felső határ, alapértelmezés −6 dB, állítható); „lásd még” megjegyzés a FrequencyLaboratory-hoz; Állapot/Offline sorok; CHANGELOG.md (előző: v5.0.0).
 - **4.3.9 — 2026-10-22:** Érintési célpontok: az ELI5 „?” jelvények elérik a 24×24 px-t (durva mutatónál 44 px). Újabb ellenőrzés 360 és 1366 px-en (kezdőállapot, kinyitott szakaszok, rejtett panelek): nem marad 24 px alatti célpont és 12 px alatti szöveg.
 
 ### 4.3.13 — 2026-10-23

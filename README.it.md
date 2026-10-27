@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 5.0.0 · **Ultimo aggiornamento:** 2026-10-26
+**Versione:** 5.1.0 · **Ultimo aggiornamento:** 2026-10-27
+
+**Stato:** stabile · **Offline:** completo
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -74,7 +76,17 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf
 
 Frequency Laboratory è un toolkit Web Audio in un unico file: oscillatori e battimenti binaurali, filtri ed effetti, pianoforte/MIDI, sequencer, analizzatori (FFT, RTA, scope di fase), misura SPL e dell'ambiente con il microfono, test uditivi, suoni ambientali, sessioni programmabili, registrazione WAV e una banca dati di frequenze. Interfaccia in 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU). Lo stato è conservato in localStorage (chiavi `frequencylaboratory.`); l'applicazione non effettua richieste di rete (CSP `connect-src 'self'`). Non è un dispositivo medico.
 
+## Protezione dell’udito e limitatore di volume (5.1.0)
+
+All’avvio compare un avviso con conferma («Ho capito — attiva il suono»): fino ad allora l’uscita audio è muta. È integrato un **limitatore di volume** (tetto per tutto il suono verso altoparlanti/cuffie, test dell’udito compreso): −6 dB predefinito, regolabile da −30 dB a 0 dB dal badge «LIMITE … dB» nell’intestazione; il limite è salvato in `localStorage` (`frequencylaboratory.volcap`), la conferma solo per la sessione. Il volume «Master» resta entro il limite; i file registrati (WAV) non sono interessati. Non è un dispositivo medico: inizia con il volume del dispositivo al minimo.
+
+## Vedi anche: FrequencyLaboratory
+
+**FrequencyLaboratory** (questa app) e **Frequency Laboratory (generator-frecvente)** condividono la base di codice e si sovrappongono molto. FrequencyLaboratory è la versione più recente e completa; generator-frecvente mantiene l’interfaccia classica a pannello unico e ha la libreria di scene. Le due app NON sono state unite; hanno chiavi di archiviazione separate e possono scambiarsi la configurazione tramite un link (`#state=`). generator-frecvente: https://chiuta.github.io/generator-frecvente/
+
 ## Cronologia / Changelog
+
+- **5.1.0 — 2026-10-27:** avviso di protezione dell’udito con conferma prima del primo suono + limitatore di volume (tetto, −6 dB predefinito, regolabile); nota «vedi anche» FrequencyLaboratory; righe Stato/Offline; CHANGELOG.md (precedente: v5.0.0).
 - **4.3.9 — 2026-10-22:** Bersagli touch: i badge «?» ELI5 raggiungono 24×24 px (44 px su puntatore grossolano). Nuovo audit a 360 e 1366 px (stato iniziale, sezioni espanse, pannelli nascosti): non restano bersagli sotto 24 px né testo sotto 12 px.
 
 ### 4.3.13 — 2026-10-23
