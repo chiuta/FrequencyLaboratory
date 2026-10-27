@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 5.1.0 · **Utolsó frissítés:** 2026-10-27
+**Verzió:** 5.2.0 · **Utolsó frissítés:** 2026-10-27
 
 **Állapot:** stabil · **Offline:** teljes
 
@@ -84,8 +84,13 @@ Induláskor megerősítést kérő figyelmeztetés jelenik meg („Értem — ha
 
 A **FrequencyLaboratory** (ez az alkalmazás) és a **Frequency Laboratory (generator-frecvente)** közös kódalapról indul, és erősen átfedik egymást. A FrequencyLaboratory az újabb, teljesebb változat; a generator-frecvente a klasszikus egypaneles felületet őrzi, és megvan benne a jelenettár. A két alkalmazást NEM vontuk össze; külön tárolókulcsokat használnak, és hivatkozással (`#state=`) átadhatják egymásnak a beállítást. generator-frecvente: https://chiuta.github.io/generator-frecvente/
 
+## Egyszerű generátor mód és jelenettár (v5.2.0)
+
+Az **„Egyszerű generátor mód”** gomb csak a klasszikus generátor, a [generator-frecvente](https://chiuta.github.io/generator-frecvente/) paneljeit és az új jelenettárat mutatja; a többi **el van rejtve, nem törölve**, a teljes mód egy kattintásra van (a választás megmarad). A **jelenettár** (a generator-frecvente-ből másolt logika) 6 beépített és saját jelenetet tartalmaz: keresés, betöltés a munkamenetekbe, lejátszás, export/import (`gf-scenes` JSON), terv-CSV és `GF1.…` megosztókód, amely kompatibilis a generator-frecvente-vel. Csak frekvencia- és binaurális ütemsorozatok, tájékoztató és kísérleti jelleggel. A hallásvédelmi figyelmeztetés és a hangerőkorlát mindkét módban működik. A generator-frecvente változatlanul elérhető marad. Az új szövegek románul és angolul vannak meg.
+
 ## Előzmények / Changelog
 
+- **5.2.0 — 2026-10-27:** „Egyszerű generátor mód” + jelenettár (6 beépített, export/import, CSV, `GF1.` kód); hallásvédelmi figyelmeztetés és korlátozó mindkét módban; új tesztfájl; CHANGELOG.md (előző: v5.1.0).
 - **5.1.0 — 2026-10-27:** hallásvédelmi figyelmeztetés megerősítéssel az első hang előtt + hangerőkorlátozó (felső határ, alapértelmezés −6 dB, állítható); „lásd még” megjegyzés a FrequencyLaboratory-hoz; Állapot/Offline sorok; CHANGELOG.md (előző: v5.0.0).
 - **4.3.9 — 2026-10-22:** Érintési célpontok: az ELI5 „?” jelvények elérik a 24×24 px-t (durva mutatónál 44 px). Újabb ellenőrzés 360 és 1366 px-en (kezdőállapot, kinyitott szakaszok, rejtett panelek): nem marad 24 px alatti célpont és 12 px alatti szöveg.
 

@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 5.1.0 · **Last updated:** 2026-10-27
+**Version:** 5.2.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete
 
@@ -84,8 +84,17 @@ A warning with confirmation (“I understand — enable sound”) appears at sta
 
 **FrequencyLaboratory** (this app) and **Frequency Laboratory (generator-frecvente)** share a code base and overlap a lot. FrequencyLaboratory is the newer, more complete version (modular system, profiles, analysis tools); generator-frecvente keeps the classic single-panel interface and has the scene library (sequences of binaural stages). The two apps have NOT been merged; they use separate storage keys (own prefix) and can pass a configuration to each other through a link (`#state=`). generator-frecvente: https://chiuta.github.io/generator-frecvente/
 
+## Simple generator mode and scene library (v5.2.0)
+
+The **“Simple generator mode”** button (above the quick navigation) shows only the panels of the classic generator, [generator-frecvente](https://chiuta.github.io/generator-frecvente/) (oscillators A/B, display, master, filter, modulation, noise, recording, sessions, user presets, measurement, presets library, chords, effects, piano, phase scope, RTA, tests, audiogram, ambient sounds, tinnitus, database, drum, sequencer, looper, granular, vocoder, multiband compressor) and the new scene library. Everything else (modular patch, synthesis labs, analysers, etc.) is **hidden, not removed**: switch back to the full mode at any time. The choice is remembered (`frequencylaboratory.simple`).
+
+The **scene library** (copied logic from generator-frecvente) holds 6 built-in scenes and your own: search, load into sessions, run, export/import (`gf-scenes` JSON pack), plan CSV, and a short share code `GF1.…` that is **compatible with generator-frecvente**. Scenes are only sequences of frequencies and binaural beats: informational and experimental, not a treatment.
+
+The hearing-protection warning and the volume limiter work in both modes (they act on the page’s `AudioContext`, not on the panels). generator-frecvente remains available, unchanged, at its own address; the two apps are still separate. Limits: the new texts exist in Romanian and English (other languages use the app’s existing translation table when a string matches, otherwise English).
+
 ## History / Changelog
 
+- **5.2.0 — 2026-10-27:** “Simple generator mode” (only the panels of generator-frecvente, remembered) + scene library (6 built-in, own scenes, export/import, plan CSV, `GF1.` share code); hearing warning and limiter in both modes; new test file; CHANGELOG.md (previous: v5.1.0).
 - **5.1.0 — 2026-10-27:** hearing-protection warning with confirmation before the first sound + volume limiter (ceiling, −6 dB default, adjustable); “see also” note for FrequencyLaboratory; Status/Offline lines; CHANGELOG.md (previous: v5.0.0).
 - **4.3.9 — 2026-10-22:** Touch targets: the ELI5 “?” badges reach 24×24 px (44 px on coarse pointers). Re-audit at 360 and 1366 px (initial state, expanded sections, hidden panels): no target under 24 px and no text under 12 px remains.
 

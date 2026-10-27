@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 5.1.0 · **Zuletzt aktualisiert:** 2026-10-27
+**Version:** 5.2.0 · **Zuletzt aktualisiert:** 2026-10-27
 
 **Status:** stabil · **Offline:** vollständig
 
@@ -84,8 +84,13 @@ Beim Start erscheint ein Hinweis mit Bestätigung („Verstanden — Ton aktivie
 
 **FrequencyLaboratory** (diese App) und **Frequency Laboratory (generator-frecvente)** teilen sich eine Codebasis und überschneiden sich stark. FrequencyLaboratory ist die neuere, vollständigere Version; generator-frecvente behält die klassische Einzelpanel-Oberfläche und hat die Szenenbibliothek. Die beiden Apps wurden NICHT zusammengeführt; sie nutzen getrennte Speicherschlüssel und können eine Konfiguration per Link (`#state=`) übergeben. generator-frecvente: https://chiuta.github.io/generator-frecvente/
 
+## Modus „Einfacher Generator“ und Szenenbibliothek (v5.2.0)
+
+Die Schaltfläche **„Modus Einfacher Generator“** zeigt nur die Panels des klassischen Generators [generator-frecvente](https://chiuta.github.io/generator-frecvente/) und die neue Szenenbibliothek; alles andere ist **ausgeblendet, nicht entfernt**, der volle Modus ist einen Klick entfernt (Wahl wird gemerkt). Die **Szenenbibliothek** (aus generator-frecvente kopierte Logik) enthält 6 eingebaute und eigene Szenen: Suche, Laden in Sitzungen, Abspielen, Export/Import (JSON `gf-scenes`), Plan-CSV und einen Teilen-Code `GF1.…`, der mit generator-frecvente kompatibel ist. Es sind nur Folgen von Frequenzen und binauralen Schwebungen, informativ und experimentell. Gehörwarnung und Lautstärkebegrenzer gelten in beiden Modi. generator-frecvente bleibt unverändert verfügbar. Die neuen Texte gibt es auf Rumänisch und Englisch.
+
 ## Verlauf / Changelog
 
+- **5.2.0 — 2026-10-27:** Modus „Einfacher Generator“ + Szenenbibliothek (6 eingebaute, Export/Import, CSV, Code `GF1.`); Gehörwarnung und Begrenzer in beiden Modi; neue Testdatei; CHANGELOG.md (vorher: v5.1.0).
 - **5.1.0 — 2026-10-27:** Gehörschutz-Hinweis mit Bestätigung vor dem ersten Ton + Lautstärkebegrenzer (Obergrenze, Standard −6 dB, einstellbar); Hinweis „Siehe auch“ FrequencyLaboratory; Zeilen Status/Offline; CHANGELOG.md (vorher: v5.0.0).
 - **4.3.9 — 2026-10-22:** Touch-Ziele: die ELI5-„?“-Marken erreichen 24×24 px (44 px bei grobem Zeiger). Erneute Prüfung bei 360 und 1366 px (Anfangszustand, aufgeklappte Abschnitte, verborgene Panels): kein Ziel unter 24 px und kein Text unter 12 px mehr.
 

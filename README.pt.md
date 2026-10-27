@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 5.1.0 · **Última atualização:** 2026-10-27
+**Versão:** 5.2.0 · **Última atualização:** 2026-10-27
 
 **Estado:** estável · **Offline:** completo
 
@@ -84,8 +84,13 @@ Ao iniciar aparece um aviso com confirmação («Compreendi — ativar o som»):
 
 **FrequencyLaboratory** (esta aplicação) e **Frequency Laboratory (generator-frecvente)** partilham a base de código e sobrepõem-se muito. FrequencyLaboratory é a versão mais recente e completa; generator-frecvente mantém a interface clássica de um só painel e tem a biblioteca de cenas. As duas aplicações NÃO foram fundidas; usam chaves de armazenamento separadas e podem trocar a configuração através de uma ligação (`#state=`). generator-frecvente: https://chiuta.github.io/generator-frecvente/
 
+## Modo Gerador simples e biblioteca de cenas (v5.2.0)
+
+O botão **«Modo Gerador simples»** mostra apenas os painéis do gerador clássico [generator-frecvente](https://chiuta.github.io/generator-frecvente/) e a nova biblioteca de cenas; o resto fica **oculto, não removido**, e o modo completo está a um clique (escolha memorizada). A **biblioteca de cenas** (lógica copiada do generator-frecvente) tem 6 cenas integradas e as suas: pesquisa, carregamento nas sessões, execução, exportação/importação (JSON `gf-scenes`), CSV do plano e código de partilha `GF1.…` compatível com o generator-frecvente. São simples sequências de frequências e batimentos binaurais, informativas e experimentais. O aviso auditivo e o limitador de volume funcionam nos dois modos. O generator-frecvente continua disponível, sem alterações. Os textos novos existem em romeno e inglês.
+
 ## Histórico / Changelog
 
+- **5.2.0 — 2026-10-27:** «Modo Gerador simples» + biblioteca de cenas (6 integradas, exportar/importar, CSV, código `GF1.`); aviso auditivo e limitador nos dois modos; novo ficheiro de testes; CHANGELOG.md (anterior: v5.1.0).
 - **5.1.0 — 2026-10-27:** aviso de proteção auditiva com confirmação antes do primeiro som + limitador de volume (teto, −6 dB predefinido, ajustável); nota «ver também» FrequencyLaboratory; linhas Estado/Offline; CHANGELOG.md (anterior: v5.0.0).
 - **4.3.9 — 2026-10-22:** Alvos táteis: os distintivos «?» ELI5 chegam a 24×24 px (44 px com ponteiro grosseiro). Nova auditoria a 360 e 1366 px (estado inicial, secções expandidas, painéis ocultos): não resta nenhum alvo abaixo de 24 px nem texto abaixo de 12 px.
 
