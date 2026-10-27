@@ -91,7 +91,7 @@ Butonul **„Mod Generator simplu”** (deasupra navigării rapide) arată doar 
 
 **Biblioteca de scene** (logică copiată din generator-frecvente) are 6 scene încorporate și scenele tale: căutare, încărcare în sesiuni, rulare, export/import (pachet JSON `gf-scenes`), plan CSV și un cod scurt de partajare `GF1.…` **compatibil cu generator-frecvente**. Scenele sunt doar secvențe de frecvențe și bătăi binaurale: informative și experimentale, nu tratament.
 
-Avertizarea pentru auz și limitatorul de volum funcționează în ambele moduri (acționează asupra `AudioContext`-ului paginii, nu asupra panourilor). generator-frecvente rămâne disponibil, neschimbat, la adresa lui; cele două aplicații rămân separate. Limite: textele noi există în română și engleză (celelalte limbi folosesc tabela de traduceri existentă a aplicației când un șir se potrivește, altfel engleza).
+Avertizarea pentru auz și limitatorul de volum funcționează în ambele moduri (acționează asupra `AudioContext`-ului paginii, nu asupra panourilor). generator-frecvente rămâne disponibil, neschimbat, la adresa lui; cele două aplicații rămân separate. Traduceri: textele noi au fost scrise în română și engleză; traducerile FR/IT/ES/PT/DE/HU (adăugate ca rânduri în tabela de traduceri a aplicației) sunt automate, nevalidate de vorbitori nativi.
 
 ## Istoric / Changelog
 

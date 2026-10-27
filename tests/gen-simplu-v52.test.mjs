@@ -130,6 +130,10 @@ console.log('Biblioteca de scene');
   await p.selectOption('#flLang', 'en'); await p.waitForTimeout(1600);
   t('în engleză: titlul și butoanele se traduc', /scene library/i.test(await p.textContent('#scenesPanel .panel-title')) && /SAVE SCENE/.test(await p.textContent('#btnSaveScene')), await p.textContent('#btnSaveScene'));
   t('în engleză: numele scenelor încorporate', /Meditation/.test(await p.textContent('#sceneList')));
+  for (const [lg, reTitle, reBtn, reName] of [['fr', /biblioth[èe]que de sc[èe]nes/i, /ENREGISTRER LA SC[ÈE]NE/i, /M[ée]ditation/], ['it', /libreria di scene/i, /SALVA SCENA/i, /Meditazione/], ['es', /biblioteca de escenas/i, /GUARDAR ESCENA/i, /Meditaci[óo]n/], ['pt', /biblioteca de cenas/i, /GUARDAR CENA/i, /Medita[çc][ãa]o/], ['de', /Szenenbibliothek/i, /SZENE SPEICHERN/i, /Meditation/], ['hu', /jelenett[áa]r/i, /JELENET MENT[ÉE]SE/i, /Medit[áa]ci[óo]/]]) {
+    await p.selectOption('#flLang', lg); await p.waitForTimeout(1600);
+    t('în ' + lg + ': titlul, butonul și scenele încorporate sunt traduse (traducere automată)', reTitle.test(await p.textContent('#scenesPanel .panel-title')) && reBtn.test(await p.textContent('#btnSaveScene')) && reName.test(await p.textContent('#sceneList')), (await p.textContent('#scenesPanel .panel-title')) + ' | ' + (await p.textContent('#btnSaveScene')));
+  }
   t('fără erori', errs.length === 0, errs);
   await ctx.close();
 }

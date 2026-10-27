@@ -90,7 +90,7 @@ The **“Simple generator mode”** button (above the quick navigation) shows on
 
 The **scene library** (copied logic from generator-frecvente) holds 6 built-in scenes and your own: search, load into sessions, run, export/import (`gf-scenes` JSON pack), plan CSV, and a short share code `GF1.…` that is **compatible with generator-frecvente**. Scenes are only sequences of frequencies and binaural beats: informational and experimental, not a treatment.
 
-The hearing-protection warning and the volume limiter work in both modes (they act on the page’s `AudioContext`, not on the panels). generator-frecvente remains available, unchanged, at its own address; the two apps are still separate. Limits: the new texts exist in Romanian and English (other languages use the app’s existing translation table when a string matches, otherwise English).
+The hearing-protection warning and the volume limiter work in both modes (they act on the page’s `AudioContext`, not on the panels). generator-frecvente remains available, unchanged, at its own address; the two apps are still separate. Translations: the new texts were written in Romanian and English; the FR/IT/ES/PT/DE/HU translations (added as rows of the app’s translation table) are machine translations, not validated by native speakers.
 
 ## History / Changelog
 
