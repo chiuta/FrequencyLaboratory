@@ -2,6 +2,12 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 5.2.1 — 2026-10-31
+
+### Accesibilitate
+- Etichetele și valorile panourilor de efecte (`.flp-p`, `.flp-an`, `.flp-st`) la 12 px în loc de 11 px.
+- Șirul de versiune din subsol (`data-tf-ro`/`data-tf-en`) aliniat cu `app.json`; înainte rămânea 5.2.0 la schimbarea limbii.
+
 ## 5.2.0 — 2026-10-27 (anterior: v5.1.0)
 
 Stare: stabil · Offline: complet
