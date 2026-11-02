@@ -27,8 +27,8 @@
     "frequencylaboratory.theme",
     "frequencylaboratory.wn_seen"
   ],
-  "sizeBytes": 2474985,
-  "sha256": "122bb12d01b5cf44e531cda5bf68b5f967812cc902763a5f88b2a79250f32ee3",
+  "sizeBytes": 2615419,
+  "sha256": "e3b77af36e9753b167498d71113a7283166640d39210641249d90aac2375b7f3",
   "csp": {
     "present": true,
     "directives": {
@@ -70,7 +70,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "kit": {
@@ -80,7 +84,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "selfSerializing": false
