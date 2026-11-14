@@ -11,7 +11,8 @@
     "navigator.share",
     "clipboard",
     "serviceWorker",
-    "localStorage"
+    "localStorage",
+    "WebGL"
   ],
   "storageKeys": [
     "frequencylaboratory.custom_theme",
@@ -27,8 +28,8 @@
     "frequencylaboratory.theme",
     "frequencylaboratory.wn_seen"
   ],
-  "sizeBytes": 2669646,
-  "sha256": "9828f819d1aa4028bfb18d35b4fa0378dfe7018ef3483d17f1b9080f88553c06",
+  "sizeBytes": 2721317,
+  "sha256": "6014d9b399adc82d5049e3c8fa0b908b091094d2ccd0f82aed0b62c88b792df3",
   "csp": {
     "present": true,
     "directives": {
@@ -41,7 +42,7 @@
       "base-uri": "'self'",
       "form-action": "'self'",
       "worker-src": "'self' blob:",
-      "script-src": "'self' blob: sha256×13",
+      "script-src": "'self' blob: sha256×14",
       "connect-src": "'self'",
       "manifest-src": "'self'"
     },
