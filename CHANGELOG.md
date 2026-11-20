@@ -2,6 +2,15 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 5.3.3 — 2026-11-19
+
+- Structura HTML reparată: închiderile div-urilor «usage notes» (.info-grid, .col-info) și ale grilei principale erau mutate după ultimul panou, iar bara de acțiuni se deschidea înaintea a ~60 de panouri (bit crusher, bancă binaurală, wavetable ș.a.). Pe desktop acele panouri erau ascunse (bara de acțiuni e vizibilă doar sub 900 px), iar pe mobil erau înghesuite în bara fixă și lărgeau pagina la ~920 px. Acum toate panourile sunt în grila principală și sunt distribuite în secțiunile prevăzute; fără derulare orizontală la 320–1280 px (constatat de bateria adversarială din 19 noiembrie 2026)
+- Consecință: panourile respectă acum modulele alese (butonul «Module»); un panou care aparține unui modul inactiv (de ex. patch-ul modular, din «Instrumente») apare după activarea modulului. Testul propriu modular-v5 activează acum toate modulele (profilul «Producție completă»)
+- Panourile cu «grid-column» inline (v4.6+) ocupă tot rândul sub 900 px, iar notele de utilizare folosesc coloane minmax(0, 1fr), ca să nu mai lărgească pagina
+- Antetele secțiunilor (titlu + lista de module) trec pe rânduri separate sub 700 px: în germană lista lungă lărgea pagina peste 320 px
+- Starea salvată a panourilor și secțiunilor: o valoare «null», număr sau listă în stocarea locală nu mai oprește inițializarea panourilor
+- Kit fff 1.8.1: dacă stocarea locală este indisponibilă (mod privat, politică de browser), aplicația pornește cu o stocare temporară în memorie, în loc să se oprească
+
 ## 5.3.2 — 2026-11-17
 
 - Compatibilitate cu browsere mai vechi (Chrome/Edge 55+, Firefox 52+, Safari 10.1+/iOS 10.3+): kitul 1.8.0 aduce stratul de compatibilitate (rezerve pentru API-urile care lipsesc în motoarele vechi), iar sintaxa JavaScript mai nouă decât ES2017 a fost înlocuită cu forme echivalente acolo unde exista; expresiile regulate noi și `import()` trec prin rezerve. Fără modificări de funcționalitate intenționate. Verificat cu parser ES2017 și într-un motor vechi simulat, nu pe dispozitive reale.
